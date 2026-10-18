@@ -1,0 +1,130 @@
+{
+  "round": 3,
+  "models": [
+    {
+      "n_stop": 20,
+      "n_go": 20,
+      "stop_correct": 20,
+      "go_correct": 0,
+      "unparsed": 0,
+      "recall_stop": 1.0,
+      "recall_go": 0.0,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.8388698745050667,
+        1.0
+      ],
+      "recall_go_ci95": [
+        0.0,
+        0.16113012549493322
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "qwen25vl-3b-q8"
+    },
+    {
+      "n_stop": 20,
+      "n_go": 20,
+      "stop_correct": 20,
+      "go_correct": 1,
+      "unparsed": 0,
+      "recall_stop": 1.0,
+      "recall_go": 0.05,
+      "balanced_accuracy": 0.525,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.8388698745050667,
+        1.0
+      ],
+      "recall_go_ci95": [
+        0.008881219432873136,
+        0.23613589351256675
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "qwen25vl-3b-q4"
+    },
+    {
+      "n_stop": 20,
+      "n_go": 20,
+      "stop_correct": 20,
+      "go_correct": 0,
+      "unparsed": 0,
+      "recall_stop": 1.0,
+      "recall_go": 0.0,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.8388698745050667,
+        1.0
+      ],
+      "recall_go_ci95": [
+        0.0,
+        0.16113012549493322
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "gemma3-4b-q8"
+    },
+    {
+      "n_stop": 20,
+      "n_go": 20,
+      "stop_correct": 20,
+      "go_correct": 0,
+      "unparsed": 0,
+      "recall_stop": 1.0,
+      "recall_go": 0.0,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.8388698745050667,
+        1.0
+      ],
+      "recall_go_ci95": [
+        0.0,
+        0.16113012549493322
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "gemma3-4b-q4"
+    }
+  ],
+  "backend": "llama",
+  "passers": [],
+  "reader_means": {
+    "qwen25vl-3b-q8": 1.0,
+    "qwen25vl-3b-q4": 0.9642857142857143,
+    "gemma3-4b-q8": 0.805952380952381,
+    "gemma3-4b-q4": 0.7791666666666667
+  },
+  "readers": {
+    "qwen25vl-3b-q8": true,
+    "qwen25vl-3b-q4": true,
+    "gemma3-4b-q8": true,
+    "gemma3-4b-q4": true
+  },
+  "median_clean_seconds": {},
+  "run_g2": false,
+  "dropped": []
+}

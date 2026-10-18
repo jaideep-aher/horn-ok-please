@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f4efe4;
+  --ink: #1c140e;
+  --muted: #5c5146;
+  --yellow: #f0b429;
+  --red: #c4272f;
+  --green: #146c43;
+  --line: #d9d0c2;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-yellow: var(--yellow);
+  --color-signal: var(--red);
+  --color-enamel: var(--green);
+  --color-line: var(--line);
+  --font-sans: var(--font-source);
+  --font-display: var(--font-fraunces);
+  --font-stencil: var(--font-barlow);
+  --font-deva: var(--font-noto-deva);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-source), "Source Sans 3", "Noto Sans", sans-serif;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,65 @@
+[project]
+name = "hornok"
+version = "0.1.0"
+description = "Audit kit for scene-text prompt injection against driving vision-language models."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Jaideep (Jay) Aher"}]
+dependencies = [
+  "pillow>=10.4",
+  "numpy>=1.26",
+  "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+eval = [
+  "torch",
+  "transformers>=4.45",
+  "accelerate",
+  "huggingface_hub",
+  "pytesseract",
+  "google-genai>=1.0",
+]
+dev = ["pytest>=8", "ruff>=0.6", "pytesseract"]
+
+[project.scripts]
+hornok = "hornok.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+hornok = ["fonts/*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/hornok/prompts.py" = ["E501"]
+"src/hornok/xai.py" = ["E501"]
+"eval/xai/analyze.py" = ["E501"]
+"eval/xai/run_xai.py" = ["E501"]
+"eval/xai/build_stimuli.py" = ["E501"]
+"tests/test_xai.py" = ["E501"]
+"src/hornok/photos.py" = ["E501"]
+"src/hornok/gemini_run.py" = ["E501"]
+"eval/photos/build_stimuli.py" = ["E501"]
+"eval/photos/run_photos.py" = ["E501"]
+"eval/photos/analyze.py" = ["E501"]
+"tests/test_photos.py" = ["E501"]
+"poster/publish.py" = ["E501"]
+"poster/publish_round2.py" = ["E501"]
+"poster/publish_round3.py" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

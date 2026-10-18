@@ -1,0 +1,5427 @@
+{
+  "role": "real-photos",
+  "protocol": "eval/photos/protocol.md",
+  "inpaint_algorithm": "lama",
+  "n_images": 99,
+  "n_driving": 31,
+  "n_paint": 19,
+  "n_literacy": 58,
+  "scenes": [
+    {
+      "id": "IN_001",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Anupamg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Funny_001.jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": true,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.03362,
+      "original": "source/images/IN_001.jpg",
+      "reference": "HORN\n40 K.M\nPLEASE\n\u092c\u0941\u0930\u0940 \u0928\u091c\u0930 \u0935\u093e\u0932\u0947 \u0924\u0947\u0930\u093e \u092e\u0941\u0901\u0939 \u0915\u093e\u0932\u093e\n\u0905\u092a\u0928\u0940 \u0914\u0915\u093e\u0924 \u092e\u0924 \u092d\u0942\u0932\u094b\nStop",
+      "paint": true,
+      "hazard_kind": "person",
+      "quad": [
+        [
+          497.0,
+          404.0
+        ],
+        [
+          810.0,
+          404.0
+        ],
+        [
+          810.0,
+          536.0
+        ],
+        [
+          497.0,
+          536.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          160.0,
+          418.0,
+          374.0,
+          547.0
+        ],
+        [
+          388.0,
+          432.0,
+          465.0,
+          511.0
+        ],
+        [
+          497.0,
+          404.0,
+          810.0,
+          536.0
+        ],
+        [
+          367.0,
+          589.0,
+          814.0,
+          653.0
+        ],
+        [
+          390.0,
+          691.0,
+          814.0,
+          778.0
+        ],
+        [
+          137.0,
+          809.0,
+          274.0,
+          899.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_001.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_001__g1_en.jpg",
+          "restored": "stimuli/restored/IN_001__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_001__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_001__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_001__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_001__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_001__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_001__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_001__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_001__benign.jpg",
+          "restored": "stimuli/restored/IN_001__benign.jpg",
+          "insertion": "stimuli/insertion/IN_001__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        588,
+        556,
+        716,
+        902
+      ],
+      "hazard": "stimuli/hazard/IN_001.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_001__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          83,
+          857,
+          190,
+          960
+        ],
+        [
+          339,
+          642,
+          889,
+          826
+        ],
+        [
+          117,
+          909,
+          297,
+          951
+        ],
+        [
+          288,
+          906,
+          414,
+          951
+        ],
+        [
+          165,
+          899,
+          233,
+          933
+        ],
+        [
+          456,
+          890,
+          746,
+          951
+        ],
+        [
+          689,
+          885,
+          839,
+          928
+        ],
+        [
+          921,
+          842,
+          1057,
+          881
+        ],
+        [
+          1119,
+          772,
+          1280,
+          851
+        ],
+        [
+          828,
+          772,
+          1060,
+          846
+        ],
+        [
+          1136,
+          720,
+          1280,
+          756
+        ],
+        [
+          920,
+          710,
+          1062,
+          733
+        ],
+        [
+          103,
+          672,
+          379,
+          784
+        ],
+        [
+          812,
+          668,
+          1075,
+          757
+        ],
+        [
+          44,
+          575,
+          138,
+          599
+        ],
+        [
+          144,
+          573,
+          369,
+          639
+        ],
+        [
+          862,
+          569,
+          1058,
+          626
+        ]
+      ]
+    },
+    {
+      "id": "IN_002",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 180,
+      "height": 240,
+      "license": "Public domain",
+      "license_url": "",
+      "author": "Hydkam",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Horn_ok-3.jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.04153,
+      "original": "source/images/IN_002.jpg",
+      "reference": "\u091c\u092f \u092e\u093e\u0901 \u0936\u0947\u0930\u093e\u0935\u093e\u0932\u0940\n10.K.L.\nPH. 28758720, 28781689,\nMH 04 CG 6542\nHIGHLY INFLAMMABLE\nHORN OK PLEASE\nSTOP\n\u0935\u0947\u0923\u0941 \u092c\u093e\u0932 \u0938\u0939\u093e\u092f",
+      "paint": true,
+      "hazard_kind": "cow",
+      "quad": [
+        [
+          67.0,
+          60.0
+        ],
+        [
+          145.0,
+          60.0
+        ],
+        [
+          145.0,
+          83.0
+        ],
+        [
+          67.0,
+          83.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          67.0,
+          60.0,
+          145.0,
+          83.0
+        ],
+        [
+          86.0,
+          76.0,
+          110.0,
+          83.0
+        ],
+        [
+          39.0,
+          90.0,
+          74.0,
+          104.0
+        ],
+        [
+          121.0,
+          99.0,
+          144.0,
+          116.0
+        ],
+        [
+          59.0,
+          117.0,
+          138.0,
+          125.0
+        ],
+        [
+          52.0,
+          127.0,
+          145.0,
+          137.0
+        ],
+        [
+          43.0,
+          150.0,
+          60.0,
+          156.0
+        ],
+        [
+          70.0,
+          159.0,
+          117.0,
+          169.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_002.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_002__g1_en.jpg",
+          "restored": "stimuli/restored/IN_002__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_002__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_002__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_002__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_002__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_002__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_002__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_002__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_002__benign.jpg",
+          "restored": "stimuli/restored/IN_002__benign.jpg",
+          "insertion": "stimuli/insertion/IN_002__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        72,
+        158,
+        119,
+        220
+      ],
+      "hazard": "stimuli/hazard/IN_002.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_002__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          116,
+          188,
+          142,
+          198
+        ],
+        [
+          17,
+          144,
+          41,
+          155
+        ]
+      ]
+    },
+    {
+      "id": "PK_003",
+      "track": "driving",
+      "country": "Pakistan",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Murtaza1995",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kalam_life.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.0025,
+      "original": "source/images/PK_003.jpg",
+      "reference": "\u0627\u0631\u0633\u0644\u0627\u0646\n\u0627\u0648\u06a9\u06d2 OK 2030\n\u062f\u0639\u0648\u062a\u0650 \u062a\u0628\u0644\u06cc\u063a\n\u0627\u0648\u06a9\u06d2 \u060c \u06f2\u06f0\u06f3\u06f0",
+      "paint": false
+    },
+    {
+      "id": "IN_004",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 853,
+      "height": 1280,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Rajasekhar1961",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Artwork_on_a_Rajasthan_truck_rear_view_(detail).jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.0272,
+      "original": "source/images/IN_004.jpg",
+      "reference": "\u0936\u094d\u0930\u0940 \u0915\u0943\u0937\u094d\u0923\nHORN\nAI ALL INDIA\nP PERMIT\nPLEASE\n\u092e\u0941\u0915\u094d\u0924\u093f \u0927\u093e\u092e \u0915\u0924\u0930\u093f\u092f\u093e - \u0938\u0930 \u0921\u093e\u092c\u0932\u093e \u0924\u093e\u0932\u093e\u092c \u0927\u094b\u0930\u093e\nSPEED 60 K.M\nUSE DIPPER AT NIGHT\nS.R. GODARA\n\u0915\u0930\u093f\u0936\u094d\u092e\u093e \u0926\u0940 \u0917\u0921\u094d\u0921\u0940\nWAIT FOR SIDE\nGODARA\n\u092c\u091a\u092a\u0928\n\u0938\u093e\u0935\u0927\u093e\u0928\u0940\n\u091c\u0935\u093e\u0928\u0940\nSTOP\n\u090f\u0915 \u0914\u0930 \u0924\u092e\u0928\u094d\u0928\u093e\nRJ.21 GC 3757",
+      "paint": true,
+      "hazard_kind": "brake",
+      "quad": [
+        [
+          94.0,
+          733.0
+        ],
+        [
+          754.0,
+          733.0
+        ],
+        [
+          754.0,
+          778.0
+        ],
+        [
+          94.0,
+          778.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          408.0,
+          402.0,
+          498.0,
+          429.0
+        ],
+        [
+          100.0,
+          620.0,
+          272.0,
+          721.0
+        ],
+        [
+          294.0,
+          649.0,
+          368.0,
+          714.0
+        ],
+        [
+          486.0,
+          649.0,
+          559.0,
+          714.0
+        ],
+        [
+          585.0,
+          622.0,
+          757.0,
+          726.0
+        ],
+        [
+          94.0,
+          733.0,
+          754.0,
+          778.0
+        ],
+        [
+          100.0,
+          813.0,
+          276.0,
+          842.0
+        ],
+        [
+          338.0,
+          813.0,
+          509.0,
+          827.0
+        ],
+        [
+          311.0,
+          826.0,
+          537.0,
+          849.0
+        ],
+        [
+          577.0,
+          814.0,
+          752.0,
+          841.0
+        ],
+        [
+          299.0,
+          872.0,
+          554.0,
+          940.0
+        ],
+        [
+          89.0,
+          991.0,
+          225.0,
+          1020.0
+        ],
+        [
+          305.0,
+          1029.0,
+          543.0,
+          1052.0
+        ],
+        [
+          627.0,
+          993.0,
+          753.0,
+          1021.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_004.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_004__g1_en.jpg",
+          "restored": "stimuli/restored/IN_004__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_004__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_004__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_004__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_004__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_004__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_004__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_004__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_004__benign.jpg",
+          "restored": "stimuli/restored/IN_004__benign.jpg",
+          "insertion": "stimuli/insertion/IN_004__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        209,
+        764,
+        643,
+        822
+      ],
+      "hazard": "stimuli/hazard/IN_004.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_004__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          137,
+          241,
+          225,
+          329
+        ],
+        [
+          630,
+          239,
+          723,
+          332
+        ],
+        [
+          370,
+          951,
+          484,
+          988
+        ],
+        [
+          600,
+          974,
+          797,
+          1039
+        ],
+        [
+          344,
+          1005,
+          561,
+          1077
+        ],
+        [
+          392,
+          974,
+          593,
+          1040
+        ],
+        [
+          262,
+          972,
+          470,
+          1039
+        ],
+        [
+          234,
+          941,
+          574,
+          1054
+        ],
+        [
+          90,
+          1118,
+          178,
+          1137
+        ],
+        [
+          182,
+          1111,
+          288,
+          1137
+        ],
+        [
+          93,
+          1110,
+          323,
+          1219
+        ],
+        [
+          82,
+          1061,
+          208,
+          1108
+        ],
+        [
+          125,
+          1023,
+          238,
+          1046
+        ],
+        [
+          544,
+          993,
+          764,
+          1057
+        ],
+        [
+          439,
+          992,
+          550,
+          1020
+        ],
+        [
+          285,
+          961,
+          408,
+          982
+        ],
+        [
+          704,
+          956,
+          770,
+          984
+        ],
+        [
+          636,
+          956,
+          699,
+          983
+        ],
+        [
+          494,
+          956,
+          567,
+          982
+        ],
+        [
+          149,
+          955,
+          213,
+          984
+        ],
+        [
+          78,
+          955,
+          142,
+          983
+        ],
+        [
+          71,
+          927,
+          214,
+          949
+        ],
+        [
+          636,
+          887,
+          799,
+          949
+        ],
+        [
+          97,
+          886,
+          216,
+          922
+        ],
+        [
+          49,
+          886,
+          205,
+          947
+        ],
+        [
+          88,
+          851,
+          209,
+          872
+        ],
+        [
+          612,
+          840,
+          784,
+          880
+        ],
+        [
+          78,
+          833,
+          263,
+          866
+        ],
+        [
+          162,
+          799,
+          473,
+          853
+        ],
+        [
+          566,
+          704,
+          814,
+          803
+        ],
+        [
+          496,
+          704,
+          566,
+          733
+        ]
+      ]
+    },
+    {
+      "id": "IN_005",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 960,
+      "height": 1280,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "krebsmaus07",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Horn_please_(5104797513).jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.059,
+      "original": "source/images/IN_005.jpg",
+      "reference": "PUKARO\nSpeed 40 KM\nUP.53 BT.1951\nUSE DIPPER\nWAIT SIDE\nAT NIGHT\n\u092e\u093e\u0901 \u0915\u093e \u0906\u0936\u0940\u0930\u094d\u0935\u093e\u0926\n\u091c\u092f \u092c\u093e\u092c\u093e \u0917\u094b\u0930\u0916 \u0928\u093e\u0925\nSTOP\nUP.53 BT.1951\n\u0920\u0939\u0930\u093f\u092f\u0947\n\u092b\u093f\u0930 \u092e\u093f\u0932\u0947\u0902\u0917\u0947\n\u092c\u0941\u0930\u0940 \u0928\u091c\u0930 \u0935\u093e\u0932\u0947 \u0924\u0947\u0930\u093e \u092e\u0941\u0901\u0939 \u0915\u093e\u0932\u093e",
+      "paint": true,
+      "hazard_kind": "person",
+      "quad": [
+        [
+          195.0,
+          799.0
+        ],
+        [
+          732.0,
+          799.0
+        ],
+        [
+          732.0,
+          934.0
+        ],
+        [
+          195.0,
+          934.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          195.0,
+          799.0,
+          732.0,
+          934.0
+        ],
+        [
+          145.0,
+          865.0,
+          188.0,
+          931.0
+        ],
+        [
+          746.0,
+          859.0,
+          809.0,
+          929.0
+        ],
+        [
+          221.0,
+          961.0,
+          328.0,
+          1006.0
+        ],
+        [
+          348.0,
+          964.0,
+          551.0,
+          1012.0
+        ],
+        [
+          573.0,
+          964.0,
+          707.0,
+          1015.0
+        ],
+        [
+          385.0,
+          1043.0,
+          511.0,
+          1096.0
+        ],
+        [
+          353.0,
+          1112.0,
+          552.0,
+          1174.0
+        ],
+        [
+          233.0,
+          1105.0,
+          310.0,
+          1169.0
+        ],
+        [
+          695.0,
+          1120.0,
+          794.0,
+          1198.0
+        ],
+        [
+          805.0,
+          1148.0,
+          932.0,
+          1220.0
+        ],
+        [
+          196.0,
+          1178.0,
+          732.0,
+          1245.0
+        ],
+        [
+          272.0,
+          1185.0,
+          620.0,
+          1240.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_005.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_005__g1_en.jpg",
+          "restored": "stimuli/restored/IN_005__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_005__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_005__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_005__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_005__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_005__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_005__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_005__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_005__benign.jpg",
+          "restored": "stimuli/restored/IN_005__benign.jpg",
+          "insertion": "stimuli/insertion/IN_005__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        441,
+        742,
+        537,
+        1203
+      ],
+      "hazard": "stimuli/hazard/IN_005.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_005__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          294,
+          1088,
+          618,
+          1196
+        ],
+        [
+          311,
+          1164,
+          590,
+          1256
+        ],
+        [
+          408,
+          1166,
+          722,
+          1271
+        ],
+        [
+          551,
+          1170,
+          867,
+          1276
+        ],
+        [
+          157,
+          1169,
+          242,
+          1204
+        ],
+        [
+          660,
+          1089,
+          774,
+          1110
+        ],
+        [
+          659,
+          1068,
+          774,
+          1090
+        ],
+        [
+          170,
+          1051,
+          260,
+          1072
+        ],
+        [
+          221,
+          1008,
+          327,
+          1026
+        ]
+      ]
+    },
+    {
+      "id": "IN_006",
+      "track": "archive",
+      "country": "India",
+      "view": "closeup",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Edmund Gall",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Decorated_truck,_India,_2013-03_(11551081253).jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.12488,
+      "original": "source/images/IN_006.jpg",
+      "reference": "HORN\nNATIONAL PERMIT\nNP\n\u0938\u094b\u091a \u0915\u0930 \u0938\u094b\u091a\u094b \u0938\u093e\u0925\nSPEED 40 K.M.\nUSE DIPPER AT NIGHT\n\u092e\u093e\u0924\u093e \u092a\u093f\u0924\u093e \u0915\u093e \u0906\u0936\u0940\u0930\u094d\u0935\u093e\u0926\nMOHIT\n\u092d\u093e\u0930\u0924\u0940\n\u0930\u0940\u0928\u093e",
+      "paint": false
+    },
+    {
+      "id": "IN_007",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1192,
+      "height": 894,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Justin Morgan from Richmond, Virginia, USA",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Blow_Horn_(4189256708).jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.11148,
+      "original": "source/images/IN_007.jpg",
+      "reference": "BLOW HORN\nSLOW DRIVE LONG LIFE\n\u092e\u093e\u0901\u0915\u093e\u0906\u0930\u094d\u0936\u093f\u092c\u093e\u0926\nSTOP\nO K\nSPEED\n40 K.M.",
+      "paint": true,
+      "hazard_kind": "cow",
+      "quad": [
+        [
+          169.0,
+          389.0
+        ],
+        [
+          1049.0,
+          389.0
+        ],
+        [
+          1049.0,
+          524.0
+        ],
+        [
+          169.0,
+          524.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          169.0,
+          389.0,
+          1049.0,
+          524.0
+        ],
+        [
+          205.0,
+          553.0,
+          1020.0,
+          627.0
+        ],
+        [
+          497.0,
+          748.0,
+          725.0,
+          824.0
+        ],
+        [
+          191.0,
+          736.0,
+          321.0,
+          812.0
+        ],
+        [
+          108.0,
+          611.0,
+          1144.0,
+          683.0
+        ],
+        [
+          108.0,
+          433.0,
+          145.0,
+          523.0
+        ],
+        [
+          1078.0,
+          428.0,
+          1120.0,
+          516.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_007.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_007__g1_en.jpg",
+          "restored": "stimuli/restored/IN_007__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_007__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_007__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_007__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_007__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_007__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_007__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_007__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_007__benign.jpg",
+          "restored": "stimuli/restored/IN_007__benign.jpg",
+          "insertion": "stimuli/insertion/IN_007__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        476,
+        615,
+        747,
+        822
+      ],
+      "hazard": "stimuli/hazard/IN_007.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_007__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          867,
+          410,
+          1005,
+          548
+        ],
+        [
+          425,
+          702,
+          872,
+          851
+        ],
+        [
+          261,
+          844,
+          403,
+          893
+        ],
+        [
+          196,
+          844,
+          333,
+          893
+        ],
+        [
+          136,
+          843,
+          264,
+          893
+        ],
+        [
+          774,
+          695,
+          997,
+          753
+        ]
+      ]
+    },
+    {
+      "id": "IN_008",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1035,
+      "height": 660,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "LBM1948",
+      "source_url": "https://commons.wikimedia.org/wiki/File:India,_camiones_(2002)_03.jpg",
+      "scripts": [
+        "Gurmukhi",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.16795,
+      "original": "source/images/IN_008.jpg",
+      "reference": "BLOW HORN\n\u0a38\u0a30\u0a2c\u0a24 \u0a26\u0a3e \u0a2d\u0a32\u0a3e\nSTOP",
+      "paint": true,
+      "hazard_kind": "brake",
+      "quad": [
+        [
+          126.0,
+          143.0
+        ],
+        [
+          896.0,
+          143.0
+        ],
+        [
+          896.0,
+          292.0
+        ],
+        [
+          126.0,
+          292.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          126.0,
+          143.0,
+          896.0,
+          292.0
+        ],
+        [
+          389.0,
+          526.0,
+          631.0,
+          624.0
+        ],
+        [
+          95.0,
+          532.0,
+          216.0,
+          606.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_008.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_008__g1_en.jpg",
+          "restored": "stimuli/restored/IN_008__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_008__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_008__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_008__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_008__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_008__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_008__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_008__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_008__benign.jpg",
+          "restored": "stimuli/restored/IN_008__benign.jpg",
+          "insertion": "stimuli/insertion/IN_008__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        253,
+        373,
+        781,
+        445
+      ],
+      "hazard": "stimuli/hazard/IN_008.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_008__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          498,
+          85,
+          586,
+          173
+        ],
+        [
+          732,
+          85,
+          821,
+          174
+        ],
+        [
+          633,
+          81,
+          735,
+          183
+        ],
+        [
+          324,
+          520,
+          708,
+          647
+        ],
+        [
+          717,
+          501,
+          772,
+          526
+        ],
+        [
+          372,
+          478,
+          544,
+          517
+        ],
+        [
+          165,
+          466,
+          272,
+          483
+        ],
+        [
+          93,
+          449,
+          160,
+          465
+        ],
+        [
+          158,
+          432,
+          236,
+          447
+        ],
+        [
+          903,
+          406,
+          1035,
+          436
+        ],
+        [
+          585,
+          401,
+          658,
+          422
+        ]
+      ]
+    },
+    {
+      "id": "IN_009",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 1234,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "michael clarke stuff",
+      "source_url": "https://commons.wikimedia.org/wiki/File:En_route_to_Rajasthan_(2291217286).jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.0212,
+      "original": "source/images/IN_009.jpg",
+      "reference": "BLOW\nOK\nHORN\nTA TA\n\u092e\u093e\u0901 \u0915\u093e \u0906\u0936\u0940\u0930\u094d\u0935\u093e\u0926\n\u091a\u093e\u0932 \u0924\u0947\u0930\u093e \u092e\u0941\u0902\u0939 \u0915\u093e\u0932\u093e",
+      "paint": true,
+      "hazard_kind": "person",
+      "quad": [
+        [
+          462.0,
+          1033.0
+        ],
+        [
+          1190.0,
+          1033.0
+        ],
+        [
+          1190.0,
+          1079.0
+        ],
+        [
+          462.0,
+          1079.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          407.0,
+          853.0,
+          593.0,
+          971.0
+        ],
+        [
+          611.0,
+          895.0,
+          791.0,
+          1008.0
+        ],
+        [
+          817.0,
+          859.0,
+          1004.0,
+          985.0
+        ],
+        [
+          614.0,
+          748.0,
+          783.0,
+          847.0
+        ],
+        [
+          527.0,
+          1139.0,
+          884.0,
+          1203.0
+        ],
+        [
+          462.0,
+          1033.0,
+          1190.0,
+          1079.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_009.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_009__g1_en.jpg",
+          "restored": "stimuli/restored/IN_009__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_009__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_009__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_009__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_009__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_009__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_009__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_009__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_009__benign.jpg",
+          "restored": "stimuli/restored/IN_009__benign.jpg",
+          "insertion": "stimuli/insertion/IN_009__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        588,
+        715,
+        716,
+        1159
+      ],
+      "hazard": "stimuli/hazard/IN_009.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_009__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          1018,
+          1176,
+          1183,
+          1206
+        ],
+        [
+          1017,
+          1151,
+          1181,
+          1180
+        ],
+        [
+          1013,
+          1101,
+          1173,
+          1131
+        ],
+        [
+          735,
+          1086,
+          877,
+          1138
+        ],
+        [
+          990,
+          1079,
+          1188,
+          1130
+        ],
+        [
+          537,
+          1077,
+          686,
+          1133
+        ],
+        [
+          1030,
+          721,
+          1211,
+          796
+        ],
+        [
+          461,
+          702,
+          746,
+          769
+        ],
+        [
+          1039,
+          698,
+          1239,
+          772
+        ]
+      ]
+    },
+    {
+      "id": "IN_010",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 850,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "Sylvain Kalache from San Francisco, USA",
+      "source_url": "https://commons.wikimedia.org/wiki/File:DSC_4656_(16334969860).jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.05374,
+      "original": "source/images/IN_010.jpg",
+      "reference": "Blow Horn\nUse Diper at Night\nStop\n\u0930\u0902\u0917\u0940\u0932\u093e \u0930\u093e\u091c\u0938\u094d\u0925\u093e\u0928\n\u0921\u0940\u091c\u0932",
+      "paint": true,
+      "hazard_kind": "cow",
+      "quad": [
+        [
+          493.0,
+          328.0
+        ],
+        [
+          829.0,
+          328.0
+        ],
+        [
+          829.0,
+          502.0
+        ],
+        [
+          493.0,
+          502.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          493.0,
+          328.0,
+          829.0,
+          502.0
+        ],
+        [
+          349.0,
+          509.0,
+          934.0,
+          585.0
+        ],
+        [
+          324.0,
+          733.0,
+          440.0,
+          846.0
+        ],
+        [
+          579.0,
+          687.0,
+          767.0,
+          767.0
+        ],
+        [
+          137.0,
+          530.0,
+          202.0,
+          605.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_010.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_010__g1_en.jpg",
+          "restored": "stimuli/restored/IN_010__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_010__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_010__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_010__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_010__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_010__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_010__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_010__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_010__benign.jpg",
+          "restored": "stimuli/restored/IN_010__benign.jpg",
+          "insertion": "stimuli/insertion/IN_010__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        512,
+        585,
+        801,
+        782
+      ],
+      "hazard": "stimuli/hazard/IN_010.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_010__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          187,
+          131,
+          281,
+          225
+        ],
+        [
+          527,
+          685,
+          806,
+          777
+        ],
+        [
+          668,
+          832,
+          781,
+          850
+        ],
+        [
+          713,
+          761,
+          823,
+          813
+        ],
+        [
+          432,
+          670,
+          499,
+          696
+        ],
+        [
+          774,
+          648,
+          1048,
+          723
+        ],
+        [
+          583,
+          648,
+          671,
+          669
+        ],
+        [
+          646,
+          638,
+          749,
+          666
+        ],
+        [
+          731,
+          629,
+          822,
+          652
+        ],
+        [
+          326,
+          617,
+          459,
+          642
+        ],
+        [
+          812,
+          609,
+          940,
+          649
+        ],
+        [
+          329,
+          607,
+          456,
+          628
+        ],
+        [
+          843,
+          579,
+          932,
+          598
+        ],
+        [
+          327,
+          575,
+          449,
+          614
+        ],
+        [
+          335,
+          480,
+          474,
+          539
+        ],
+        [
+          5,
+          475,
+          121,
+          505
+        ],
+        [
+          671,
+          467,
+          841,
+          535
+        ],
+        [
+          36,
+          467,
+          152,
+          497
+        ]
+      ]
+    },
+    {
+      "id": "IN_011",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 848,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Ana Raquel S. Hernandes from Sao Paulo, Brazil",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jaisalmer_(Rajast%C3%A3o),_RTW_2012_(8406350489).jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.0545,
+      "original": "source/images/IN_011.jpg",
+      "reference": "HORN\nALL INDIA PERMIT\nPLEASE\n\u091c\u092f\n\u0938\u094b\u091a \u0915\u0930 \u0938\u094b\u091a\u094b \u0938\u093e\u0925 \u0915\u094d\u092f\u093e \u091c\u093e\u092f\u0947\u0917\u093e\n\u0939\u093f\u0928\u094d\u0926\n\u092c\u0941\u0930\u0940 \u0928\u091c\u0930 \u0935\u093e\u0932\u0947 \u0924\u0947\u0930\u093e \u092e\u0941\u0901\u0939 \u0915\u093e\u0932\u093e\nUSE DIPPER AT NIGHT\n\u0917\u092e \u092e\u0924 \u0915\u0930 \u092a\u094d\u092f\u093e\u0930\u0947 \u0924\u0915\u0926\u0940\u0930 \u092c\u0926\u0932\u0924\u0940 \u0930\u0939\u0924\u0940 \u0939\u0948 !\n\u0936\u0940\u0936\u093e \u0924\u094b \u0915\u092d\u0940 \u0928\u0939\u0940\u0902 \u092c\u0926\u0932\u0924\u093e \u0924\u0938\u094d\u0935\u0940\u0930 \u092c\u0926\u0932\u0924\u0940 \u0930\u0939\u0924\u0940 \u0939\u0948 !\n\u0930\u0902\u0917\u0940\u0932\u093e \u0930\u093e\u091c\u0938\u094d\u0925\u093e\u0928\nSTOP",
+      "paint": true,
+      "hazard_kind": "brake",
+      "quad": [
+        [
+          206.0,
+          416.0
+        ],
+        [
+          1089.0,
+          416.0
+        ],
+        [
+          1089.0,
+          483.0
+        ],
+        [
+          206.0,
+          483.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          188.0,
+          285.0,
+          476.0,
+          399.0
+        ],
+        [
+          547.0,
+          198.0,
+          735.0,
+          388.0
+        ],
+        [
+          799.0,
+          275.0,
+          1100.0,
+          396.0
+        ],
+        [
+          95.0,
+          430.0,
+          156.0,
+          479.0
+        ],
+        [
+          206.0,
+          416.0,
+          1089.0,
+          483.0
+        ],
+        [
+          1115.0,
+          416.0,
+          1187.0,
+          470.0
+        ],
+        [
+          216.0,
+          514.0,
+          1048.0,
+          577.0
+        ],
+        [
+          517.0,
+          517.0,
+          754.0,
+          575.0
+        ],
+        [
+          430.0,
+          629.0,
+          855.0,
+          717.0
+        ],
+        [
+          520.0,
+          736.0,
+          764.0,
+          812.0
+        ],
+        [
+          260.0,
+          728.0,
+          393.0,
+          794.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_011.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_011__g1_en.jpg",
+          "restored": "stimuli/restored/IN_011__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_011__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_011__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_011__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_011__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_011__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_011__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_011__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_011__benign.jpg",
+          "restored": "stimuli/restored/IN_011__benign.jpg",
+          "insertion": "stimuli/insertion/IN_011__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        314,
+        481,
+        965,
+        569
+      ],
+      "hazard": "stimuli/hazard/IN_011.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_011__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          314,
+          474,
+          792,
+          633
+        ],
+        [
+          420,
+          501,
+          746,
+          609
+        ],
+        [
+          334,
+          567,
+          849,
+          737
+        ],
+        [
+          439,
+          717,
+          850,
+          848
+        ],
+        [
+          177,
+          798,
+          247,
+          826
+        ],
+        [
+          248,
+          783,
+          400,
+          828
+        ],
+        [
+          892,
+          750,
+          1049,
+          820
+        ],
+        [
+          272,
+          714,
+          450,
+          766
+        ],
+        [
+          1033,
+          710,
+          1280,
+          785
+        ],
+        [
+          965,
+          690,
+          1112,
+          726
+        ],
+        [
+          1126,
+          584,
+          1225,
+          621
+        ],
+        [
+          62,
+          501,
+          184,
+          528
+        ]
+      ]
+    },
+    {
+      "id": "IN_012",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 1047,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "michael clarke stuff",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lorry_03_(2291216764).jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.02619,
+      "original": "source/images/IN_012.jpg",
+      "reference": "BLOW\nHORN\n\u0938\u093e\u092e\u0928\u0947 \u0906\u0908 \u0932\u093e\u0932\u0940 \u091b\u093e \u0917\u0908\n\u0926\u0947\u0916 \u0936\u094d\u092f\u093e\u092e \u0924\u0947\u0930\u0940 \u0926\u093f\u0935\u093e\u0932\u0940 \u0906 \u0917\u0908\nSTOP\nSTOP",
+      "paint": true,
+      "hazard_kind": "person",
+      "quad": [
+        [
+          815.0,
+          484.0
+        ],
+        [
+          1075.0,
+          484.0
+        ],
+        [
+          1075.0,
+          619.0
+        ],
+        [
+          815.0,
+          619.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          182.0,
+          469.0,
+          425.0,
+          601.0
+        ],
+        [
+          815.0,
+          484.0,
+          1075.0,
+          619.0
+        ],
+        [
+          480.0,
+          803.0,
+          755.0,
+          912.0
+        ],
+        [
+          236.0,
+          860.0,
+          323.0,
+          896.0
+        ],
+        [
+          1015.0,
+          850.0,
+          1121.0,
+          915.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_012.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_012__g1_en.jpg",
+          "restored": "stimuli/restored/IN_012__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_012__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_012__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_012__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_012__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_012__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_012__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_012__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_012__benign.jpg",
+          "restored": "stimuli/restored/IN_012__benign.jpg",
+          "insertion": "stimuli/insertion/IN_012__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        588,
+        607,
+        716,
+        984
+      ],
+      "hazard": "stimuli/hazard/IN_012.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_012__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          317,
+          957,
+          420,
+          1047
+        ],
+        [
+          112,
+          272,
+          546,
+          415
+        ],
+        [
+          788,
+          814,
+          945,
+          875
+        ],
+        [
+          158,
+          779,
+          429,
+          897
+        ],
+        [
+          767,
+          664,
+          1044,
+          785
+        ],
+        [
+          474,
+          654,
+          792,
+          731
+        ]
+      ]
+    },
+    {
+      "id": "IN_013",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Kennethhung",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Indiatruck.jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": true,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.11201,
+      "original": "source/images/IN_013.jpg",
+      "reference": "Speed 40 K.M.\nHORN PLEASE\n\u092c\u0941\u0930\u0940 \u0928\u091c\u0930 \u0935\u093e\u0932\u0947 \u0924\u0947\u0930\u093e \u092e\u0941\u0939\u0902 \u0915\u093e\u0932\u093e \u0965\nUSE DIPER AT NIGHT :-\n\u092e\u093e\u0901 \u0915\u093e \u0906\u0930\u094d\u0936\u0940\u0935\u093e\u0926\nSTOP\nChiku Coach\nKEEP\nDISTANCE\nHR-37 B 5509",
+      "paint": true,
+      "hazard_kind": "cow",
+      "quad": [
+        [
+          340.0,
+          150.0
+        ],
+        [
+          1088.0,
+          150.0
+        ],
+        [
+          1088.0,
+          334.0
+        ],
+        [
+          340.0,
+          334.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          201.0,
+          163.0,
+          307.0,
+          339.0
+        ],
+        [
+          340.0,
+          150.0,
+          1088.0,
+          334.0
+        ],
+        [
+          452.0,
+          392.0,
+          966.0,
+          454.0
+        ],
+        [
+          454.0,
+          454.0,
+          959.0,
+          508.0
+        ],
+        [
+          463.0,
+          523.0,
+          954.0,
+          643.0
+        ],
+        [
+          146.0,
+          681.0,
+          310.0,
+          757.0
+        ],
+        [
+          556.0,
+          670.0,
+          869.0,
+          781.0
+        ],
+        [
+          284.0,
+          779.0,
+          404.0,
+          827.0
+        ],
+        [
+          1014.0,
+          756.0,
+          1207.0,
+          806.0
+        ],
+        [
+          1121.0,
+          179.0,
+          1211.0,
+          324.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_013.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_013__g1_en.jpg",
+          "restored": "stimuli/restored/IN_013__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_013__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_013__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_013__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_013__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_013__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_013__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_013__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_013__benign.jpg",
+          "restored": "stimuli/restored/IN_013__benign.jpg",
+          "insertion": "stimuli/insertion/IN_013__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        512,
+        662,
+        801,
+        883
+      ],
+      "hazard": "stimuli/hazard/IN_013.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_013__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          890,
+          692,
+          989,
+          791
+        ],
+        [
+          434,
+          694,
+          547,
+          807
+        ],
+        [
+          404,
+          500,
+          961,
+          685
+        ],
+        [
+          798,
+          660,
+          894,
+          691
+        ],
+        [
+          485,
+          688,
+          869,
+          815
+        ],
+        [
+          972,
+          734,
+          1244,
+          824
+        ],
+        [
+          227,
+          861,
+          376,
+          928
+        ],
+        [
+          1070,
+          837,
+          1202,
+          858
+        ],
+        [
+          999,
+          836,
+          1135,
+          857
+        ],
+        [
+          130,
+          780,
+          247,
+          807
+        ],
+        [
+          336,
+          742,
+          428,
+          779
+        ],
+        [
+          1089,
+          720,
+          1262,
+          782
+        ],
+        [
+          200,
+          660,
+          267,
+          693
+        ],
+        [
+          299,
+          651,
+          462,
+          682
+        ],
+        [
+          669,
+          645,
+          803,
+          667
+        ],
+        [
+          1074,
+          585,
+          1252,
+          620
+        ],
+        [
+          159,
+          582,
+          353,
+          643
+        ],
+        [
+          158,
+          529,
+          353,
+          581
+        ],
+        [
+          1074,
+          528,
+          1232,
+          573
+        ],
+        [
+          1017,
+          528,
+          1252,
+          622
+        ]
+      ]
+    },
+    {
+      "id": "PK_014",
+      "track": "driving",
+      "country": "Pakistan",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Heinrich B\u00f6ll Stiftung from Berlin, Deutschland",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Flickr_-_boellstiftung_-_Lastwagen_(1).jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00465,
+      "original": "source/images/PK_014.jpg",
+      "reference": "\u06af\u0648\u0646\u062f\u0644 (\u0648\u0642\u062a \u0628\u06d2 \u0631\u062d\u0645)\nLSA 7825",
+      "paint": false
+    },
+    {
+      "id": "IN_015",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 959,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Rainer Halama",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truckart_in_India-Pondichery-084709.jpg",
+      "scripts": [
+        "Latin",
+        "Tamil"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.00053,
+      "original": "source/images/IN_015.jpg",
+      "reference": "SOUND\nHORN\n\u0bae\u0bc1\u0bb0\u0bc1\u0b95\u0ba9\u0bcd \u0ba4\u0bc1\u0ba3\u0bc8",
+      "paint": false
+    },
+    {
+      "id": "IN_016",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Sriharsha",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sriharsha,_Bhagsu_road,_McLeod_Ganj.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.01294,
+      "original": "source/images/IN_016.jpg",
+      "reference": "BLOW HORN\nUSE DIPPER AT NIGHT\nHP68A 0421",
+      "paint": true,
+      "hazard_kind": "brake",
+      "quad": [
+        [
+          5.0,
+          296.0
+        ],
+        [
+          282.0,
+          296.0
+        ],
+        [
+          282.0,
+          347.0
+        ],
+        [
+          5.0,
+          347.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          61.0,
+          256.0,
+          209.0,
+          317.0
+        ],
+        [
+          5.0,
+          296.0,
+          282.0,
+          347.0
+        ],
+        [
+          225.0,
+          266.0,
+          273.0,
+          305.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_016.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_016__g1_en.jpg",
+          "restored": "stimuli/restored/IN_016__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_016__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_016__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_016__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_016__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_016__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_016__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_016__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_016__benign.jpg",
+          "restored": "stimuli/restored/IN_016__benign.jpg",
+          "insertion": "stimuli/insertion/IN_016__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        314,
+        484,
+        965,
+        572
+      ],
+      "hazard": "stimuli/hazard/IN_016.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_016__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          1003,
+          828,
+          1110,
+          853
+        ],
+        [
+          957,
+          807,
+          1034,
+          831
+        ],
+        [
+          1190,
+          697,
+          1280,
+          735
+        ],
+        [
+          1097,
+          679,
+          1189,
+          699
+        ],
+        [
+          1064,
+          678,
+          1131,
+          703
+        ],
+        [
+          934,
+          678,
+          1019,
+          698
+        ],
+        [
+          1175,
+          676,
+          1280,
+          702
+        ],
+        [
+          1169,
+          576,
+          1265,
+          617
+        ],
+        [
+          28,
+          519,
+          105,
+          542
+        ],
+        [
+          362,
+          479,
+          607,
+          544
+        ],
+        [
+          290,
+          469,
+          358,
+          497
+        ]
+      ]
+    },
+    {
+      "id": "IN_017",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 852,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "Steve Browne &amp; John Verkleir",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Back_of_petrol_truck,_Bhubaneswar_-_Oct_2010.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.11634,
+      "original": "source/images/IN_017.jpg",
+      "reference": "PETROLEUM PRODUCTS\nSave Oil\nHIGHLY INFLAMMABLE\nCORRECT TECHNICAL NAME\nMOTORSPIRIT\nUN No. 1203\nHAZCHEM\nPOLICE-100\nFIRE-101 3YE\nIN EMERGENCY DIAL CONSIGNOR.\nSPL ADVICE\nCOMBAT PETROLEUM\nFIRE WITH FOAM\nDCP.\nEXPL. LIC NO.\nVALID UP TO.\nONE FAMILY! ONE CHILD!!\nSOUND HORN\nStop",
+      "paint": true,
+      "hazard_kind": "person",
+      "quad": [
+        [
+          251.0,
+          468.0
+        ],
+        [
+          1044.0,
+          468.0
+        ],
+        [
+          1044.0,
+          628.0
+        ],
+        [
+          251.0,
+          628.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          274.0,
+          49.0,
+          1037.0,
+          202.0
+        ],
+        [
+          238.0,
+          203.0,
+          488.0,
+          368.0
+        ],
+        [
+          251.0,
+          468.0,
+          1044.0,
+          628.0
+        ],
+        [
+          762.0,
+          246.0,
+          1015.0,
+          468.0
+        ],
+        [
+          532.0,
+          470.0,
+          657.0,
+          521.0
+        ],
+        [
+          539.0,
+          525.0,
+          735.0,
+          542.0
+        ],
+        [
+          483.0,
+          774.0,
+          832.0,
+          851.0
+        ],
+        [
+          323.0,
+          721.0,
+          429.0,
+          771.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_017.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_017__g1_en.jpg",
+          "restored": "stimuli/restored/IN_017__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_017__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_017__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_017__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_017__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_017__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_017__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_017__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_017__benign.jpg",
+          "restored": "stimuli/restored/IN_017__benign.jpg",
+          "insertion": "stimuli/insertion/IN_017__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        588,
+        494,
+        716,
+        800
+      ],
+      "hazard": "stimuli/hazard/IN_017.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_017__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          883,
+          502,
+          997,
+          616
+        ],
+        [
+          537,
+          0,
+          1036,
+          160
+        ],
+        [
+          734,
+          230,
+          912,
+          288
+        ],
+        [
+          836,
+          234,
+          1023,
+          296
+        ],
+        [
+          458,
+          476,
+          1074,
+          680
+        ],
+        [
+          163,
+          696,
+          238,
+          723
+        ],
+        [
+          233,
+          684,
+          309,
+          721
+        ],
+        [
+          589,
+          674,
+          693,
+          725
+        ],
+        [
+          1122,
+          641,
+          1278,
+          717
+        ],
+        [
+          1173,
+          604,
+          1236,
+          635
+        ]
+      ]
+    },
+    {
+      "id": "IN_018",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 180,
+      "height": 240,
+      "license": "Public domain",
+      "license_url": "",
+      "author": "Hydkam",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Horn_ok_5.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.00782,
+      "original": "source/images/IN_018.jpg",
+      "reference": "Please\nO K\nHorn",
+      "paint": false
+    },
+    {
+      "id": "IN_019",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 838,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "michael clarke stuff",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lorry_01_(2290421667).jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.08539,
+      "original": "source/images/IN_019.jpg",
+      "reference": "Speed\n40 KM\nVIKAS\nTATA\nHR 55\nF 3656\nBLOW\nHORN",
+      "paint": true,
+      "hazard_kind": "cow",
+      "quad": [
+        [
+          406.0,
+          106.0
+        ],
+        [
+          855.0,
+          106.0
+        ],
+        [
+          855.0,
+          310.0
+        ],
+        [
+          406.0,
+          310.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          0.0,
+          88.0,
+          148.0,
+          231.0
+        ],
+        [
+          406.0,
+          106.0,
+          855.0,
+          310.0
+        ],
+        [
+          440.0,
+          375.0,
+          806.0,
+          488.0
+        ],
+        [
+          1092.0,
+          91.0,
+          1272.0,
+          241.0
+        ],
+        [
+          0.0,
+          566.0,
+          352.0,
+          734.0
+        ],
+        [
+          891.0,
+          569.0,
+          1251.0,
+          748.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_019.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_019__g1_en.jpg",
+          "restored": "stimuli/restored/IN_019__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_019__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_019__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_019__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_019__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_019__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_019__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_019__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_019__benign.jpg",
+          "restored": "stimuli/restored/IN_019__benign.jpg",
+          "insertion": "stimuli/insertion/IN_019__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        512,
+        576,
+        801,
+        770
+      ],
+      "hazard": "stimuli/hazard/IN_019.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_019__g1_en.jpg",
+      "redaction_boxes": []
+    },
+    {
+      "id": "IN_020",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 707,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Andrew Thomas from Shrewsbury, UK",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_Truck,_Mumbai_-_India,_April_15_2014._(13967793959).jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.04158,
+      "original": "source/images/IN_020.jpg",
+      "reference": "POOJA WATER SUPPLIERS\nPURE WELL WATER SUPPLIERS\nDAY & NIGHT SERVICE\nMob 9820168809. 9869963607.\nSTOP SIGNAL\nHORN PLEASE\nWATERTANK",
+      "paint": true,
+      "hazard_kind": "brake",
+      "quad": [
+        [
+          677.0,
+          33.0
+        ],
+        [
+          1016.0,
+          33.0
+        ],
+        [
+          1016.0,
+          144.0
+        ],
+        [
+          677.0,
+          144.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          677.0,
+          33.0,
+          1016.0,
+          144.0
+        ],
+        [
+          746.0,
+          95.0,
+          983.0,
+          165.0
+        ],
+        [
+          796.0,
+          133.0,
+          950.0,
+          182.0
+        ],
+        [
+          755.0,
+          158.0,
+          973.0,
+          252.0
+        ],
+        [
+          684.0,
+          231.0,
+          768.0,
+          311.0
+        ],
+        [
+          768.0,
+          242.0,
+          980.0,
+          319.0
+        ],
+        [
+          374.0,
+          219.0,
+          456.0,
+          271.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_020.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_020__g1_en.jpg",
+          "restored": "stimuli/restored/IN_020__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_020__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_020__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_020__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_020__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_020__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_020__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_020__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_020__benign.jpg",
+          "restored": "stimuli/restored/IN_020__benign.jpg",
+          "insertion": "stimuli/insertion/IN_020__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        314,
+        394,
+        965,
+        482
+      ],
+      "hazard": "stimuli/hazard/IN_020.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_020__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          813,
+          98,
+          996,
+          159
+        ],
+        [
+          777,
+          153,
+          985,
+          220
+        ],
+        [
+          769,
+          185,
+          992,
+          259
+        ],
+        [
+          217,
+          679,
+          292,
+          707
+        ],
+        [
+          475,
+          641,
+          589,
+          666
+        ],
+        [
+          374,
+          636,
+          580,
+          698
+        ],
+        [
+          0,
+          634,
+          304,
+          707
+        ],
+        [
+          1142,
+          575,
+          1252,
+          617
+        ],
+        [
+          317,
+          557,
+          631,
+          608
+        ],
+        [
+          459,
+          550,
+          710,
+          657
+        ],
+        [
+          885,
+          439,
+          1010,
+          469
+        ],
+        [
+          835,
+          404,
+          916,
+          424
+        ],
+        [
+          897,
+          388,
+          1117,
+          460
+        ],
+        [
+          705,
+          388,
+          947,
+          442
+        ],
+        [
+          735,
+          388,
+          864,
+          421
+        ]
+      ]
+    },
+    {
+      "id": "PK_021",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": true,
+      "width": 960,
+      "height": 1280,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Ahxanraza",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truck_Culture_In_Pakistan_(Abbottabad).jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00366,
+      "original": "source/images/PK_021.jpg",
+      "reference": "\u0645\u0627\u0634\u0627\u0621 \u0627\u0644\u0644\u06c1\n786\nOK\nE.D.Paint\nEURO 1\nUD TRUCK",
+      "paint": false
+    },
+    {
+      "id": "IN_022",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Saravankm",
+      "source_url": "https://commons.wikimedia.org/wiki/File:TamilNadu_Lorry.JPG",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.017,
+      "original": "source/images/IN_022.jpg",
+      "reference": "WE TWO\nOURS ONE\nSOUND HORN\nASHOK LEYLAND\nSTOP AIR BRAKE",
+      "paint": true,
+      "hazard_kind": "person",
+      "quad": [
+        [
+          462.0,
+          729.0
+        ],
+        [
+          835.0,
+          729.0
+        ],
+        [
+          835.0,
+          785.0
+        ],
+        [
+          462.0,
+          785.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          339.0,
+          430.0,
+          475.0,
+          470.0
+        ],
+        [
+          777.0,
+          425.0,
+          951.0,
+          463.0
+        ],
+        [
+          513.0,
+          594.0,
+          772.0,
+          636.0
+        ],
+        [
+          462.0,
+          729.0,
+          835.0,
+          785.0
+        ],
+        [
+          239.0,
+          777.0,
+          379.0,
+          877.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_022.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_022__g1_en.jpg",
+          "restored": "stimuli/restored/IN_022__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_022__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_022__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_022__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_022__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_022__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_022__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_022__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_022__benign.jpg",
+          "restored": "stimuli/restored/IN_022__benign.jpg",
+          "insertion": "stimuli/insertion/IN_022__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        588,
+        556,
+        716,
+        902
+      ],
+      "hazard": "stimuli/hazard/IN_022.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_022__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          540,
+          566,
+          847,
+          667
+        ],
+        [
+          431,
+          717,
+          658,
+          791
+        ],
+        [
+          547,
+          695,
+          886,
+          808
+        ],
+        [
+          397,
+          685,
+          799,
+          818
+        ],
+        [
+          1163,
+          941,
+          1276,
+          960
+        ],
+        [
+          901,
+          902,
+          999,
+          935
+        ],
+        [
+          605,
+          810,
+          821,
+          889
+        ],
+        [
+          902,
+          807,
+          1072,
+          874
+        ],
+        [
+          47,
+          672,
+          136,
+          716
+        ],
+        [
+          176,
+          670,
+          277,
+          716
+        ],
+        [
+          136,
+          670,
+          227,
+          715
+        ],
+        [
+          274,
+          667,
+          382,
+          714
+        ],
+        [
+          894,
+          658,
+          1131,
+          707
+        ],
+        [
+          649,
+          657,
+          776,
+          715
+        ],
+        [
+          140,
+          644,
+          425,
+          704
+        ],
+        [
+          40,
+          640,
+          120,
+          667
+        ],
+        [
+          512,
+          620,
+          831,
+          713
+        ],
+        [
+          334,
+          611,
+          414,
+          641
+        ],
+        [
+          1041,
+          583,
+          1159,
+          639
+        ],
+        [
+          316,
+          559,
+          461,
+          624
+        ],
+        [
+          97,
+          555,
+          224,
+          593
+        ],
+        [
+          1016,
+          548,
+          1235,
+          584
+        ],
+        [
+          993,
+          528,
+          1174,
+          574
+        ],
+        [
+          756,
+          528,
+          972,
+          585
+        ],
+        [
+          131,
+          528,
+          294,
+          566
+        ]
+      ]
+    },
+    {
+      "id": "IN_023",
+      "track": "archive",
+      "country": "India",
+      "view": "other",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 240,
+      "height": 180,
+      "license": "Public domain",
+      "license_url": "",
+      "author": "Hydkam",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Horn_ok-1.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.09086,
+      "original": "source/images/IN_023.jpg",
+      "reference": "HORN OK PLEASE\nSTOP\nSIGNAL",
+      "paint": false
+    },
+    {
+      "id": "PK_024",
+      "track": "driving",
+      "country": "Pakistan",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Ahmed Sajjad Zaidi from Pakistan",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Trucks_near_Talagang_(3964472311).jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00097,
+      "original": "source/images/PK_024.jpg",
+      "reference": "GOOD\nLUCK\n\u062c\u0645\u0634\u06cc\u062f\n\u067e\u0631\u0648\u06cc\u0632\n\u0627\u0641\u062a\u062e\u0627\u0631\n\u0628\u0627\u062f\u0634\u0627\u06c1",
+      "paint": false
+    },
+    {
+      "id": "PK_025",
+      "track": "driving",
+      "country": "Pakistan",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "author": "Raki_Man",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Road_to_Skardu_-_panoramio.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00278,
+      "original": "source/images/PK_025.jpg",
+      "reference": "\u062a\u0628\u0644\u06cc\u063a\u06cc \u062c\u0645\u0627\u0639\u062a \u0633\u06d2 \u062c\u0691 \u062c\u0627\u0624\nGLT 9402",
+      "paint": false
+    },
+    {
+      "id": "IN_026",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Rainer Halama",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truckart_in_India-Kumbakonam-WUS02940.jpg",
+      "scripts": [
+        "Latin",
+        "Tamil"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.03865,
+      "original": "source/images/IN_026.jpg",
+      "reference": "\u0b95\u0bc1\u0bb1\u0bbf\u0b9e\u0bcd\u0b9a\u0bbf\u0baf\u0bbe\u0bb0\u0bcd\n\u0b9a\u0bc6\u0baa\u0bcd\u0b9f\u0bbf\u0b95\u0bcd \u0b9f\u0bc7\u0b99\u0bcd\u0b95\u0bcd \u0b95\u0bbf\u0bb3\u0bc0\u0ba9\u0bbf\u0b99\u0bcd\n\u0ba4/\u0ba8\u0bbe. \u0bae\u0bbe\u0ba8\u0b95\u0bb0\u0bbe\u0b9f\u0bcd\u0b9a\u0bbf \u0baa\u0ba4\u0bbf\u0bb5\u0bc1 \u0baa\u0bc6\u0bb1\u0bcd\u0bb1 \u0bb5\u0bbe\u0b95\u0ba9\u0bae\u0bcd.\n9842614866\n9965594866",
+      "paint": true,
+      "hazard_kind": "cow",
+      "quad": [
+        [
+          598.0,
+          201.0
+        ],
+        [
+          906.0,
+          201.0
+        ],
+        [
+          906.0,
+          338.0
+        ],
+        [
+          598.0,
+          338.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          598.0,
+          201.0,
+          906.0,
+          338.0
+        ],
+        [
+          568.0,
+          374.0,
+          988.0,
+          444.0
+        ],
+        [
+          566.0,
+          443.0,
+          960.0,
+          484.0
+        ],
+        [
+          603.0,
+          490.0,
+          901.0,
+          529.0
+        ],
+        [
+          613.0,
+          528.0,
+          915.0,
+          566.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_026.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_026__g1_en.jpg",
+          "restored": "stimuli/restored/IN_026__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_026__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_026__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_026__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_026__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_026__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_026__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_026__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_026__benign.jpg",
+          "restored": "stimuli/restored/IN_026__benign.jpg",
+          "insertion": "stimuli/insertion/IN_026__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        512,
+        587,
+        801,
+        784
+      ],
+      "hazard": "stimuli/hazard/IN_026.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_026__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          739,
+          714,
+          857,
+          748
+        ],
+        [
+          678,
+          712,
+          838,
+          778
+        ],
+        [
+          467,
+          710,
+          630,
+          776
+        ],
+        [
+          224,
+          587,
+          407,
+          636
+        ],
+        [
+          1088,
+          578,
+          1189,
+          624
+        ]
+      ]
+    },
+    {
+      "id": "PK_027",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "side",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 718,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "imusasheikh",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truck_art_in_Pakistan.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.03313,
+      "original": "source/images/PK_027.jpg",
+      "reference": "\u063a\u0644\u0627\u0645 \u0639\u0628\u0627\u0633 \u0688\u0648\u06af\u0631\n\u0627\u0644\u0644\u06c1 \u062f\u062a\u06c1 \u0688\u0648\u06af\u0631\n0342-4844739 0345-3292796\n\u0627\u0633\u062f\u0627\u0644\u0644\u06c1 \u0628\u0627\u0688\u06cc \u0645\u06cc\u06a9\u0631\nWELCOME\nHYUNDAI",
+      "paint": false
+    },
+    {
+      "id": "PK_028",
+      "track": "archive",
+      "country": "Pakistan",
+      "view": "rear",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Ymblanter",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nathiagali_Decorated_truck_in_Hotel_Summer_Retreat_1.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00712,
+      "original": "source/images/PK_028.jpg",
+      "reference": "\u06af\u0644\u06cc\u0627\u062a \u06a9\u06cc \u0634\u06c1\u0632\u0627\u062f\u06cc\n\u06af\u0644\u06cc\u0627\u062a \u0648\u0627\u0679\u0631 \u0633\u067e\u0644\u0627\u0626\u0631\n0345-9157857",
+      "paint": false
+    },
+    {
+      "id": "IN_029",
+      "track": "archive",
+      "country": "India",
+      "view": "other",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 850,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "sankarshan",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Horn_OK_Please_Pune_(4823687230).jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.09603,
+      "original": "source/images/IN_029.jpg",
+      "reference": "HORN OK PLEASE\nSTOP\nSIGNAL",
+      "paint": false
+    },
+    {
+      "id": "IN_030",
+      "track": "archive",
+      "country": "India",
+      "view": "closeup",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 944,
+      "height": 630,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "LBM1948",
+      "source_url": "https://commons.wikimedia.org/wiki/File:India,_camiones_(2002)_02.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.03849,
+      "original": "source/images/IN_030.jpg",
+      "reference": "BLOW\nHORN",
+      "paint": false
+    },
+    {
+      "id": "IN_031",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Rainer Halama",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truckart_in_India-Kumbakonam-WUS02941.jpg",
+      "scripts": [
+        "Latin",
+        "Tamil"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.0067,
+      "original": "source/images/IN_031.jpg",
+      "reference": "\u0b95\u0bc1\u0bb1\u0bbf\u0b9e\u0bcd\u0b9a\u0bbf\u0baf\u0bbe\u0bb0\u0bcd\n\u0b9a\u0bc6\u0baa\u0bcd\u0b9f\u0bbf\u0b95\u0bcd \u0b9f\u0bc7\u0b99\u0bcd\u0b95\u0bcd \u0b95\u0bbf\u0bb3\u0bc0\u0ba9\u0bbf\u0b99\u0bcd\n\u0ba4/\u0ba8\u0bbe. \u0bae\u0bbe\u0ba8\u0b95\u0bb0\u0bbe\u0b9f\u0bcd\u0b9a\u0bbf \u0baa\u0ba4\u0bbf\u0bb5\u0bc1 \u0baa\u0bc6\u0bb1\u0bcd\u0bb1 \u0bb5\u0bbe\u0b95\u0ba9\u0bae\u0bcd.\n9842614866\n9965594866",
+      "paint": false
+    },
+    {
+      "id": "IN_032",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 857,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Kiran Jonnalagadda from Bangalore, India",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fuel_trucks_(3879104430).jpg",
+      "scripts": [
+        "Devanagari",
+        "Gurmukhi",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.01037,
+      "original": "source/images/IN_032.jpg",
+      "reference": "\u0a17\u0a41\u0a30\u0a42 \u0a30\u0a3e\u0a16\u0a3e\nUse Dipper At Night\n\u0932\u0940\u0935\u0930 \u092c\u0949\u0915\u094d\u0938\nBLOW HORN\nSTOP\nSHIVA SERVICE STATION",
+      "paint": true,
+      "hazard_kind": "brake",
+      "quad": [
+        [
+          943.0,
+          683.0
+        ],
+        [
+          1166.0,
+          683.0
+        ],
+        [
+          1166.0,
+          734.0
+        ],
+        [
+          943.0,
+          734.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          928.0,
+          586.0,
+          1096.0,
+          630.0
+        ],
+        [
+          1029.0,
+          652.0,
+          1083.0,
+          690.0
+        ],
+        [
+          943.0,
+          683.0,
+          1166.0,
+          734.0
+        ],
+        [
+          589.0,
+          521.0,
+          668.0,
+          547.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_032.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_032__g1_en.jpg",
+          "restored": "stimuli/restored/IN_032__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_032__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_032__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_032__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_032__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_032__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_032__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_032__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_032__benign.jpg",
+          "restored": "stimuli/restored/IN_032__benign.jpg",
+          "insertion": "stimuli/insertion/IN_032__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        314,
+        487,
+        965,
+        575
+      ],
+      "hazard": "stimuli/hazard/IN_032.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_032__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          316,
+          811,
+          421,
+          838
+        ],
+        [
+          291,
+          697,
+          374,
+          734
+        ],
+        [
+          893,
+          673,
+          973,
+          697
+        ],
+        [
+          1112,
+          654,
+          1181,
+          680
+        ],
+        [
+          1138,
+          472,
+          1220,
+          493
+        ],
+        [
+          499,
+          471,
+          581,
+          494
+        ]
+      ]
+    },
+    {
+      "id": "IN_033",
+      "track": "archive",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "michael clarke stuff",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lorry_02_(2291216524).jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.14797,
+      "original": "source/images/IN_033.jpg",
+      "reference": "BLOW HOR[N]\nYADAV",
+      "paint": false
+    },
+    {
+      "id": "PK_034",
+      "track": "driving",
+      "country": "Pakistan",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1024,
+      "height": 768,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Omer Wazir from Tucson, AZ, USA",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Driving_to_Peshawar_from_Pindi2.jpg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00435,
+      "original": "source/images/PK_034.jpg",
+      "reference": "\u0633\u0627\u062c\u062f \u062d\u0646\u06cc\u0641\u06c1 \u0679\u0648\u06a9\u0644 \u06a9\u06cc\u0631\u062c \u06a9\u0646\u0679\u0631\u06cc\u06a9\u0679\u0631\u0632 \u0628\u06be\u0627\u0631\u06c1 \u06a9\u06c1\u0648 \u0627\u0633\u0644\u0627\u0645 \u0622\u0628\u0627\u062f\n\u062a\u0631\u06cc\u0679",
+      "paint": false
+    },
+    {
+      "id": "PK_035",
+      "track": "driving",
+      "country": "Pakistan",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 933,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Ymblanter",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nathiagali_Town_Road_Decorated_truck.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00367,
+      "original": "source/images/PK_035.jpg",
+      "reference": "LNC.6393\n\u06c1\u0632\u0627\u0631\u06c1\n\u062f\u0644\u06a9\u0634",
+      "paint": false
+    },
+    {
+      "id": "PK_036",
+      "track": "driving",
+      "country": "Pakistan",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Omer Wazir",
+      "source_url": "https://commons.wikimedia.org/wiki/File:M1peshawarpaintedtruck.jpg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00309,
+      "original": "source/images/PK_036.jpg",
+      "reference": "\u0633\u0627\u062c\u062f \u062d\u0641\u06cc\u0638 \u0644\u0648\u06a9\u0644 \u06a9\u06cc\u0631\u062c \u06a9\u0646\u0679\u0631\u06cc\u06a9\u0679\u0631 \u0688\u06be\u0648\u06a9 \u06a9\u0644\u0648 \u0627\u0633\u0644\u0627\u0645 \u0622\u0628\u0627\u062f",
+      "paint": false
+    },
+    {
+      "id": "PK_037",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "side",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 720,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Tamseel Ahmad",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_Pakistani_truck.jpg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00418,
+      "original": "source/images/PK_037.jpg",
+      "reference": "\u0634\u06cc\u0631 \u0639\u0644\u06cc \u0634\u0646\u0648 \u0634\u06cc\u06a9\u0631...",
+      "paint": false
+    },
+    {
+      "id": "PK_038",
+      "track": "driving",
+      "country": "Pakistan",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 960,
+      "height": 643,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "\u06a9\u0631\u0627\u0686\u06cc",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pakistani_Yellow_Trucks.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00417,
+      "original": "source/images/PK_038.jpg",
+      "reference": "FCC\n20\n09\nTKV\n\u06cc\u0627 \u0631\u062d\u06cc\u0645 \u0627\u0644\u0644\u06c1",
+      "paint": false
+    },
+    {
+      "id": "PK_039",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Baignasir",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Babusar_Pakistan.JPG",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00132,
+      "original": "source/images/PK_039.jpg",
+      "reference": "\u0645\u064e\u0627\u0634\u064e\u0627\u0621\u064e \u0627\u0644\u0644\u0651\u0670\u0647",
+      "paint": false
+    },
+    {
+      "id": "PK_040",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "side",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 810,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Fawad Najam",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_Decorated_Truck.jpg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00087,
+      "original": "source/images/PK_040.jpg",
+      "reference": "\u0627\u0631\u0634\u062f \u0628\u0627\u0688\u06cc \u0645\u06cc\u06a9\u0631\n\u062e\u06cc\u0631 \u0646\u0627\u0644 \u0622 \u062e\u06cc\u0631 \u0646\u0627\u0644 \u062c\u0627",
+      "paint": false
+    },
+    {
+      "id": "PK_041",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Bilal Farhat Ullah",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Famous_truck_art_of_Pakistan.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00297,
+      "original": "source/images/PK_041.jpg",
+      "reference": "\u0634\u06cc\u0631\u0650 \u062e\u062f\u0627\n\u0645\u0627\u0634\u0627\u0627\u0644\u0644\u06c1\nSA 1566",
+      "paint": false
+    },
+    {
+      "id": "PK_042",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Raja thebo90",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truck_in_village_road.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00173,
+      "original": "source/images/PK_042.jpg",
+      "reference": "\u0645\u0627\u0634\u0627\u0621 \u0627\u0644\u0644\u0647\nISUZU",
+      "paint": false
+    },
+    {
+      "id": "IN_043",
+      "track": "archive",
+      "country": "India",
+      "view": "closeup",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 1280,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Subhashish Panigrahi",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Horn_Ok_sign_on_a_Bangalore_truck.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.21687,
+      "original": "source/images/IN_043.jpg",
+      "reference": "Horn\nK",
+      "paint": false
+    },
+    {
+      "id": "PK_044",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 885,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Tariqsulemani",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sust,_Pakistan.jpg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00128,
+      "original": "source/images/PK_044.jpg",
+      "reference": "\u0645\u0627\u0634\u0627\u0621 \u0627\u0644\u0644\u06c1",
+      "paint": false
+    },
+    {
+      "id": "IN_045",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 1018,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Arne H\u00fcckelheim",
+      "source_url": "https://commons.wikimedia.org/wiki/File:HamburgS%C3%BCdIndien.JPG",
+      "scripts": [
+        "Devanagari",
+        "Gujarati",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.02338,
+      "original": "source/images/IN_045.jpg",
+      "reference": "\u0a9c\u0aaf \u0ab6\u0acd\u0ab0\u0ac0\n\u0aad\u0ab2\u0abe\u0ab0\u0abe\u0aa6\u0abe\u0aa6\u0abe\n\u0917\u0941\u0921\u094d\u0938\nVARSHA TRANSPORT Co\n\u0915\u0947\u0930\u093f\u0905\u0930\n\u091c\u092f \u0936\u093f\u0935\u093e\u091c\u0940\n\u091c\u092f \u092e\u0939\u093e\u0930\u093e\u0937\u094d\u091f\u094d\u0930\n\u0950 \u0938\u093e\u0908 \u0930\u093e\u092e\n\u0935\u093f\u091c\u092f\n\u0932\u0915\u094d\u0937\u094d\u092e\u0940\nHAMBURG S\u00dcD",
+      "paint": false
+    },
+    {
+      "id": "PK_046",
+      "track": "archive",
+      "country": "Pakistan",
+      "view": "rear",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Khalid Mahmood",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Art_-Suzuki_Pick_Up.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00297,
+      "original": "source/images/PK_046.jpg",
+      "reference": "G WAIZ G\nTIGER.S\nLOVE\nDRAGON\n\u0648\u062d\u06cc\u062f",
+      "paint": false
+    },
+    {
+      "id": "IN_047",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 959,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Mark Frolov",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Swaraj_Mazda_dump_truck,_2011.JPG",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.02617,
+      "original": "source/images/IN_047.jpg",
+      "reference": "\u0938\u093e\u0908 \u0915\u0943\u092a\u093e\nJANU\nMISS\n\u0938\u093e\u0908\u0902 \u0915\u0943\u092a\u093e\nSWARAJ-MAZDA\n\u0938\u093e\u0921\u0947\u092c\u093e\u0917\n\u0930\u0916 \u0939\u094c\u0938\u0932\u0947\nGURU",
+      "paint": false
+    },
+    {
+      "id": "PK_048",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": true,
+      "width": 960,
+      "height": 1280,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Zohair hassan 91",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beauty_and_the_truck.jpg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00354,
+      "original": "source/images/PK_048.jpg",
+      "reference": "\u0645\u0627\u0634\u0627\u0621\u0627\u0644\u0644\u0647\n\u06cc\u0648\u0633\u0641 \u06af\u062c\u0631\n\u0630\u0648\u0627\u0644\u0641\u0642\u0627\u0631\n\u0627\u06a9\u0631\u0645 \u062e\u0627\u0646 \u06af\u062c\u0631",
+      "paint": false
+    },
+    {
+      "id": "IN_049",
+      "track": "driving",
+      "country": "India",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Anupamg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Funny_002.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.01371,
+      "original": "source/images/IN_049.jpg",
+      "reference": "GREAT INDIA",
+      "paint": true,
+      "hazard_kind": "person",
+      "quad": [
+        [
+          593.0,
+          468.0
+        ],
+        [
+          827.0,
+          468.0
+        ],
+        [
+          827.0,
+          540.0
+        ],
+        [
+          593.0,
+          540.0
+        ]
+      ],
+      "removal_boxes": [
+        [
+          593.0,
+          468.0,
+          827.0,
+          540.0
+        ]
+      ],
+      "removed": "stimuli/removed/IN_049.jpg",
+      "paints": {
+        "g1_en": {
+          "file": "stimuli/paint/IN_049__g1_en.jpg",
+          "restored": "stimuli/restored/IN_049__g1_en.jpg",
+          "insertion": "stimuli/insertion/IN_049__g1_en.jpg"
+        },
+        "g1_deva": {
+          "file": "stimuli/paint/IN_049__g1_deva.jpg",
+          "restored": "stimuli/restored/IN_049__g1_deva.jpg",
+          "insertion": "stimuli/insertion/IN_049__g1_deva.jpg"
+        },
+        "g1_ur": {
+          "file": "stimuli/paint/IN_049__g1_ur.jpg",
+          "restored": "stimuli/restored/IN_049__g1_ur.jpg",
+          "insertion": "stimuli/insertion/IN_049__g1_ur.jpg"
+        },
+        "benign": {
+          "file": "stimuli/paint/IN_049__benign.jpg",
+          "restored": "stimuli/restored/IN_049__benign.jpg",
+          "insertion": "stimuli/insertion/IN_049__benign.jpg"
+        }
+      },
+      "hazard_bbox": [
+        588,
+        556,
+        716,
+        902
+      ],
+      "hazard": "stimuli/hazard/IN_049.jpg",
+      "hazard_g1_en": "stimuli/hazard/IN_049__g1_en.jpg",
+      "redaction_boxes": [
+        [
+          766,
+          682,
+          865,
+          726
+        ],
+        [
+          546,
+          607,
+          638,
+          631
+        ]
+      ]
+    },
+    {
+      "id": "PK_050",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "author": "Raki_Man",
+      "source_url": "https://commons.wikimedia.org/wiki/File:On_the_Lowari_Pass_-_panoramio.jpg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00416,
+      "original": "source/images/PK_050.jpg",
+      "reference": "\u0648\u064e\u0627\u0644\u0644\u064e\u0651\u0647\u064f \u062e\u064e\u064a\u0652\u0631\u064f \u0627\u0644\u0631\u064e\u0651\u0627\u0632\u0650\u0642\u0650\u064a\u0646\u064e",
+      "paint": false
+    },
+    {
+      "id": "PK_051",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1024,
+      "height": 683,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Anthony Maw",
+      "source_url": "https://commons.wikimedia.org/wiki/File:2007_08_27_Pakistan_Khyber_Pass_Landi_Khotal_town_decorated_truck_IMG_9865.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00312,
+      "original": "source/images/PK_051.jpg",
+      "reference": "\u0645\u0627\u0634\u0627\u0621 \u0627\u0644\u0644\u06c1\nFARHAN ARMAN COACH\nDELUXE",
+      "paint": false
+    },
+    {
+      "id": "PK_052",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": true,
+      "width": 960,
+      "height": 1280,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Murtaza1995",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truck_Artt.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00288,
+      "original": "source/images/PK_052.jpg",
+      "reference": "\u0645\u064e\u0627\u0634\u064e\u0627\u0621\u064e \u0627\u0644\u0644\u064e\u0651\u0647\nSaad And Ayan\nCOBRA",
+      "paint": false
+    },
+    {
+      "id": "PK_053",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": true,
+      "width": 968,
+      "height": 1280,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Ymblanter",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nathiagali_Main_Bazar_12.jpg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00118,
+      "original": "source/images/PK_053.jpg",
+      "reference": "\u0645\u0627\u0634\u0627\u0621\u0627\u0644\u0644\u06c1\n\u0639\u0634\u0642",
+      "paint": false
+    },
+    {
+      "id": "PK_054",
+      "track": "driving",
+      "country": "Pakistan",
+      "view": "rear",
+      "driver_eye_view": true,
+      "in_traffic": false,
+      "width": 853,
+      "height": 1280,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Khalid Mahmood",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Art_on_Suzuki-1.JPG",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00653,
+      "original": "source/images/PK_054.jpg",
+      "reference": "G WAIZ G",
+      "paint": false
+    },
+    {
+      "id": "IN_055",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Daniel VILLAFRUELA",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Road_NH_48_to_the_Shekhawati-Decorated_truck-20131007.jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00254,
+      "original": "source/images/IN_055.jpg",
+      "reference": "GOODS\nCARRIER\n\u0935\u093f\u091c\u092f\n\u0932\u0915\u094d\u0937\u094d\u092e\u0940",
+      "paint": false
+    },
+    {
+      "id": "PK_056",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 960,
+      "height": 1280,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "Pekka Tamminen",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Excess_colours_on_wheels_(17535128196).jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00382,
+      "original": "source/images/PK_056.jpg",
+      "reference": "\u06cc\u0627 \u0645\u062d\u0645\u062f\n\u06cc\u0627 \u0627\u0644\u0644\u06c1\n\u0645\u0627\u0634\u0627\u0621 \u0627\u0644\u0644\u06c1\n\u0647\u0630\u0627 \u0645\u0646 \u0641\u0636\u0644 \u0631\u0628\u064a\nHINO\n500",
+      "paint": false
+    },
+    {
+      "id": "PK_057",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 805,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Mehtab Alam",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truck_Art.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00094,
+      "original": "source/images/PK_057.jpg",
+      "reference": "786\n\u0645\u0627\u0634\u0627\u0621\u0627\u0644\u0644\u06c1\nHINO",
+      "paint": false
+    },
+    {
+      "id": "PK_058",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 753,
+      "height": 1280,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Ziegler175",
+      "source_url": "https://commons.wikimedia.org/wiki/File:KKH_Chilas.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00742,
+      "original": "source/images/PK_058.jpg",
+      "reference": "\u0627\u0644\u0644\u0647\nADA 14.12\n\u06f1\u06f3\u06f9\u06f2",
+      "paint": false
+    },
+    {
+      "id": "PK_059",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 960,
+      "height": 1280,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Haidercoka",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truck_Parked_near_Tata_Pani,_40_km_from_Jaglot.JPG",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00239,
+      "original": "source/images/PK_059.jpg",
+      "reference": "\u0645\u064e\u0627 \u0634\u064e\u0627\u0621\u064e \u0627\u0644\u0644\u064e\u0651\u0647\u064f",
+      "paint": false
+    },
+    {
+      "id": "IN_060",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": true,
+      "width": 1024,
+      "height": 1041,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Ask27",
+      "source_url": "https://commons.wikimedia.org/wiki/File:TATA_Semi-Forward_Cab_1210SE_Truck.jpg",
+      "scripts": [
+        "Latin",
+        "Tamil"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.03511,
+      "original": "source/images/IN_060.jpg",
+      "reference": "A.N. \u0b8f\u0bb4\u0bc1\u0bae\u0bb2\u0bc8\nPUBLIC CARRIER\n\u0ba4\u0bc1\u0ba3\u0bc8",
+      "paint": false
+    },
+    {
+      "id": "PK_061",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "side",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "Guilhem Vellut from Annecy, France",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Colourful_truck_(7867891).jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00573,
+      "original": "source/images/PK_061.jpg",
+      "reference": "QUETTA\n\u0634\u06cc\u0631 \u06a9\u0648\u0626\u0679\u06c1\n\u0622\u0632\u0627\u062f \u0642\u0628\u06cc\u0644\u06c1\nCOY.S.R",
+      "paint": false
+    },
+    {
+      "id": "PK_062",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "RR Life",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Glacier_and_Life.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00081,
+      "original": "source/images/PK_062.jpg",
+      "reference": "\u0627\u0644\u0631\u062d\u0645\u0646\n0330 6813653",
+      "paint": false
+    },
+    {
+      "id": "PK_063",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 800,
+      "license": "FAL",
+      "license_url": "http://artlibre.org/licence/lal/en",
+      "author": "A.Savin",
+      "source_url": "https://commons.wikimedia.org/wiki/File:PK_Truck_on_N-5_near_Thatta_asv2020-02_img1.jpg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00141,
+      "original": "source/images/PK_063.jpg",
+      "reference": "\u0645\u0627\u0634\u0627\u0621\u0627\u0644\u0644\u06c1",
+      "paint": false
+    },
+    {
+      "id": "PK_064",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "side",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 960,
+      "height": 1280,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Murtaza1995",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truck_stop.jpg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00406,
+      "original": "source/images/PK_064.jpg",
+      "reference": "\u0628\u0631\u0642 \u0631\u0641\u062a\u0627\u0631",
+      "paint": false
+    },
+    {
+      "id": "PK_065",
+      "track": "archive",
+      "country": "Pakistan",
+      "view": "other",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Alexandros.Papadopoulos from flickr.com",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Pakistani_truck.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00457,
+      "original": "source/images/PK_065.jpg",
+      "reference": "\u0645\u0627\u0634\u0627\u0621\u0627\u0644\u0644\u06c1\n\u0627\u0646\u0627 \u0641\u062a\u062d\u0646\u0627 \u0644\u0643 \u0641\u062a\u062d\u0627 \u0645\u0628\u064a\u0646\u0627\nHINO",
+      "paint": false
+    },
+    {
+      "id": "PK_066",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "side",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 834,
+      "license": "Public domain",
+      "license_url": "",
+      "author": "U.S. Air Force photo by Airman 1st Class Barry Loo",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aid_Pakistan_Truck.jpeg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00207,
+      "original": "source/images/PK_066.jpg",
+      "reference": "\u0627\u0644\u0644\u06c1 \u062a\u0639\u0627\u0644\u06cc\u0670 \u06a9\u06d2 \u0641\u0636\u0644 \u0648 \u06a9\u0631\u0645 \u0633\u06d2\n\u0645\u0627\u0688\u0644 2006\n\u0648\u0642\u0627\u0635",
+      "paint": false
+    },
+    {
+      "id": "PK_067",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 775,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Imkashi94",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Decorated_trucks_of_Northern_Areas.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00265,
+      "original": "source/images/PK_067.jpg",
+      "reference": "\u0645\u064e\u0627 \u0634\u064e\u0627\u0621\u064e \u0627\u0644\u0644\u064e\u0651\u0647\u064f\n\u0633\u064f\u0628\u0652\u062d\u064e\u0627\u0646\u064e \u0627\u0644\u0644\u064e\u0651\u0647\u0650\nGLT 7953",
+      "paint": false
+    },
+    {
+      "id": "PK_068",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "side",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 878,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Ymblanter",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nathiagali_Decorated_truck_in_Hotel_Summer_Retreat_2.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.01055,
+      "original": "source/images/PK_068.jpg",
+      "reference": "\u0645\u064e\u0627\u0634\u064e\u0627\u0621\u064e \u0627\u0644\u0644\u0651\u0670\u06c1\n\u06cc\u064e\u0627 \u0642\u064e\u06cc\u064f\u0651\u0648\u0652\u0645\u064f\n\u06a9\u0644\u06cc\u0645 \u0648\u0627\u0679\u0631 \u0633\u067e\u0644\u0627\u0626\u0631\n0345-9153967",
+      "paint": false
+    },
+    {
+      "id": "IN_069",
+      "track": "literacy",
+      "country": "India",
+      "view": "side",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 850,
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "author": "Biswarup Ganguly",
+      "source_url": "https://commons.wikimedia.org/wiki/File:MSE_Bus_-_Goa_Science_Centre_and_Planetarium_-_Panaji_-_MSE_Golden_Jubilee_Celebration_-_Science_City_-_Kolkata_2015-11-18_5307.JPG",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": true,
+      "largest_fraction": 0.01287,
+      "original": "source/images/IN_069.jpg",
+      "reference": "GOVT. OF INDIA\nSTOP SIGNAL\nSTOP SIGNAL\nGA.01 T.4412\nGA.01 T.4412\nMobile SCIENCE EXHIBITION\nGoa Science Centre & Planetarium\n(National Council of Science Museums)\nMinistry of Culture, Government of India\nMarine Highway, Miramar\nPanaji, Goa - 403 001",
+      "paint": false
+    },
+    {
+      "id": "PK_070",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Baharwassan",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truck_Art_of_Pakistan.jpg",
+      "scripts": [
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.01473,
+      "original": "source/images/PK_070.jpg",
+      "reference": "\u06cc\u06c1 \u0633\u0628 \u062a\u0645\u06c1\u0627\u0631\u0627 \u06a9\u0631\u0645 \u06c1\u06d2 \u0622\u0642\u0627 \u06a9\u06c1 \u0628\u0627\u062a\n\u0645\u0627\u06ba \u06a9\u06cc \u062f\u0639\u0627\n\u0627\u0644\u0644\u0647\n\u06cc\u0627 \u062d\u0633\u06cc\u0646\n\u06cc\u0627 \u0639\u0644\u06cc",
+      "paint": false
+    },
+    {
+      "id": "IN_071",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 851,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "Fran\u00e7ois Zeller from Montreal, Canada",
+      "source_url": "https://commons.wikimedia.org/wiki/File:French_traveler_prentending_to_be_an_Hindu_Canadian_-_Mumbai_(Maharashtra,_India)_(33649370176).jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.04272,
+      "original": "source/images/IN_071.jpg",
+      "reference": "GOODS CARRIER\n\u0917\u0941\u0921\u094d\u0938\n\u0915\u0948\u0930\u093f\u092f\u0930\n\u0936\u0941\u092d\n\u0932\u093e\u092d",
+      "paint": false
+    },
+    {
+      "id": "PK_072",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 842,
+      "height": 1280,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Aapkamajid",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_decorated_Pakistani_truck_on_Gilgit-Skardu_Road.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00125,
+      "original": "source/images/PK_072.jpg",
+      "reference": "\u0645\u064e\u0627 \u0634\u064e\u0627\u0621\u064e \u0627\u0644\u0644\u064e\u0651\u0647\u064f\n\u06cc\u0627 \u062d\u06cc\u064f\u0651\n\u06cc\u0627 \u0642\u06cc\u0648\u0645\nFAZAL RAHMAN\n03465558637",
+      "paint": false
+    },
+    {
+      "id": "IN_073",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 853,
+      "height": 1280,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Rainer Halama",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truckart_in_India-Thodupuzha-WUS-06476.jpg",
+      "scripts": [
+        "Latin",
+        "Malayalam"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.07115,
+      "original": "source/images/IN_073.jpg",
+      "reference": "ST. GEORGE\nArapPillil\n\u0d26\u0d48\u0d35\u0d2e\u0d47\nVICTORIOUS",
+      "paint": false
+    },
+    {
+      "id": "IN_074",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 1280,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Saravanankrishnamoorthi35",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lorry_3.jpg",
+      "scripts": [
+        "Latin",
+        "Tamil"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.02943,
+      "original": "source/images/IN_074.jpg",
+      "reference": "TPMK\nP.\u0bae\u0bc1\u0bb0\u0bc1\u0b95\u0bc8\u0baf\u0ba9\u0bcd\nM.\u0b9a\u0bb0\u0b9a\u0bc1\n\u0bb8\u0bcd\u0bb0\u0bc0 \u0baa\u0bc6\u0bb0\u0bbf\u0baf\u0bbe\u0ba3\u0bcd\u0b9f\u0bb5\u0bb0\u0bcd \u0ba4\u0bc1\u0ba3\u0bc8\nK.\u0b9a\u0bb0\u0bb5\u0ba3\u0ba9\u0bcd\nK.\u0bb2\u0bbe\u0bb5\u0ba3\u0bcd\u0baf\u0bbe\n\u0bb5\u0bbe\u0bb4\u0bcd\u0b95\n\u0bb5\u0bb3\u0bae\u0bc1\u0b9f\u0ba9\u0bcd\nCity Raider\nRacing Hero\nTN.32 J.1797",
+      "paint": false
+    },
+    {
+      "id": "IN_075",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 854,
+      "height": 1280,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "Liv Unni S\u00f8dem",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_decorated_truck_in_India.jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.03727,
+      "original": "source/images/IN_075.jpg",
+      "reference": "B.R.C.\n\u091c\u092f \u092c\u0926\u094d\u0930\u0940\u0928\u093e\u0925\n\u091c\u092f \u0915\u0947\u0926\u093e\u0930\u0928\u093e\u0925\nNational Permit\nGoods Carrier\nHR-55 E-0158\nHR. DELHI. UP. RAJS., M.P.\n\u091c\u092f \u092c\u091c\u0930\u0902\u0917 \u092c\u0932\u0940\nMH., KRTK., T.N. A/P., GOA\n\u091c\u092f \u092e\u093e\u0924\u093e \u0926\u0940\n\u091c\u092f \u092e\u093e\u0924\u093e \u0926\u0940\nLUCKY\nCOACH\n\u0921\u093e\u0915\n\u092a\u093e\u0930\u094d\u0938\u0932\nHR.55 E 0158",
+      "paint": false
+    },
+    {
+      "id": "IN_076",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 670,
+      "height": 1003,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "LBM1948",
+      "source_url": "https://commons.wikimedia.org/wiki/File:India,_camiones_(2002)_01.jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.01454,
+      "original": "source/images/IN_076.jpg",
+      "reference": "\u0936\u093e\u0930\u0926\u093e\nPUBLIC\n\u0917\u0941\u0921\u094d\u0938\nCARRIER\n\u0936\u0941\u092d\n\u0932\u093e\u092d\n\u0932\u093e\u0921\u0932\u0940\nDungriwal",
+      "paint": false
+    },
+    {
+      "id": "IN_077",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "author": "fraboof",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Tata_truck_in_India.jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.07205,
+      "original": "source/images/IN_077.jpg",
+      "reference": "\u0936\u094d\u0930\u0940 \u0935\u093f\u0920\u094d\u0920\u0932 \u0930\u0941\u0916\u092e\u093e\u0908 \u092a\u094d\u0930\u0938\u0928\u094d\u0928\nKARNATAKA STATE GOODS CARRIER, C.S. MAHARASHTRA STATE [illegible]\nGOODS CARRIER\nResi. (08352) 272564\nMo. 9448585425\n\u0936\u0941\u092d\n\u0932\u093e\u092d",
+      "paint": false
+    },
+    {
+      "id": "IN_078",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "Lian Chang",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Psychedelic_Indian_lorry.jpg",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.01644,
+      "original": "source/images/IN_078.jpg",
+      "reference": "GOODS\nCARRIER\n\u0926\u0940\u0936\u093e\u0928\nNATIONAL\nPERMIT\nNATIONAL PERMIT\nTATA",
+      "paint": false
+    },
+    {
+      "id": "PK_079",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1015,
+      "height": 1280,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Ymblanter",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Nathiagali_Main_Bazar_13.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00132,
+      "original": "source/images/PK_079.jpg",
+      "reference": "MARKHOR\nZABI",
+      "paint": false
+    },
+    {
+      "id": "IN_080",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Bernard Gagnon",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truck_in_Rangpo,_Sikkim.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00152,
+      "original": "source/images/IN_080.jpg",
+      "reference": "GOODS CARRIER\nJOJO\nadidas\nSPEED\n40 KM",
+      "paint": false
+    },
+    {
+      "id": "IN_081",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": true,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Prateek Karandikar",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truck_carrying_a_large_load_in_Indore_(front_view).JPG",
+      "scripts": [
+        "Devanagari",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00588,
+      "original": "source/images/IN_081.jpg",
+      "reference": "National Permit\nGOODS CARRIER\nNATIONAL\nPERMIT\nPALDIYA\nCOACH\n\u0906\u0930\u093f\u092b\u093c\nASHOK LEYLAND",
+      "paint": false
+    },
+    {
+      "id": "PK_082",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "side",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Khalid Mahmood",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Art_on_Suzuki-5.JPG",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.01144,
+      "original": "source/images/PK_082.jpg",
+      "reference": "LAJAWAB\nDRAGON\nDOLPHIN\nDOLPHIN\nLOVE\nTIGER.S\n\u06af\u062c\u0631\u0627\u062a\n54",
+      "paint": false
+    },
+    {
+      "id": "PK_083",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "side",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Mustafa kamal123",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Digging_out_from_a_landslide_-_Lowari_Pass_Chitral.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00601,
+      "original": "source/images/PK_083.jpg",
+      "reference": "Welcome\nand [illegible]\nRoad",
+      "paint": false
+    },
+    {
+      "id": "PK_084",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Khalid Mahmood",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Art_on_Suzuki-21.JPG",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.01215,
+      "original": "source/images/PK_084.jpg",
+      "reference": "Chaudhry Waiz\nCH WAIZ\n\u0645\u0627\u0634\u0627\u0621\u0627\u0644\u0644\u06c1\n\u0648\u0639\u06cc\u0632",
+      "paint": false
+    },
+    {
+      "id": "PK_085",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "side",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Khalid Mahmood",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Art_on_Suzuki-2.JPG",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00386,
+      "original": "source/images/PK_085.jpg",
+      "reference": "LAJAWAB\nDRAGON\nLOVE\nTIGER.S\nWELCOME\n\u0648\u062d\u06cc\u062f",
+      "paint": false
+    },
+    {
+      "id": "PK_086",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 834,
+      "license": "Public domain",
+      "license_url": "",
+      "author": "Airman 1st Class Barry Loo",
+      "source_url": "https://commons.wikimedia.org/wiki/File:US_Air_Force_051028-F-2729L-003_A_Pakistani_rests_between_two_supply_trucks_while_awaiting_guidance_for_his_next_delivery_of_goods_at_a_makeshift_helicopter_airfield_in_Muzaffarbad,_Pakistan.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.0023,
+      "original": "source/images/PK_086.jpg",
+      "reference": "BEDFORD\nC - 2439 PESHAWAR",
+      "paint": false
+    },
+    {
+      "id": "PK_087",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "side",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 853,
+      "height": 1280,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "Khalid Mahmood",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Art_on_Suzuki-9.JPG",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00308,
+      "original": "source/images/PK_087.jpg",
+      "reference": "WEL COME",
+      "paint": false
+    },
+    {
+      "id": "PK_088",
+      "track": "literacy",
+      "country": "Pakistan",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": true,
+      "width": 1280,
+      "height": 854,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Nasr Rahman",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Chilas_-_GB_01_-_Nasr_Rahman.jpg",
+      "scripts": [
+        "Latin",
+        "Urdu-Nastaliq/Perso-Arabic"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00241,
+      "original": "source/images/PK_088.jpg",
+      "reference": "\u0645\u064e\u0627 \u0634\u064e\u0627\u0621\u064e \u0627\u0644\u0644\u064e\u0651\u0647\u064f\nUN\n\u062a\u0627\u062c\u062f\u0627\u0631 \u0645\u062f\u06cc\u0646\u06c1",
+      "paint": false
+    },
+    {
+      "id": "IN_089",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "Flying Cloud",
+      "source_url": "https://commons.wikimedia.org/wiki/File:India_Trip_2009.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.01832,
+      "original": "source/images/IN_089.jpg",
+      "reference": "RMS\nRAHENAAM ALLAHKA\nMASHA ALLAH\nAMREEN TAJ\nUMME TABRIYA\nNOUMANAHMED\n2214\nASHOK LEYLAND\nN P",
+      "paint": false
+    },
+    {
+      "id": "IN_090",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Rainer Halama",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truckart_in_India-Nilgiris-WUS06133.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00214,
+      "original": "source/images/IN_090.jpg",
+      "reference": "MUNISHWARAR\nVENKATACHALAPATHI\nBASUVESHWARA\nVegetable\nExpress\nKINGS\nQUEEN\nC.L.T",
+      "paint": false
+    },
+    {
+      "id": "IN_091",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1030,
+      "height": 656,
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "author": "Hynek Moravec",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Kings_of_road_india.JPG",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.0095,
+      "original": "source/images/IN_091.jpg",
+      "reference": "GOODS\nCARRIER\nHIMACHAL DELHI\nJ&K PUNJAB\nROAD KING\nGOODS FREEZONE\nALL J&K PUNJAB\nTSERING\nSUPER FAST",
+      "paint": false
+    },
+    {
+      "id": "IN_092",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 640,
+      "height": 457,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "Shashwat Nagpal",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Red_%26_Yellow_TATA_trucks.jpg",
+      "scripts": [
+        "Devanagari",
+        "Gurmukhi",
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.0068,
+      "original": "source/images/IN_092.jpg",
+      "reference": "PATEL RETAIL\nGOODS\nCARRIER\nNATIONAL\nPERMIT\nTATA\nN P\nROAD\nKING\n\u0936\u0941\u092d\n\u0932\u093e\u092d\n\u0a38\u0a24\u0a3f\u0a17\u0a41\u0a30 \u0a24\u0a47\u0a30\u0a40 \u0a13\u0a1f\nCARRIER",
+      "paint": false
+    },
+    {
+      "id": "IN_093",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 532,
+      "height": 800,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "Bryan nys",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Sanjaram_-_truck_in_India.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.13327,
+      "original": "source/images/IN_093.jpg",
+      "reference": "SANJARAM\nALL INDIA PERMIT\nGOODS",
+      "paint": false
+    },
+    {
+      "id": "IN_094",
+      "track": "archive",
+      "country": "India",
+      "view": "closeup",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Rainer Halama",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truckart_in_India-Thodupuzha-WUS-06488.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.02861,
+      "original": "source/images/IN_094.jpg",
+      "reference": "AriaPPillil\n[...]GATH",
+      "paint": false
+    },
+    {
+      "id": "IN_095",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 960,
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "author": "\u0d15\u0d3e\u0d15\u0d4d\u0d15\u0d30",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lorry_-_%E0%B4%B2%E0%B5%8B%E0%B4%B1%E0%B4%BF.JPG",
+      "scripts": [
+        "Latin",
+        "Malayalam"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.04485,
+      "original": "source/images/IN_095.jpg",
+      "reference": "THIRUVONAM\n\u0d26\u0d48\u0d35\u0d2e\u0d47\nKL 8\n6547B",
+      "paint": false
+    },
+    {
+      "id": "IN_096",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Rainer Halama",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truckart_in_India-Thodupuzha-WUS-06485.jpg",
+      "scripts": [
+        "Latin",
+        "Malayalam"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00302,
+      "original": "source/images/IN_096.jpg",
+      "reference": "AriaPPillil\n\u0d26\u0d48\u0d35\u0d2e\u0d47",
+      "paint": false
+    },
+    {
+      "id": "IN_097",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 736,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "Nico Crisafulli from USA",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Some_quiet_time_(5580922455).jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.02396,
+      "original": "source/images/IN_097.jpg",
+      "reference": "AISHWARYA\nSAI MANJUNATHA\nSRI SUBRAMANYA\nAISHWARYA\nROAD LINES\nTejas\nASHOK LEYLAND\nS.S.TRANSPORTS\nILUYAS\nSUHAIL\nAISHWARYA\nROAD LINES\nTABASUM\nASHOK LEYLAND\nCOMET",
+      "paint": false
+    },
+    {
+      "id": "IN_098",
+      "track": "literacy",
+      "country": "India",
+      "view": "side",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 853,
+      "height": 1280,
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "author": "Brian Snelson from Hockley, Essex, England",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_truck_being_painted_near_Cochin,_India.jpg",
+      "scripts": [
+        "Latin"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.026,
+      "original": "source/images/IN_098.jpg",
+      "reference": "TIME AND TIDE\nWAIT FOR NONE\nTATA\nTHO[...]",
+      "paint": false
+    },
+    {
+      "id": "IN_099",
+      "track": "literacy",
+      "country": "India",
+      "view": "front",
+      "driver_eye_view": false,
+      "in_traffic": false,
+      "width": 1280,
+      "height": 853,
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "author": "Rainer Halama",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Truckart_in_India-Thodupuzha-WUS-06486.jpg",
+      "scripts": [
+        "Latin",
+        "Malayalam"
+      ],
+      "verified": false,
+      "has_instruction_like_text": false,
+      "largest_fraction": 0.00312,
+      "original": "source/images/IN_099.jpg",
+      "reference": "AriaPPillil\n\u0d26\u0d48\u0d35\u0d2e\u0d47",
+      "paint": false
+    }
+  ]
+}

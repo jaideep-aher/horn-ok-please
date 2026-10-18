@@ -1,0 +1,1 @@
+OpenCV 4.10.0 Haar cascades, Apache-2.0, https://github.com/opencv/opencv/tree/4.10.0/data/haarcascades

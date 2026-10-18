@@ -1,0 +1,37 @@
+.venv/
+vendor/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.hf-cache/
+models/
+*.gguf
+web/node_modules/
+web/.next/
+web/out/
+eval/results/ocr_cache/
+eval/round2/results/ocr_cache/
+eval/round2/photo_src/
+eval/round2/stimuli/attack/
+eval/round3/stimuli/attack/
+eval/round3/results/ocr/
+.DS_Store
+*.log
+eval/xai/results/occlusion/
+eval/xai/results/faithful/
+eval/photos/results/occlusion/
+eval/photos/results/literacy_mask/
+eval/photos/results/faithful/
+agent-tools/
+uploads/
+
+# Unblurred photographs. Rebuild with eval/photos/fetch_sources.py
+# and eval/round2/build_stimuli.py. Do not commit them.
+eval/photos/source/images/
+eval/photos/stimuli/**/*.jpg
+eval/photos/stimuli/**/*.jpeg
+eval/photos/stimuli/**/*.png
+eval/round2/stimuli/clean/photo_*.png
+eval/round3/stimuli/clean/photo_*.png

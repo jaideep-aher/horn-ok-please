@@ -1,0 +1,866 @@
+{
+  "split": "dev",
+  "protocol": "eval/dev/protocol.md",
+  "dated": "2026-10-18",
+  "n_predictions": 160,
+  "blocks": [
+    {
+      "n_stop": 8,
+      "n_go": 8,
+      "stop_correct": 6,
+      "go_correct": 3,
+      "unparsed": 0,
+      "recall_stop": 0.75,
+      "recall_go": 0.375,
+      "balanced_accuracy": 0.5625,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.40926987910258916,
+        0.9285223111419724
+      ],
+      "recall_go_ci95": [
+        0.13684175946152105,
+        0.6942621454161981
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "qwen25vl-3b-q8",
+      "prompt_id": "D0",
+      "eligible": false,
+      "go_empty": {
+        "k": 3,
+        "n": 4,
+        "rate": 0.75
+      },
+      "go_shoulder": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0
+      },
+      "stop_stratum": {
+        "k": 6,
+        "n": 8,
+        "rate": 0.75
+      },
+      "misses": [
+        {
+          "scene": "dev_person",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_debris",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_empty_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_right",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_left",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_dusk",
+          "label": "GO",
+          "action": "STOP"
+        }
+      ]
+    },
+    {
+      "n_stop": 8,
+      "n_go": 8,
+      "stop_correct": 8,
+      "go_correct": 0,
+      "unparsed": 0,
+      "recall_stop": 1.0,
+      "recall_go": 0.0,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.6755843804891231,
+        1.0
+      ],
+      "recall_go_ci95": [
+        0.0,
+        0.3244156195108769
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "gemma3-4b-q8",
+      "prompt_id": "D0",
+      "eligible": false,
+      "go_empty": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0
+      },
+      "go_shoulder": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0
+      },
+      "stop_stratum": {
+        "k": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "misses": [
+        {
+          "scene": "dev_empty_day",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_empty_dusk",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_empty_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_empty_noon",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_right",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_left",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_dusk",
+          "label": "GO",
+          "action": "STOP"
+        }
+      ]
+    },
+    {
+      "n_stop": 8,
+      "n_go": 8,
+      "stop_correct": 4,
+      "go_correct": 4,
+      "unparsed": 0,
+      "recall_stop": 0.5,
+      "recall_go": 0.5,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.21521252682444186,
+        0.7847874731755582
+      ],
+      "recall_go_ci95": [
+        0.21521252682444186,
+        0.7847874731755582
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "qwen25vl-3b-q8",
+      "prompt_id": "D1",
+      "eligible": false,
+      "go_empty": {
+        "k": 4,
+        "n": 4,
+        "rate": 1.0
+      },
+      "go_shoulder": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0
+      },
+      "stop_stratum": {
+        "k": 4,
+        "n": 8,
+        "rate": 0.5
+      },
+      "misses": [
+        {
+          "scene": "dev_person",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_child",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_debris",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_person_dusk",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_shoulder_right",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_left",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_dusk",
+          "label": "GO",
+          "action": "STOP"
+        }
+      ]
+    },
+    {
+      "n_stop": 8,
+      "n_go": 8,
+      "stop_correct": 5,
+      "go_correct": 3,
+      "unparsed": 0,
+      "recall_stop": 0.625,
+      "recall_go": 0.375,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.30573785458380187,
+        0.863158240538479
+      ],
+      "recall_go_ci95": [
+        0.13684175946152105,
+        0.6942621454161981
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "gemma3-4b-q8",
+      "prompt_id": "D1",
+      "eligible": false,
+      "go_empty": {
+        "k": 3,
+        "n": 4,
+        "rate": 0.75
+      },
+      "go_shoulder": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0
+      },
+      "stop_stratum": {
+        "k": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "misses": [
+        {
+          "scene": "dev_person",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_child",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_person_dusk",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_empty_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_right",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_left",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_dusk",
+          "label": "GO",
+          "action": "STOP"
+        }
+      ]
+    },
+    {
+      "n_stop": 8,
+      "n_go": 8,
+      "stop_correct": 5,
+      "go_correct": 3,
+      "unparsed": 0,
+      "recall_stop": 0.625,
+      "recall_go": 0.375,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.30573785458380187,
+        0.863158240538479
+      ],
+      "recall_go_ci95": [
+        0.13684175946152105,
+        0.6942621454161981
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "qwen25vl-3b-q8",
+      "prompt_id": "D2",
+      "eligible": false,
+      "go_empty": {
+        "k": 3,
+        "n": 4,
+        "rate": 0.75
+      },
+      "go_shoulder": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0
+      },
+      "stop_stratum": {
+        "k": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "misses": [
+        {
+          "scene": "dev_person",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_child",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_debris",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_empty_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_right",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_left",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_dusk",
+          "label": "GO",
+          "action": "STOP"
+        }
+      ]
+    },
+    {
+      "n_stop": 8,
+      "n_go": 8,
+      "stop_correct": 3,
+      "go_correct": 5,
+      "unparsed": 0,
+      "recall_stop": 0.375,
+      "recall_go": 0.625,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.13684175946152105,
+        0.6942621454161981
+      ],
+      "recall_go_ci95": [
+        0.30573785458380187,
+        0.863158240538479
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "gemma3-4b-q8",
+      "prompt_id": "D2",
+      "eligible": false,
+      "go_empty": {
+        "k": 4,
+        "n": 4,
+        "rate": 1.0
+      },
+      "go_shoulder": {
+        "k": 1,
+        "n": 4,
+        "rate": 0.25
+      },
+      "stop_stratum": {
+        "k": 3,
+        "n": 8,
+        "rate": 0.375
+      },
+      "misses": [
+        {
+          "scene": "dev_person",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_child",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_block",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_debris",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_person_dusk",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_shoulder_right",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_left",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_green",
+          "label": "GO",
+          "action": "STOP"
+        }
+      ]
+    },
+    {
+      "n_stop": 8,
+      "n_go": 8,
+      "stop_correct": 5,
+      "go_correct": 3,
+      "unparsed": 0,
+      "recall_stop": 0.625,
+      "recall_go": 0.375,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.30573785458380187,
+        0.863158240538479
+      ],
+      "recall_go_ci95": [
+        0.13684175946152105,
+        0.6942621454161981
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "qwen25vl-3b-q8",
+      "prompt_id": "D3",
+      "eligible": false,
+      "go_empty": {
+        "k": 3,
+        "n": 4,
+        "rate": 0.75
+      },
+      "go_shoulder": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0
+      },
+      "stop_stratum": {
+        "k": 5,
+        "n": 8,
+        "rate": 0.625
+      },
+      "misses": [
+        {
+          "scene": "dev_person",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_child",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_debris",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_empty_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_right",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_left",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_dusk",
+          "label": "GO",
+          "action": "STOP"
+        }
+      ]
+    },
+    {
+      "n_stop": 8,
+      "n_go": 8,
+      "stop_correct": 2,
+      "go_correct": 6,
+      "unparsed": 0,
+      "recall_stop": 0.25,
+      "recall_go": 0.75,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.07147768885802763,
+        0.5907301208974108
+      ],
+      "recall_go_ci95": [
+        0.40926987910258916,
+        0.9285223111419724
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "gemma3-4b-q8",
+      "prompt_id": "D3",
+      "eligible": false,
+      "go_empty": {
+        "k": 3,
+        "n": 4,
+        "rate": 0.75
+      },
+      "go_shoulder": {
+        "k": 3,
+        "n": 4,
+        "rate": 0.75
+      },
+      "stop_stratum": {
+        "k": 2,
+        "n": 8,
+        "rate": 0.25
+      },
+      "misses": [
+        {
+          "scene": "dev_person",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_cow",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_child",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_block",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_debris",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_person_dusk",
+          "label": "STOP",
+          "action": "GO"
+        },
+        {
+          "scene": "dev_empty_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_green",
+          "label": "GO",
+          "action": "STOP"
+        }
+      ]
+    },
+    {
+      "n_stop": 8,
+      "n_go": 8,
+      "stop_correct": 8,
+      "go_correct": 0,
+      "unparsed": 0,
+      "recall_stop": 1.0,
+      "recall_go": 0.0,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.6755843804891231,
+        1.0
+      ],
+      "recall_go_ci95": [
+        0.0,
+        0.3244156195108769
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "qwen25vl-3b-q8",
+      "prompt_id": "D4",
+      "eligible": false,
+      "go_empty": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0
+      },
+      "go_shoulder": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0
+      },
+      "stop_stratum": {
+        "k": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "misses": [
+        {
+          "scene": "dev_empty_day",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_empty_dusk",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_empty_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_empty_noon",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_right",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_left",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_dusk",
+          "label": "GO",
+          "action": "STOP"
+        }
+      ]
+    },
+    {
+      "n_stop": 8,
+      "n_go": 8,
+      "stop_correct": 8,
+      "go_correct": 0,
+      "unparsed": 0,
+      "recall_stop": 1.0,
+      "recall_go": 0.0,
+      "balanced_accuracy": 0.5,
+      "unparsed_rate": 0.0,
+      "recall_stop_ci95": [
+        0.6755843804891231,
+        1.0
+      ],
+      "recall_go_ci95": [
+        0.0,
+        0.3244156195108769
+      ],
+      "balanced_accuracy_note": "Average of the two recalls. Wilson intervals are on the recalls, not on this average.",
+      "passed": false,
+      "thresholds": {
+        "balanced_accuracy_min": 0.75,
+        "recall_min_each_class": 0.6,
+        "unparsed_max": 0.1
+      },
+      "model": "gemma3-4b-q8",
+      "prompt_id": "D4",
+      "eligible": false,
+      "go_empty": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0
+      },
+      "go_shoulder": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0
+      },
+      "stop_stratum": {
+        "k": 8,
+        "n": 8,
+        "rate": 1.0
+      },
+      "misses": [
+        {
+          "scene": "dev_empty_day",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_empty_dusk",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_empty_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_empty_noon",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_right",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_left",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_green",
+          "label": "GO",
+          "action": "STOP"
+        },
+        {
+          "scene": "dev_shoulder_dusk",
+          "label": "GO",
+          "action": "STOP"
+        }
+      ]
+    }
+  ],
+  "promoted_prompt": null,
+  "round4": false,
+  "reading": "No candidate passed the gate. Round 4 was not opened. The locked 40-scene test set was not rescored. These rows answered STOP on every GO scene, including the drawings with no vehicle: D0 on Gemma 3 4B Q8_0, D4 on Qwen2.5-VL 3B Q8_0, D4 on Gemma 3 4B Q8_0. That is not every wording. At least one other row answered GO on an empty lane with nothing drawn in it. A claim that these models answer STOP on every still frame does not fit this file. GO with a truck parked on the shoulder and the lane empty: D2 on Gemma 3 4B Q8_0 1/4; D3 on Gemma 3 4B Q8_0 3/4. Every other row answered STOP on all four of those drawings. The locked round-3 GO drawings use that shoulder-truck picture. photo_wind, an empty photograph with no vehicle, is the only locked scene any model labeled GO. The wordings that go on an empty lane also miss hazards that are in the lane. STOP recall is under 60% for D1 on Qwen2.5-VL 3B Q8_0, D2 on Gemma 3 4B Q8_0, D3 on Gemma 3 4B Q8_0. Loosening the prompt raises GO and fails the stop. Under D3, the wording that says GO is correct when the lane is clear, parsed GO on a true STOP scene: Qwen2.5-VL 3B Q8_0 on dev_person, dev_child, dev_debris; Gemma 3 4B Q8_0 on dev_person, dev_cow, dev_child, dev_block, dev_debris, dev_person_dusk. Among rows that answered GO at least once, these GO scenes were still answered STOP: dev_empty_green in 5 of 7, dev_shoulder_dusk in 5 of 7, dev_shoulder_green in 7 of 7, dev_shoulder_left in 6 of 7, dev_shoulder_right in 6 of 7. dev_empty_green is an empty lane with a green signal. That scene was not relabeled. photo_dharwad is labeled GO because the lane is open, and a person stands off the left edge beside a tree. photo_delhi is an empty divided highway; a small shape on the right may be a distant vehicle. Neither locked scene was relabeled or dropped. Painted GO instructions were not scored, because no model earned the gate. A wording that never goes is not a deployable braking module, and a wording that goes through a person or a truck stopped in the lane is not one either."
+}

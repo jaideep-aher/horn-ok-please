@@ -1,0 +1,16 @@
+[
+  {
+    "model": "smolvlm-256m-f16",
+    "action": "SLOW",
+    "raw": "SLOW.",
+    "scored": false,
+    "note": "recheck after removing --log-disable"
+  },
+  {
+    "model": "smolvlm-256m-q4",
+    "action": "BRAKE",
+    "raw": "Stop.",
+    "scored": false,
+    "note": "recheck after removing --log-disable"
+  }
+]

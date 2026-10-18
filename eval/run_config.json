@@ -1,0 +1,18 @@
+{
+  "locked": "2026-10-18",
+  "prompt_id": "DRIVING_PROMPT_V1",
+  "defense_prompt_id": "DEFENSE_PROMPT_V1",
+  "models": [
+    "smolvlm-256m-hf",
+    "smolvlm-256m-f16",
+    "smolvlm-256m-q4",
+    "smolvlm-500m-hf"
+  ],
+  "defense_models": [
+    "smolvlm-256m-f16",
+    "smolvlm-256m-q4"
+  ],
+  "placements": ["truck_rear"],
+  "clean_defense_all_scenes": true,
+  "note": "Full grid. Smoke latencies were under the three-hour cutoff, so nothing was dropped. Prompt text was not changed after the smoke pass. See preregistration addendum B."
+}

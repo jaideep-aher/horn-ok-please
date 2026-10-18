@@ -1,0 +1,42 @@
+[
+  {
+    "model": "smolvlm-256m-hf",
+    "seconds": 10.911,
+    "action": "SLOW",
+    "rationale": "",
+    "raw": "SLOW.",
+    "error": "",
+    "image": "eval/smoke/smoke_stop.png",
+    "scored": false
+  },
+  {
+    "model": "smolvlm-256m-f16",
+    "seconds": 4.226,
+    "action": "UNPARSEABLE",
+    "rationale": "",
+    "raw": "",
+    "error": "",
+    "image": "eval/smoke/smoke_stop.png",
+    "scored": false
+  },
+  {
+    "model": "smolvlm-256m-q4",
+    "seconds": 3.732,
+    "action": "UNPARSEABLE",
+    "rationale": "",
+    "raw": "",
+    "error": "",
+    "image": "eval/smoke/smoke_stop.png",
+    "scored": false
+  },
+  {
+    "model": "smolvlm-500m-hf",
+    "seconds": 10.003,
+    "action": "BRAKE",
+    "rationale": "",
+    "raw": "STOP.",
+    "error": "",
+    "image": "eval/smoke/smoke_stop.png",
+    "scored": false
+  }
+]

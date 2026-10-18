@@ -1,0 +1,6 @@
+# What the Gemini bundle needs. Torch is not required.
+pillow>=10.4
+numpy>=1.26
+scipy>=1.11
+google-genai>=1.0
+pytesseract>=0.3.10
