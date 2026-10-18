@@ -12,6 +12,7 @@ import { Painter } from "@/components/painter";
 import { Round2Report, type Round2Summary } from "@/components/round2-report";
 import { DevReport, type DevSummary } from "@/components/dev-report";
 import { Round3Report, type Round3Summary } from "@/components/round3-report";
+import { GeminiReport, type GeminiSummary } from "@/components/gemini-report";
 import { PhotoGallery, type PhotoSummary } from "@/components/photo-gallery";
 import { SeePanel, type XaiSummary } from "@/components/see-panel";
 import { SiteHeader } from "@/components/site-header";
@@ -33,6 +34,7 @@ export function Exhibit() {
   const [dev, setDev] = useState<DevSummary | null>(null);
   const [xai, setXai] = useState<XaiSummary | null>(null);
   const [photos, setPhotos] = useState<PhotoSummary | null>(null);
+  const [gemini, setGemini] = useState<GeminiSummary | null>(null);
   const [status, setStatus] = useState<Status>("loading");
 
   useEffect(() => {
@@ -45,8 +47,9 @@ export function Exhibit() {
       loadJson<DevSummary>("/data/dev.json"),
       loadJson<XaiSummary>("/data/xai.json"),
       loadJson<PhotoSummary>("/data/photos.json"),
+      loadJson<GeminiSummary>("/data/gemini.json"),
     ])
-      .then(([r3, r2, pilotData, current, devData, xaiData, photoData]) => {
+      .then(([r3, r2, pilotData, current, devData, xaiData, photoData, geminiData]) => {
         if (cancel) return;
         const round3Data = r3?.round === 3 ? r3 : current?.round === 3 ? current : null;
         const round2Data = r2?.round === 2 ? r2 : current?.round === 2 ? current : null;
@@ -55,6 +58,7 @@ export function Exhibit() {
         setDev(devData?.split === "dev" ? devData : null);
         setXai(xaiData?.split === "xai" ? xaiData : null);
         setPhotos(photoData?.split === "photos" ? photoData : null);
+        setGemini(geminiData?.flash ? geminiData : null);
         setPilot(pilotData);
         setSummary(current);
         if (round3Data?.gate || round2Data?.gate) setStatus("ready");
@@ -93,6 +97,7 @@ export function Exhibit() {
           }
         />
         {showingRound3 && round3 ? <Round3Report summary={round3} /> : null}
+        {gemini ? <GeminiReport summary={gemini} /> : null}
         {dev?.blocks?.length ? <DevReport summary={dev} /> : null}
         <SeePanel summary={xai} />
         <PhotoGallery summary={photos} />
