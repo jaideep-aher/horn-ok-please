@@ -32,7 +32,7 @@ pip install -e ".[dev,eval]"
 
 Noto Sans and Noto Sans Devanagari ship in `src/hornok/fonts` under the SIL Open Font License 1.1. See `src/hornok/fonts/OFL-NOTICE.txt`.
 
-Tests do not download models:
+Tests do not download models. The Ubuntu CI run (`.github/workflows/ci.yml`) is the reference. On a Mac without libraqm and Tesseract, 4 to 5 Devanagari rendering and OCR tests fail for environment reasons only. `brew install fribidi` and `export DYLD_LIBRARY_PATH=/opt/homebrew/lib` turn on shaping in the Pillow wheel, which leaves only the Tesseract test skipped.
 
 ```bash
 ruff check src tests eval poster
