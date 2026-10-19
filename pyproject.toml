@@ -20,13 +20,16 @@ eval = [
   "huggingface_hub",
   "pytesseract",
   "google-genai>=1.0",
+  "opencv-python-headless>=4.10,<5",
 ]
+# simple-lama-inpainting is optional and is not installed by CI. The recorded
+# 99-photograph fill was LaMa. The six illustrated explanation scenes used Telea.
 dev = [
   "pytest>=8",
   "ruff>=0.6",
   "pytesseract",
   "google-genai>=1.0",
-  "opencv-python-headless>=4.8",
+  "opencv-python-headless>=4.10,<5",
 ]
 
 [project.scripts]
@@ -65,6 +68,7 @@ select = ["E", "F", "I", "W"]
 "poster/publish.py" = ["E501"]
 "poster/publish_round2.py" = ["E501"]
 "poster/publish_round3.py" = ["E501"]
+"poster/expo_poster.py" = ["E501"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

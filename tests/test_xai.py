@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
 from PIL import Image, ImageDraw
 
 from hornok.devsplit import dev_specs
@@ -167,6 +168,7 @@ def test_occlusion_mass_names_the_failure():
 
 
 def test_inpaint_removes_a_marked_square_and_keeps_the_corner():
+    pytest.importorskip("cv2")
     image = Image.new("RGB", (64, 64), (40, 80, 120))
     draw = ImageDraw.Draw(image)
     draw.rectangle([20, 20, 40, 40], fill=(220, 20, 20))
