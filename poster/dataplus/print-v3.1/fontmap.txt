@@ -1,0 +1,37 @@
+| Element | Min pt | Max pt | Chars | Sizes (pt: chars) |
+|---|---|---|---|---|
+| Title | 100 | 100 | 12 | 100: 12 |
+| Subtitle | 37.99 | 37.99 | 54 | 37.99: 54 |
+| Author line | 28 | 28 | 51 | 28: 51 |
+| QR URL | 19 | 19 | 37 | 19: 37 |
+| Key message | 36 | 36 | 145 | 36: 145 |
+| Section bars | 40 | 40 | 87 | 40: 87 |
+| Subheadings | 30 | 30 | 105 | 30: 105 |
+| Photo caption | 18 | 18 | 21 | 18: 21 |
+| Overview bullets | 24 | 24 | 139 | 24: 139 |
+| Stakeholders | 24 | 24 | 82 | 24: 82 |
+| RAI gap | 24 | 24 | 47 | 24: 47 |
+| Objective | 24 | 24 | 120 | 24: 120 |
+| Flow diagram | 22 | 22 | 45 | 22: 45 |
+| Stimuli callout | 24 | 31.99 | 75 | 24: 58, 31.99: 17 |
+| Stimuli bullets | 24 | 24 | 59 | 24: 59 |
+| Wording table | 24 | 24 | 109 | 24: 109 |
+| Future | 24 | 24 | 65 | 24: 65 |
+| Hero legend | 18 | 18 | 62 | 18: 62 |
+| Hero figure | 19 | 22 | 227 | 19: 122, 21: 46, 22: 59 |
+| Hero caption | 18 | 18 | 247 | 18: 247 |
+| Models text | 24 | 24 | 81 | 24: 81 |
+| Gate table | 24 | 24 | 134 | 24: 134 |
+| Gate note | 24 | 24 | 84 | 24: 84 |
+| Cloud reference label | 21 | 21 | 21 | 21: 21 |
+| Cloud reference text | 24 | 24 | 97 | 24: 97 |
+| Key number 6/6 | 19 | 76 | 104 | 19: 19, 24: 82, 76: 3 |
+| Bar chart | 19 | 19.99 | 71 | 19: 32, 19.99: 39 |
+| Controls note | 24 | 24 | 38 | 24: 38 |
+| Key number 6/19 | 19 | 76 | 103 | 19: 11, 24: 88, 76: 4 |
+| Key number 4/17 | 24 | 76 | 90 | 24: 86, 76: 4 |
+| Limitations | 24 | 24 | 91 | 24: 91 |
+| References | 18 | 18 | 281 | 18: 281 |
+| Credits | 18 | 18 | 320 | 18: 320 |
+
+pdfplumber per-character sizes (pt: chars): 18: 930, 19: 220, 19.99: 39, 21: 67, 22: 104, 24: 1457, 28: 50, 30: 105, 31.99: 17, 36: 144, 37.99: 54, 40: 87, 76: 11, 100: 12

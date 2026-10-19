@@ -1,0 +1,13 @@
+pages 1 rect Rect(0.0, 0.0, 1728.0, 1728.0) inches 24.0 24.0
+font sizes (pt: chars): [(18.0, 1061), (19.0, 238), (20.0, 39), (21.0, 70), (22.0, 108), (24.0, 1677), (28.0, 61), (30.0, 122), (32.0, 20), (36.0, 177), (38.0, 65), (40.0, 90), (76.0, 11), (100.0, 14)]
+min size 18.0 max size 100.0
+spans under 18pt: none
+Horn OK Please [100.0]
+Why it matters [30.0]
+What I built []
+What I found []
+Limits and next []
+chars at 24-28pt: 1738/3753 = 46%; chars 18-<24pt: 1516
+objects intruding into 0.5in margin: none 0
+inked pixels in margin band at 72dpi: 0
+QR placed size in: 1.92 decoded: 'https://jaideep-aher.github.io/horn-ok-please'

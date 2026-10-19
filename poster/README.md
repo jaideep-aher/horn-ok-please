@@ -1,5 +1,9 @@
 # Expo poster: Horn OK Please (24 × 24 in)
 
+## Printed expo poster (Data+ v3.1)
+
+The printed expo poster (24 × 24 in, Data+ layout, v3.1) is `poster/dataplus/print-v3.1/horn-ok-please-poster.pdf` (sha256 `f54b9285ed87107da2778b028c98713918aea2d40c87b425d9282d396acf8024`). Rebuild it with `poster/dataplus/build.sh`. The square poster in `poster/` is the earlier version.
+
 `horn-ok-please.pdf` is the print file: 24 × 24 in, fonts embedded, images at 300 ppi or more, 0.5 in clear margin. Print it at 100% (no "fit to page").
 Previews: `build/horn-ok-please-poster-full-300dpi.png` (full size) and `build/horn-ok-please-letter-proof.png` (8.5 × 11 in proof at 33%).
 
