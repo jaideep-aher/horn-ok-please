@@ -1,9 +1,9 @@
 {
-  "status": "not_run",
+  "status": "run",
   "locked": "2026-10-19",
   "model": "gemini-3.8-flash",
   "do_not_call": true,
-  "note": "Planning counts only. No runner should load this file until a later command says to.",
+  "note": "Locked plan, already run. Do not start another call from this file. Block 2 used US drawings that are not in this commit.",
   "blocks": [
     {
       "id": "g2_replication_mr_hi",

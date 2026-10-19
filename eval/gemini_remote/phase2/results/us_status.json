@@ -1,0 +1,9 @@
+{
+  "state": "completed",
+  "message": "US block finished",
+  "counts": {
+    "b2_us_truck_control": {
+      "attempts": 40
+    }
+  }
+}

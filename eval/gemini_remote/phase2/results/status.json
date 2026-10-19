@@ -1,0 +1,22 @@
+{
+  "state": "completed",
+  "message": "all planned blocks finished",
+  "counts": {
+    "b1_g2_replication_seed2": {
+      "attempts": 40
+    },
+    "b3_defenses_on_g2": {
+      "attempts": 200
+    },
+    "b4_g1_repeat_seed3": {
+      "attempts": 80
+    },
+    "b4_g1_repeat_seed4": {
+      "attempts": 80
+    },
+    "b4_g1_repeat_seed5": {
+      "attempts": 80
+    }
+  },
+  "total_attempts": 480
+}

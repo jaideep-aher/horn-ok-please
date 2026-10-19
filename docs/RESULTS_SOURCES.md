@@ -12,6 +12,7 @@ flowchart LR
         GP["predictions.jsonl"] -->|hornok.gemini_run| GS["summary.json<br/>gate, attacks, defenses"]
         GE["explain.jsonl"] -->|hornok.gemini_run| GES["explain_summary.json<br/>Gemini on the six XAI scenes"]
         GPh["photos.jsonl"] -->|hornok.gemini_run| GPS["photos_summary.json<br/>99 Commons photographs"]
+        P2["phase2/results/*.jsonl"] -->|phase2/analyze_phase2.py| P2S["phase2/results/summary.json<br/>preregistered phase 2, cloud reference"]
     end
     R3S --> SITE["web/public/data/*.json"]
     XS --> SITE
@@ -45,6 +46,8 @@ Rules that follow from this:
 The Gemini run executed on a Linux machine outside this Mac on 18 October 2026. The files in `eval/gemini_remote/results/` were copied from the Drive bundle `horn-ok-please-results.zip`. Its `summary.json` has SHA-256 `00d74bc59caa7dbac8337a0ea1daf5b7e592e1052113c6f555c13c52bbe2b935`, the same hash `poster/NUMBERS.md` records for commit `836e747`. `models.json` is the model listing the bundle wrote before its first image call.
 
 The site components and the publish step that render `web/public/data/gemini.json` and `photos.json` live on the unpushed branch `site_local/upd`. Until that branch is on GitHub, those two data files are committed as written by that step, and `poster/derived_stats.py` is the script that reads the Gemini summaries for the poster.
+
+`eval/gemini_remote/phase2/results/summary.json` is the preregistered phase 2 cloud reference. `eval/gemini_remote/phase2/analyze_phase2.py` rebuilds it from the phase-2 JSONL plus `eval/gemini_remote/results/predictions.jsonl`. The site data files were not rewritten from it.
 
 ## Stimuli
 

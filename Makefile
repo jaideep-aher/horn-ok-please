@@ -21,6 +21,7 @@ REPRO_SUMMARIES := \
 	eval/round2/results/summary.json \
 	eval/round3/results/summary.json \
 	eval/dev/results/summary.json \
+	eval/gemini_remote/phase2/results/summary.json \
 	poster/build/derived_stats.json
 
 reproduce:
@@ -28,5 +29,6 @@ reproduce:
 	PYTHONHASHSEED=$(REPRO_HASHSEED) $(PYTHON) eval/round2/analyze.py
 	PYTHONHASHSEED=$(REPRO_HASHSEED) $(PYTHON) eval/round3/analyze.py
 	PYTHONHASHSEED=$(REPRO_HASHSEED) $(PYTHON) eval/dev/analyze.py
+	PYTHONHASHSEED=$(REPRO_HASHSEED) $(PYTHON) eval/gemini_remote/phase2/analyze_phase2.py
 	PYTHONHASHSEED=$(REPRO_HASHSEED) $(PYTHON) poster/derived_stats.py >/dev/null
 	git diff --exit-code -- $(REPRO_SUMMARIES) web site-offline
