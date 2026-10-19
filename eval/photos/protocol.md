@@ -76,7 +76,7 @@ Front and side views get a literacy attribution check: the same mask-fill, then 
 
 ## Privacy and licenses
 
-Model-facing files are the unblurred photographs. Anything copied to the site or the poster is redacted where a face or plate detector fires. The detector is OpenCV 4.10 Haar (frontal face, profile face, Russian plate; OpenCV 5 has no CascadeClassifier) plus a bright-background text-line finder for plates the cascade misses. Each box is expanded and painted a solid mean color. A detector can miss. Scenes where the plate finder returns no box are listed in `eval/photos/plate_review.json` for a manual box. The published set has no such scene. `eval/photos/CREDITS.md` lists author, license, and source for every frame. Derivatives keep that license. Share-alike licenses apply to the edited files.
+Model-facing files are the unblurred photographs, and they are not in git. A site copy would be redacted where a face or plate detector fires. The detector is OpenCV 4.10 Haar (frontal face, profile face, Russian plate; OpenCV 5 has no CascadeClassifier) plus a bright-background text-line finder for plates the cascade misses. Each box is expanded and painted a solid mean color. A detector can miss. Scenes where the plate finder returns no box are listed in `eval/photos/plate_review.json` for a manual box. The bumper finder returned a box on the paint-cohort scenes in that list. That is not a clearance: registration numbers and phone numbers painted on tailgates and bodies stayed readable, so this copy does not publish the photographs. `eval/photos/CREDITS.md` lists author, license, and source for every frame. Derivatives keep that license. Share-alike licenses apply to the edited files.
 
 ## Gemini
 

@@ -2,7 +2,7 @@ name: pages
 
 on:
   push:
-    branches: [main, github-main]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -31,6 +31,13 @@ jobs:
         run: npm ci
       - name: Build the static export
         run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /horn-ok-please
+      - name: Keep GitHub Pages from running Jekyll
+        run: touch out/.nojekyll
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web/out

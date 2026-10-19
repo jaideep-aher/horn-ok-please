@@ -104,7 +104,8 @@ def _text_line_plates(gray: np.ndarray) -> list[list[int]]:
     bright = cv2.dilate((gray > 140).astype(np.uint8), np.ones((11, 25), np.uint8))
     ink = ((blackhat > 28) & bright.astype(bool)).astype(np.uint8) * 255
     ink[: int(height * 0.45)] = 0
-    closed = cv2.morphologyEx(ink, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_RECT, (35, 7)))
+    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (35, 7))
+    closed = cv2.morphologyEx(ink, cv2.MORPH_CLOSE, kernel)
     contours, _ = cv2.findContours(closed, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     frame = float(width * height)
     found: list[list[int]] = []
@@ -142,7 +143,7 @@ def _iou(a: list[int], b: list[int]) -> float:
 
 
 def blur_regions(image: Image.Image, boxes: list[list[int]]) -> Image.Image:
-    """Paint each box a single mean color. The old two-pixel downsample left glyphs outside a short box."""
+    """Paint each box a single mean color."""
     out = image.convert("RGB").copy()
     for box in boxes:
         x0, y0, x1, y1 = (int(v) for v in box)
