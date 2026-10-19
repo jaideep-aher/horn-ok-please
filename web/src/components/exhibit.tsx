@@ -138,9 +138,20 @@ export function Exhibit() {
         <Methods summary={summary} />
       </main>
       <footer className="border-t border-line px-4 py-8 text-sm text-muted">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 sm:flex-row sm:justify-between">
-          <p>Horn OK Please · Jaideep (Jay) Aher · Duke AIPI 590</p>
-          <p>Scenes CC-BY-4.0. Code MIT. Noto fonts under the SIL Open Font License.</p>
+        <div className="mx-auto flex max-w-6xl flex-col gap-2">
+          <div className="flex flex-col gap-2 sm:flex-row sm:justify-between">
+            <p>Horn OK Please · Jaideep (Jay) Aher · Duke AIPI 590</p>
+            <p>Scenes CC-BY-4.0. Code MIT. Noto fonts under the SIL Open Font License.</p>
+          </div>
+          <p>
+            This project was built with substantial AI assistance. I used AI coding agents (Cursor cloud agents and
+            Grok Bot assistants) to write most of the code: the hornok toolkit and its tests, the stimulus builders,
+            the evaluation runners and the analysis scripts. The same tools built the website, drafted the README and
+            docs, and drafted the poster and pitch text. They also ran evaluation jobs and reviewed the project
+            against the course rubric. I set the research question, the study design and the preregistered protocols,
+            decided what to run and what to report, and checked every reported number against the committed result
+            files in this repository. Any errors are mine.
+          </p>
         </div>
       </footer>
     </>
