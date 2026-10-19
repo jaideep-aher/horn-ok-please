@@ -13,7 +13,7 @@ import { Round2Report, type Round2Summary } from "@/components/round2-report";
 import { DevReport, type DevSummary } from "@/components/dev-report";
 import { Round3Report, type Round3Summary } from "@/components/round3-report";
 import { GeminiReport, type GeminiSummary } from "@/components/gemini-report";
-import { PhotoGallery, type PhotoSummary } from "@/components/photo-gallery";
+import { PhotoGallery, type PhotoPayload } from "@/components/photo-gallery";
 import { SeePanel, type XaiSummary } from "@/components/see-panel";
 import { SiteHeader } from "@/components/site-header";
 import { asset } from "@/lib/asset";
@@ -34,7 +34,7 @@ export function Exhibit() {
   const [round2, setRound2] = useState<Round2Summary | null>(null);
   const [dev, setDev] = useState<DevSummary | null>(null);
   const [xai, setXai] = useState<XaiSummary | null>(null);
-  const [photos, setPhotos] = useState<PhotoSummary | null>(null);
+  const [photos, setPhotos] = useState<PhotoPayload | null>(null);
   const [gemini, setGemini] = useState<GeminiSummary | null>(null);
   const [status, setStatus] = useState<Status>("loading");
 
@@ -47,7 +47,7 @@ export function Exhibit() {
       loadJson<Summary & Round2Summary & Round3Summary>(asset("/data/summary.json")),
       loadJson<DevSummary>(asset("/data/dev.json")),
       loadJson<XaiSummary>(asset("/data/xai.json")),
-      loadJson<PhotoSummary>(asset("/data/photos.json")),
+      loadJson<PhotoPayload>(asset("/data/photos.json")),
       loadJson<GeminiSummary>(asset("/data/gemini.json")),
     ])
       .then(([r3, r2, pilotData, current, devData, xaiData, photoData, geminiData]) => {
@@ -58,7 +58,13 @@ export function Exhibit() {
         setRound2(round2Data);
         setDev(devData?.split === "dev" ? devData : null);
         setXai(xaiData?.split === "xai" ? xaiData : null);
-        setPhotos(photoData?.split === "photos" ? photoData : null);
+        setPhotos(
+          photoData &&
+            (("withheld" in photoData && photoData.withheld === true) ||
+              ("split" in photoData && photoData.split === "photos"))
+            ? photoData
+            : null,
+        );
         setGemini(geminiData?.flash ? geminiData : null);
         setPilot(pilotData);
         setSummary(current);

@@ -11,9 +11,34 @@ type PhotoSummary = {
   n_literacy: number;
 };
 
+type PhotoWithheld = {
+  withheld: true;
+  reason?: string;
+};
+
+export type PhotoPayload = PhotoSummary | PhotoWithheld;
+
 export type { PhotoSummary };
 
-export function PhotoGallery({ summary }: { summary: PhotoSummary | null }) {
+function isWithheld(summary: PhotoPayload): summary is PhotoWithheld {
+  return "withheld" in summary && summary.withheld === true;
+}
+
+export function PhotoGallery({ summary }: { summary: PhotoPayload | null }) {
+  if (summary && isWithheld(summary)) {
+    return (
+      <section id="photos" className="mx-auto max-w-6xl px-4 py-14" aria-labelledby="photos-withheld">
+        <p className="font-stencil text-sm tracking-[0.16em] text-signal uppercase">Real photographs</p>
+        <h2 id="photos-withheld" className="mt-2 font-display text-4xl">
+          Photos withheld pending privacy review
+        </h2>
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed" role="status">
+          {summary.reason || "Photos withheld pending privacy review."}
+        </p>
+      </section>
+    );
+  }
+
   return (
     <section id="photos" className="mx-auto max-w-6xl px-4 py-14">
       <p className="font-stencil text-sm tracking-[0.16em] text-signal uppercase">Real photographs</p>
