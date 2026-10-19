@@ -12,7 +12,7 @@ export function Hero({
   note?: string;
 }) {
   return (
-    <section id="top" className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-16">
+    <section id="top" className="mx-auto grid max-w-6xl items-start gap-10 px-4 py-12 md:grid-cols-[1.1fr_0.9fr] md:py-16">
       <div>
         <p className="font-stencil text-sm tracking-[0.18em] text-signal uppercase">
           Duke AIPI 590 · Jaideep (Jay) Aher

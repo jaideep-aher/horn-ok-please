@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 
 import { ActionChip } from "@/components/action-chip";
 import { LiveDialog } from "@/components/live-dialog-gate";
@@ -29,6 +29,22 @@ function parsedActions(trials: Trial[] | undefined, modelId: string): number {
 function bestStoredModel(trials: Trial[] | undefined): string {
   if (!trials?.length) return FALLBACK_MODEL;
   return [...MODELS].sort((a, b) => parsedActions(trials, b.id) - parsedActions(trials, a.id))[0]?.id ?? FALLBACK_MODEL;
+}
+
+function ToggleButton({
+  pressed,
+  onClick,
+  children,
+}: {
+  pressed: boolean;
+  onClick: () => void;
+  children: ReactNode;
+}) {
+  return (
+    <Button type="button" size="sm" variant={pressed ? "yellow" : "outline"} aria-pressed={pressed} onClick={onClick}>
+      {children}
+    </Button>
+  );
 }
 
 export function Painter({
@@ -178,15 +194,9 @@ export function Painter({
                     ["hinglish", "Hinglish"],
                   ] as const
                 ).map(([id, label]) => (
-                  <Button
-                    key={id || "clean"}
-                    type="button"
-                    size="sm"
-                    variant={script === id ? "default" : "outline"}
-                    onClick={() => setScript(id)}
-                  >
+                  <ToggleButton key={id || "clean"} pressed={script === id} onClick={() => setScript(id)}>
                     <span className={id === "deva" ? "font-deva" : undefined}>{label}</span>
-                  </Button>
+                  </ToggleButton>
                 ))}
               </div>
             </fieldset>
@@ -194,22 +204,12 @@ export function Painter({
             <fieldset>
               <legend className="font-stencil text-xs tracking-widest uppercase">Placement</legend>
               <div className="mt-2 flex flex-wrap gap-2">
-                <Button
-                  type="button"
-                  size="sm"
-                  variant={placement === "truck_rear" ? "default" : "outline"}
-                  onClick={() => setPlacement("truck_rear")}
-                >
+                <ToggleButton pressed={placement === "truck_rear"} onClick={() => setPlacement("truck_rear")}>
                   Truck tail
-                </Button>
-                <Button
-                  type="button"
-                  size="sm"
-                  variant={placement === "road_surface" ? "default" : "outline"}
-                  onClick={() => setPlacement("road_surface")}
-                >
+                </ToggleButton>
+                <ToggleButton pressed={placement === "road_surface"} onClick={() => setPlacement("road_surface")}>
                   Road paint
-                </Button>
+                </ToggleButton>
               </div>
             </fieldset>
 
@@ -257,15 +257,9 @@ export function Painter({
                     ["ocr", "OCR mask"],
                   ] as const
                 ).map(([id, label]) => (
-                  <Button
-                    key={id}
-                    type="button"
-                    size="sm"
-                    variant={defense === id ? "default" : "outline"}
-                    onClick={() => setDefense(id)}
-                  >
+                  <ToggleButton key={id} pressed={defense === id} onClick={() => setDefense(id)}>
                     {label}
-                  </Button>
+                  </ToggleButton>
                 ))}
               </div>
             </fieldset>
@@ -277,35 +271,31 @@ export function Painter({
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {MODELS.filter((item) => item.id === bestModel).map((item) => (
-                  <Button
+                  <ToggleButton
                     key={item.id}
-                    type="button"
-                    size="sm"
-                    variant={model === item.id ? "yellow" : "outline"}
+                    pressed={model === item.id}
                     onClick={() => {
                       setModelPicked(true);
                       setModel(item.id);
                     }}
                   >
                     {item.short}
-                  </Button>
+                  </ToggleButton>
                 ))}
               </div>
               <p className="mt-3 text-xs text-muted">Other round-1 checkpoints</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {MODELS.filter((item) => item.id !== bestModel).map((item) => (
-                  <Button
+                  <ToggleButton
                     key={item.id}
-                    type="button"
-                    size="sm"
-                    variant={model === item.id ? "yellow" : "outline"}
+                    pressed={model === item.id}
                     onClick={() => {
                       setModelPicked(true);
                       setModel(item.id);
                     }}
                   >
                     {item.short}
-                  </Button>
+                  </ToggleButton>
                 ))}
               </div>
             </fieldset>

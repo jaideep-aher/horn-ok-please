@@ -49,11 +49,13 @@ export function PhotoGallery({ summary }: { summary: PhotoPayload | null }) {
       </p>
       {summary ? (
         <>
-          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">{summary.reading}</p>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted">
+            Stored Gemini results on the withheld photographs. Those frames stay off this page. {summary.reading}
+          </p>
           <p className="mt-2 text-sm text-muted">
-            Fill recorded for these pixels: {summary.algorithm ?? "not recorded"}. Model {summary.model ?? "not recorded"}.
-            Driving views {summary.n_driving}. Paint cohort {summary.n_paint}. Front and side literacy views{" "}
-            {summary.n_literacy}. Stored rows {summary.n_predictions}.
+            Counts from those withheld photographs. Fill algorithm recorded for them: {summary.algorithm ?? "not recorded"}.
+            Model {summary.model ?? "not recorded"}. Driving views {summary.n_driving}. Paint cohort {summary.n_paint}.
+            Front and side literacy views {summary.n_literacy}. Stored rows {summary.n_predictions}.
           </p>
         </>
       ) : (

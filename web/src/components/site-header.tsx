@@ -6,11 +6,11 @@ import { LiveDialog } from "@/components/live-dialog-gate";
 import { liveMode } from "@/lib/live";
 
 const LINKS = [
-  ["studio", "Studio"],
   ["findings", "Findings"],
   ["diagnostic", "Diagnostic"],
   ["sees", "Sees"],
   ["photos", "Photographs"],
+  ["studio", "Studio"],
   ["defense", "Defense"],
   ["literacy", "Reading"],
   ["misuse", "Misuse"],

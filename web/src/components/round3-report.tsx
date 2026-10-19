@@ -144,7 +144,7 @@ export function Round3Report({ summary }: { summary: Round3Summary }) {
         </p>
       )}
 
-      <div className="mt-8 overflow-x-auto rounded-lg border border-line bg-white">
+      <div className="mt-8 overflow-x-auto rounded-lg border border-line bg-white pb-4">
         <table className="w-full min-w-[40rem] text-left text-sm">
           <caption className="px-4 py-3 text-left font-display text-2xl">Clean STOP / GO</caption>
           <thead className="text-xs tracking-wide text-muted uppercase">
