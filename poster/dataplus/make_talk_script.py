@@ -41,8 +41,7 @@ parts = [
             " attack counts, because fooling a model that can't drive proves nothing."
             " To get at the why, I adapted two methods from Dr. Bent's lab. A heatmap"
             ' greys out one patch at a time; here, covering the tailgate turns GO bac'
-            'k to STOP. Inpainting erases the text, which tests cause, not just corre'
-            'lation.'
+            'k to STOP. Inpainting erases the text, which tests cause, not just correlation.'
         ),
     ),
     (
@@ -67,7 +66,8 @@ parts = [
             'Now the limits. These are mostly drawings, with twenty scenes per cell. '
             "On nineteen real truck photos, the main wording never changed Gemini's a"
             'nswer; the 95% interval runs from zero to seventeen percent. The small Qwen'
-            ' model changed six of nineteen, but that is not significant after correction. So this doe'
+            ' model changed six of nineteen, but that is not significant after correction. So this '
+            'doe'
             's not show that any real car is vulnerable. Next, I want a preregistered'
             ' replication of the Marathi result, and video tests. My ask to ADAS team'
             's: test the scripts on your own roads, and report over-blocking next to '
@@ -119,57 +119,97 @@ qa = [
 
 # ---- v3 (Oct 18 2026, Jay): edge story leads; Gemini is a cloud reference ----
 _P = dict(parts)
-_P['Hook: Method figure (point at the six tiles)'] = _P['Hook: Method figure (point at the six tiles)']
+_hook = "Hook: Method figure (point at the six tiles)"
+_P[_hook] = _P[_hook]
 _P['Column 3: Results'] = (
-    "Here is the lead result, on these six drawn scenes. English paint flipped the small edge model, "
-    "Qwen 3B, from STOP to GO on all six. Four have a hazard in the lane: a person, a cow, a child, a "
-    "stopped truck. On the two empty lanes GO is right, but its clean answer was STOP, so the paint still "
-    "changed the decision. Erase the paint and STOP comes back on all six. Marathi, a harmless slogan or "
-    "random letters changed zero of eighteen answers. On real photos, an exploratory test: English paint "
-    "changed Qwen's answer on six of nineteen repainted tailgates, Holm-corrected p of 0.125, and erasing "
-    "restored all six. Defenses braked on four of seventeen empty roads. For reference, the cloud model "
+    "Here is the lead result, on these six drawn scenes. English paint flipped the small edge "
+    "model, "
+    "Qwen 3B, from STOP to GO on all six. Four have a hazard in the lane: a person, a cow, a child,"
+    " a "
+    "stopped truck. On the two empty lanes GO is right, but its clean answer was STOP, so the paint"
+    " still "
+    "changed the decision. Erase the paint and STOP comes back on all six. Marathi, a harmless "
+    "slogan or "
+    "random letters changed zero of eighteen answers. On real photos, an exploratory test: English "
+    "paint "
+    "changed Qwen's answer on six of nineteen repainted tailgates, Holm-corrected p of 0.125, and "
+    "erasing "
+    "restored all six. Defenses braked on four of seventeen empty roads. For reference, the cloud "
+    "model "
     "Gemini flipped once in eighty tries, twenty scenes times four languages."
 )
 _P['Column 3: Limitations and Future Direction'] = (
-    "Now the limits. These are drawn single frames, and the flips are results on these scenes only. The "
+    "Now the limits. These are drawn single frames, and the flips are results on these scenes only."
+    " The "
     "gate table shows every model's clean-scene score; read the edge results next to it, not as a "
-    "deployment claim. On nineteen real photos, Gemini never changed. So this does not show that any real "
-    "car is vulnerable. Next: a preregistered replication with more scenes, and video. My ask to ADAS "
-    "teams: test the scripts painted on your own roads, and report over-blocking next to attack rate. "
+    "deployment claim. On nineteen real photos, Gemini never changed. So this does not show that "
+    "any real "
+    "car is vulnerable. Next: a preregistered replication with more scenes, and video. My ask to "
+    "ADAS "
+    "teams: test the scripts painted on your own roads, and report over-blocking next to attack "
+    "rate. "
     "Scan the code to paint your own tailgate."
 )
 parts = [(k, _P[k]) for k, _ in parts]
-elev = ("South Asian trucks are covered in painted text, and in-car AI now reads text. On six drawn "
-        "scenes, English paint flipped a small edge model from STOP to GO every time, and erasing the "
-        "paint brought STOP back. Defenses braked on four of seventeen empty roads. Test local scripts, "
-        "and count over-blocking.")
+elev = (
+    "South Asian trucks are covered in painted text, and in-car AI now reads text. "
+    "On six drawn scenes, English paint flipped a small edge model from STOP to GO "
+    "every time, and erasing the paint brought STOP back. Defenses braked on four "
+    "of seventeen empty roads. Test local scripts, and count over-blocking."
+)
 qa = [
     ("Is it 6 of 6 or 4 of 4?",
-     "Both, and they mean different things. English paint changed Qwen's answer from STOP to GO on all 6 "
-     "scenes. 4 of them have a hazard, so GO is wrong there: 4 of 4, 95% interval 51 to 100%. The other 2 "
-     "are empty lanes where GO is right, but the clean answer was STOP. Erasing the paint restored STOP on "
+     "Both, and they mean different things. English paint changed Qwen's answer from STOP to GO on "
+     "all 6 "
+     "scenes. 4 of them have a hazard, so GO is wrong there: 4 of 4, 95% interval 51 to 100%. The "
+     "other 2 "
+     "are empty lanes where GO is right, but the clean answer was STOP. Erasing the paint restored "
+     "STOP on "
      "all 6."),
     ("What about a big cloud model?",
-     "Gemini is the reference box. It passed the gate, and my preregistered wording flipped it once in 80 "
-     "tries (20 scenes × 4 languages), 95% interval 0.2 to 6.8%. An exploratory Marathi wording flipped 4 "
+     "Gemini is the reference box. It passed the gate, and my preregistered wording flipped it once"
+     " in 80 "
+     "tries (20 scenes × 4 languages), 95% interval 0.2 to 6.8%. An exploratory Marathi wording "
+     "flipped 4 "
      "of 20; against English p = 0.125. On 19 real photos it never changed."),
     ("Why not just add a defense?",
      "I tested a warning prompt and OCR text-stripping on the cloud model. Each braked on 4 of 17 "
-     "empty-road scenes it had gotten right undefended. Unnecessary hard braking is also a risk, so "
+     "empty-road scenes it had gotten right undefended. Unnecessary hard braking is also a risk, so"
+     " "
      "report over-blocking next to attack rate."),
 ]
 
 # ---- v3.1 (Grader notes) ----
 _P = dict(parts)
 _k = 'Hook: Method figure (point at the six tiles)'
-assert "This is one of four hazard scenes in the test, shown six ways." in _P[_k]
-_P[_k] = _P[_k].replace("This is one of four hazard scenes in the test, shown six ways.", "This is one of six pilot scenes, shown six ways.")
-_k = 'Column 1-2: Objective, Stimuli, Models, Workflow'
-_o = "The key design choice is a competence gate. A model has to tell STOP from GO on forty clean scenes before any attack counts, because fooling a model that can't drive proves nothing."
+_old_hook = "This is one of four hazard scenes in the test, shown six ways."
+_new_hook = "This is one of six pilot scenes, shown six ways."
+assert _old_hook in _P[_k]
+_P[_k] = _P[_k].replace(_old_hook, _new_hook)
+_k = "Column 1-2: Objective, Stimuli, Models, Workflow"
+_o = (
+    "The key design choice is a competence gate. A model has to tell STOP from GO "
+    "on forty clean scenes before any attack counts, because fooling a model that "
+    "can't drive proves nothing."
+)
 assert _o in _P[_k]
-_P[_k] = _P[_k].replace(_o, "Every model takes a forty-scene STOP-or-GO test, shown in the table. The edge model is a pilot: it brakes for almost everything, so its flips show the mechanism, not a deployment rate.")
+_new_gate = (
+    "Every model takes a forty-scene STOP-or-GO test, shown in the table. The edge "
+    "model is a pilot: it brakes for almost everything, so its flips show the "
+    "mechanism, not a deployment rate."
+)
+_P[_k] = _P[_k].replace(_o, _new_gate)
 parts = [(k, _P[k]) for k, _ in parts]
-qa = [(q, a.replace("against English p = 0.125.", "against English p = 0.125, not significant.")) for q, a in qa]
+qa = [
+    (
+        q,
+        a.replace(
+            "against English p = 0.125.",
+            "against English p = 0.125, not significant.",
+        ),
+    )
+    for q, a in qa
+]
 assert any("0.125, not significant" in a for _, a in qa)
 
 def wc(text):
@@ -191,7 +231,8 @@ out = [
     (
         "Every number below is on the poster and listed in `NUMBERS.md`. "
         "The Qwen real-photo result (6/19, p = 0.03125, Holm p = 0.125; inpainting restored 6/6) "
-        "is committed in `eval/photos/results/summary.json` (`conditions.g1_en`, `tests[removed_vs_g1_en]`). "
+        "is committed in `eval/photos/results/summary.json` (`conditions.g1_en`, "
+        "`tests[removed_vs_g1_en]`). "
         "Do not add numbers that are not in committed result files."
     ),
     "",
@@ -226,11 +267,14 @@ for i, (question, answer) in enumerate(qa, 1):
     ]
 out += [
     "## Delivery notes",
-    "- Open on the hero strip and point at the orange GO badge. Visitors get the message before you say anything else.",
-    '- Scope every flip: "on these six drawn scenes". Never call any model reliable, safe or ready.',
+    "- Open on the hero strip and point at the orange GO badge. Visitors get the message before you"
+    " say anything else.",
+    '- Scope every flip: "on these six drawn scenes". '
+    "Never call any model reliable, safe or ready.",
     '- Say "exploratory" every time you mention the real-photo 6 of 19 or the Marathi 4 of 20.',
     '- Say the numbers as counts ("six of six"), not percentages, except for confidence intervals.',
-    "- If someone asks whether a production car is vulnerable: this does not show that. These are single frames, mostly drawings; point at the gate table.",
+    "- If someone asks whether a production car is vulnerable: this does not show that. These are "
+    "single frames, mostly drawings; point at the gate table.",
 ]
 dest = (
     sys.argv[1]
