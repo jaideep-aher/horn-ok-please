@@ -30,19 +30,17 @@ When painted truck text changes a driving model's decision, can we see why?
 
 ## Novelty
 
-What is new, against Chung et al., "Towards Transferable Attacks Against Vision-LLMs in Autonomous Driving with Typography." (arXiv:2405.14169), Burbano et al., "CHAI: Command Hijacking against embodied AI." (arXiv:2510.00181), and Westerhoff et al., "SCAM." (arXiv:2504.04893), is non-English and multi-script (Devanagari/Marathi, Hindi, Hinglish, Urdu) scene-text injection via truck paint on driving VLMs, a cloud versus quantized-edge comparison, a preregistered gate, and an XAI causal audit by paint removal and inpainting.
+This project, set against prior typographic attacks on vision-language models (Chung et al., arXiv:2405.14169; CHAI, arXiv:2510.00181; SCAM, arXiv:2504.04893), tests non-English, multi-script scene text (Marathi/Devanagari, Hindi, Hinglish, Urdu) painted on trucks, compares a cloud model with quantized edge models under a preregistered gate, and audits the effect causally by removing and inpainting the paint.
 
 ## Course mapping
 
-| Theme | Where it shows up |
+| Topic | Where it shows up |
 |---|---|
-| Adversarial robustness | Painted tailgate attacks in [`eval/round3/`](eval/round3/) and the two defenses in [`src/hornok/defense.py`](src/hornok/defense.py) |
-| Explainability (causal removal/inpainting) | [`eval/xai/protocol.md`](eval/xai/protocol.md) |
-| Evaluation rigor (gate, preregistration, Holm) | [`eval/round3/preregistration.md`](eval/round3/preregistration.md) and Holm adjustment in [`src/hornok/metrics.py`](src/hornok/metrics.py) |
-| Fairness / language coverage | English, Marathi, Hindi, and Hinglish in [`src/hornok/round3.py`](src/hornok/round3.py); Urdu on the photograph track in [`eval/photos/protocol.md`](eval/photos/protocol.md) |
-| Privacy (blurring, withheld photos) | Blurred frame [`poster/assets/truck_tailgate_blurred.jpg`](poster/assets/truck_tailgate_blurred.jpg); unblurred frames withheld, with credits in [`eval/photos/CREDITS.md`](eval/photos/CREDITS.md) |
-| Harms / stakeholders | [Misuse and stakeholders](#misuse-and-stakeholders) |
-| Misuse | Audit phrases, not a painting guide, in [`src/hornok/phrases.py`](src/hornok/phrases.py) |
+| XAI | Occlusion, faithfulness, and causal paint removal and inpainting in [`eval/xai/protocol.md`](eval/xai/protocol.md) |
+| Adversarial AI | Painted tailgate attacks in [`eval/round3/`](eval/round3/) and the two defenses in [`src/hornok/defense.py`](src/hornok/defense.py) |
+| Red-Teaming | Attack phrases in [`src/hornok/phrases.py`](src/hornok/phrases.py) and the scored tailgate paint in [`src/hornok/attack_paint.py`](src/hornok/attack_paint.py) |
+| AI Harms | Who is affected in [Misuse and stakeholders](#misuse-and-stakeholders). Language coverage: English, Marathi, Hindi, and Hinglish in [`src/hornok/round3.py`](src/hornok/round3.py); Urdu in [`eval/photos/protocol.md`](eval/photos/protocol.md). Privacy: blurred frame [`poster/assets/truck_tailgate_blurred.jpg`](poster/assets/truck_tailgate_blurred.jpg); unblurred frames withheld in [`eval/photos/CREDITS.md`](eval/photos/CREDITS.md). |
+| AI Evaluation | The locked gate in [`eval/round3/preregistration.md`](eval/round3/preregistration.md) and Holm adjustment in [`src/hornok/metrics.py`](src/hornok/metrics.py) |
 
 ## Key results
 
