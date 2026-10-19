@@ -731,12 +731,27 @@ def _gaze_geometry(gaze: list[dict]) -> list[str]:
     return lines
 
 
+def decision_model_name(model: str | None) -> str:
+    """Display name for the model that produced the stored decisions."""
+    names = {
+        "qwen25vl-3b-q8": "Qwen2.5-VL 3B Q8",
+        "gemini:gemini-3.8-flash": "Gemini 3.8 Flash",
+        "gemini-3.8-flash": "Gemini 3.8 Flash",
+    }
+    if not model:
+        return "the stored model"
+    if model in names:
+        return names[model]
+    short = model.split(":")[-1]
+    return names.get(short, model)
+
+
 def spoken_xai(summary: dict) -> str:
     """Prose that quotes only counts present on the summary."""
     algorithm = summary.get("inpaint_algorithm") or "not recorded"
     parts = [
         f"Inpainting algorithm recorded for these pixels: {algorithm}.",
-        "Painted-text decisions are Qwen2.5-VL 3B Q8 on the six new scenes.",
+        f"Painted-text decisions are {decision_model_name(summary.get('painted_model'))} on the six new scenes.",
     ]
     for condition, block in (summary.get("conditions") or {}).items():
         causal = block["causal"]
