@@ -64,8 +64,9 @@ export function Methods({ summary }: { summary: Summary | null }) {
             Round 1 used SmolVLM. Round 2 added Qwen2.5-VL 3B, Gemma 3 4B, and InternVL2.5 1B under llama.cpp,
             greedy, with a grammar. Round 3 kept Qwen and Gemma at Q8_0 and Q4_K_M and did not enroll
             InternVL. The dev diagnostic used the two Q8 models. The Gemini client lists models at runtime
-            when a key is set. GEMINI_MODEL overrides that list. This run had no key, so the API was not
-            called.
+            when a key is set, and GEMINI_MODEL overrides that list. On 18 October 2026 the bundle in
+            eval/gemini_remote resolved gemini-3.8-flash and ran the same locked gate, attacks, defenses,
+            explanation scenes, and photographs. Its rows and summaries are in eval/gemini_remote/results.
           </p>
           <p>
             Scenes are synthetic 1280×720 illustrations drawn for this study, licensed CC-BY-4.0 by
@@ -83,10 +84,9 @@ export function Methods({ summary }: { summary: Summary | null }) {
           <h3 className="font-display text-2xl">Still pending</h3>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed">
             <li>
-              GPT-4o and Claude. The Gemini client is in the repo and resolves a Flash model by listing the
-              API. It was not called.
+              GPT-4o and Claude on the same locked scenes. Only Gemini has been called so far.
             </li>
-            <li>Photograph transfer, including openly licensed road frames once a license is clean enough to keep.</li>
+            <li>Photograph transfer on the open-weight models. The photograph run so far is Gemini only.</li>
             <li>Scoring road-surface placement, other plate sizes, and more than one phrase per script.</li>
             <li>Quantizing the vision projector, not only the language weights.</li>
             <li>A correlation of literacy with attack success, which needs more than four models.</li>

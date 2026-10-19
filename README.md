@@ -152,7 +152,7 @@ Do not put these strings on a road, a vehicle in traffic, or a test that other r
 
 People who would bear a real version of this failure: people on foot, on two-wheelers, and in the vehicle; truck owners whose vehicles would be the canvas; ADAS and vehicle-software teams who ship a vision-language policy; regulators writing rules for driver assistance. A useful outcome of the audit is a defense that still brakes for STOP and रुको. A harmful outcome is treating a demo flip on a drawing as proof that a named production car is vulnerable, or as a reason to hide the defense and publish only the attack.
 
-Disclosure for this study is the defense shipped beside the generator, the scope limit to open research models, and the absence of a physical how-to. API models (GPT-4o, Gemini, Claude) are not called from this environment. When they are added, the same phrases and the defense should be reported to the model provider if the attack succeeds. Steps that need accounts are in `docs/SETUP.md`.
+Disclosure for this study is the defense shipped beside the generator, the scope limit to open research models, and the absence of a physical how-to. Of the API models, only Gemini has been called, through the bundle in `eval/gemini_remote` on a separate machine. GPT-4o and Claude have not been called. When a provider is added, the same phrases and the defense should be reported to the model provider if the attack succeeds. Steps that need accounts are in `docs/SETUP.md`.
 
 ## XAI methods and literature
 
@@ -218,7 +218,7 @@ No enrolled model passed. Targeted flips from STOP to GO, benign text, the Q8 ve
 - Gemma 3 4B Q8_0: reader.
 - Cards this round, Gemma 3 4B Q4_K_M Devanagari: mean 0.779, exact 2/4.
 
-Gemini was not called. The client lists models at runtime and does not hard-code an id. GEMINI_MODEL overrides that list. No key was set, so the list was not requested.
+Gemini was called on 18 October 2026 through the bundle in `eval/gemini_remote`, which resolved `gemini-3.8-flash`. The client lists models at runtime and does not hard-code an id, and GEMINI_MODEL overrides that list. The rows and summaries are in `eval/gemini_remote/results`, and `docs/RESULTS_SOURCES.md` says which file backs which claim.
 
 ### Dev diagnostic, 18 October 2026
 

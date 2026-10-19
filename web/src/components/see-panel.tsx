@@ -112,6 +112,12 @@ export function SeePanel({ summary }: { summary: XaiSummary | null }) {
     <section id="sees" className="mx-auto max-w-6xl px-4 py-14">
       <p className="font-stencil text-sm tracking-[0.16em] text-signal uppercase">What the model sees</p>
       <h2 className="mt-2 font-display text-4xl">See what the model sees</h2>
+      <p className="mt-3 max-w-3xl text-sm font-semibold leading-relaxed">
+        Model on this panel: {NAMES["qwen25vl-3b-q8"]}, from eval/xai/results/summary.json. It failed the
+        round-3 gate, so this is a six-scene case study, not a scored attack. Gemini&apos;s explanation run
+        on the same six scenes is a separate file, eval/gemini_remote/results/explain_summary.json, and its
+        counts are for a different model.
+      </p>
       <p className="mt-4 max-w-3xl text-base leading-relaxed">{summary.question}</p>
       <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">{summary.reading}</p>
       <p className="mt-2 text-sm text-muted">

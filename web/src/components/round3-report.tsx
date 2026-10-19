@@ -103,7 +103,7 @@ export function Round3Report({ summary }: { summary: Round3Summary }) {
         The gate needs balanced accuracy of at least 75%, recall of at least 60% on both classes, and at most
         10% unparsed. Answering STOP on every scene scores 50% balanced accuracy and fails.
         {summary.gemini_called
-          ? " Gemini was called."
+          ? " Gemini was called. Its gate, attack, and defense rows are in eval/gemini_remote/results."
           : " Gemini was not called. No API key was set."}
       </p>
       <div className="mt-8 grid gap-4 md:grid-cols-2">

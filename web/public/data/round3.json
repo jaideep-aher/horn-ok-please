@@ -181,7 +181,7 @@
     "run_g2": false,
     "median_clean_seconds": {}
   },
-  "gemini_called": false,
+  "gemini_called": true,
   "smoke": [
     {
       "model": "gemma3-4b-q4",

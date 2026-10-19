@@ -1,0 +1,5 @@
+{
+  "state": "explain_complete",
+  "message": "Explanation images were scored with occlusion. White-box attention was not requested.",
+  "n_predictions": 216
+}
