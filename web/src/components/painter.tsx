@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { ActionChip } from "@/components/action-chip";
 import { LiveDialog } from "@/components/live-dialog-gate";
@@ -9,11 +9,27 @@ import { Button } from "@/components/ui/button";
 import { isTargetedFlip, stimulusPath, trialFor } from "@/lib/format";
 import { liveMode } from "@/lib/live";
 import { lockedPhrase, plateBox, samePhrase, SCRIPT_LABEL } from "@/lib/phrases";
-import { MODELS, SCENES, modelShort, type Summary } from "@/lib/types";
+import { MODELS, SCENES, modelShort, type Summary, type Trial } from "@/lib/types";
 
 type Script = "" | "en" | "deva" | "hinglish";
 type Placement = "truck_rear" | "road_surface";
 type Defense = "none" | "prompt" | "ocr";
+
+/**
+ * gemini.json records a gate total for gemini-3.8-flash and no per-scene action
+ * for these frames. Until that file has trials, open on the round-1 checkpoint
+ * with the most parsed stored actions (SmolVLM 500M float32 in the committed pilot).
+ */
+const FALLBACK_MODEL = "smolvlm-500m-hf";
+
+function parsedActions(trials: Trial[] | undefined, modelId: string): number {
+  return (trials ?? []).filter((trial) => trial.model === modelId && trial.action !== "UNPARSEABLE").length;
+}
+
+function bestStoredModel(trials: Trial[] | undefined): string {
+  if (!trials?.length) return FALLBACK_MODEL;
+  return [...MODELS].sort((a, b) => parsedActions(trials, b.id) - parsedActions(trials, a.id))[0]?.id ?? FALLBACK_MODEL;
+}
 
 export function Painter({
   summary,
@@ -28,7 +44,13 @@ export function Painter({
   const [size, setSize] = useState(100);
   const [custom, setCustom] = useState("");
   const [defense, setDefense] = useState<Defense>("none");
-  const [model, setModel] = useState(summary?.primary_model || "smolvlm-256m-f16");
+  const [model, setModel] = useState(FALLBACK_MODEL);
+  const [modelPicked, setModelPicked] = useState(false);
+  const bestModel = useMemo(() => bestStoredModel(summary?.trials), [summary]);
+
+  useEffect(() => {
+    if (!modelPicked) setModel(bestModel);
+  }, [bestModel, modelPicked]);
 
   const scene = SCENES.find((item) => item.id === sceneId) ?? SCENES[0];
   const phrase = script ? lockedPhrase(scene.target, script) : "";
@@ -71,11 +93,14 @@ export function Painter({
           of the scored attack-success rate.
         </p>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
-          The chips below are the round-1 SmolVLM pilot, four actions, not the STOP versus GO roster.
-          STOP versus GO was run on Qwen2.5-VL 3B Instruct Q8_0 and Q4_K_M
+          The chips below are the round-1 SmolVLM pilot. The studio opens on the round-1 checkpoint with
+          the most parsed stored actions for these scenes. Gemini 3.8 Flash passed the STOP versus GO gate,
+          and the published Gemini file has no per-scene action for these frames, so those calls are not on
+          these chips. The other round-1 checkpoints are a secondary choice. These chips are four actions,
+          not the STOP versus GO roster. STOP versus GO was run on Qwen2.5-VL 3B Instruct Q8_0 and Q4_K_M
           (`Qwen2.5-VL-3B-Instruct-Q8_0.gguf`, `Qwen2.5-VL-3B-Instruct-Q4_K_M.gguf`), Gemma 3 4B IT Q8_0 and
           Q4_K_M (`gemma-3-4b-it-Q8_0.gguf`, `gemma-3-4b-it-Q4_K_M.gguf`), and Gemini 3.8 Flash
-          (`gemini-3.8-flash`). Those open models failed the gate. Their STOP and GO counts are in the
+          (`gemini-3.8-flash`). The open-weight checkpoints failed the gate. Their STOP and GO counts are in the
           round-3 section, not in these chips. Gemma 3 4B IT is not a model named Gemma 4B.
         </p>
 
@@ -246,15 +271,38 @@ export function Painter({
             </fieldset>
 
             <fieldset>
-              <legend className="font-stencil text-xs tracking-widest uppercase">Model</legend>
+              <legend className="font-stencil text-xs tracking-widest uppercase">Round 1 model</legend>
+              <p className="mt-1 text-xs text-muted">
+                SmolVLM {modelShort(bestModel)} is the default. Round 1 pilot, not the Gemini gate.
+              </p>
               <div className="mt-2 flex flex-wrap gap-2">
-                {MODELS.map((item) => (
+                {MODELS.filter((item) => item.id === bestModel).map((item) => (
                   <Button
                     key={item.id}
                     type="button"
                     size="sm"
                     variant={model === item.id ? "yellow" : "outline"}
-                    onClick={() => setModel(item.id)}
+                    onClick={() => {
+                      setModelPicked(true);
+                      setModel(item.id);
+                    }}
+                  >
+                    {item.short}
+                  </Button>
+                ))}
+              </div>
+              <p className="mt-3 text-xs text-muted">Other round-1 checkpoints</p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {MODELS.filter((item) => item.id !== bestModel).map((item) => (
+                  <Button
+                    key={item.id}
+                    type="button"
+                    size="sm"
+                    variant={model === item.id ? "yellow" : "outline"}
+                    onClick={() => {
+                      setModelPicked(true);
+                      setModel(item.id);
+                    }}
                   >
                     {item.short}
                   </Button>
@@ -266,8 +314,8 @@ export function Painter({
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <DecisionCard
-            kicker="This combination"
-            title={modelShort(model)}
+            kicker="Round 1 pilot"
+            title={`SmolVLM ${modelShort(model)}`}
             action={
               status !== "ready"
                 ? undefined
