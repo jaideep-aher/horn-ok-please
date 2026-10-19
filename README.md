@@ -10,7 +10,7 @@ The confirmatory Gemini result is a null. Gemini 3.8 Flash passed the STOP versu
 
 Defenses were scored on G1 only. Undefended G1 flips are 1/80 (Wilson 95% 0.002 to 0.067). Each defense flipped 0/80. That paired test is p=1, so there is no measurable benefit. Each defense over-blocked 4/17 true GO scenes (0.096 to 0.473).
 
-On six drawings, Qwen2.5-VL 3B Q8 English paint changed the decision on 6/6, and OpenCV Telea restored the clean decision on 6/6. Four of those drawings are labeled STOP, so those four changes ignore the hazard. Two are labeled GO (`xai_empty`, `xai_dusk`), so those STOP-to-GO changes are corrections. Marathi, benign text, and gibberish changed 0/6. That Qwen checkpoint failed the round-3 gate. Rationales were not a scored admission test. Stored `thinking` is `off` on 488/488 Flash rows, and `thoughts_token_count` is positive on 486/488. Flash-Lite was never evaluated: all 40 gate requests returned HTTP 400. An earlier 40/40 truncation is not a score.
+Six drawings are illustrative examples, not headline evidence. Qwen2.5-VL 3B Q8 failed the competence gate: GO 0/20, balanced accuracy 0.500. Under the preregistration its flips are not scored. On those drawings the English line changed the stored decision on 6/6 and OpenCV Telea restored 6/6. Four drawings are labeled STOP, so those changes ignore the hazard. Two are labeled GO (`xai_empty`, `xai_dusk`), so those STOP-to-GO changes are corrections. Marathi, benign text, and gibberish changed 0/6. Rationales were not a scored admission test. Stored `thinking` is `off` on 488/488 Flash rows, and `thoughts_token_count` is positive on 486/488. Flash-Lite was never evaluated: all 40 gate requests returned HTTP 400. An earlier 40/40 truncation is not a score.
 
 This is not a crash risk and not a road test. The photograph track has no empty lane, so GO recall is undefined. Jaideep (Jay) Aher, Duke AIPI 590. Install the test extra, run pytest, then start the site from the web folder.
 
@@ -36,7 +36,7 @@ When painted truck text changes a driving model's decision, can we see why, and 
 | Confirmatory tests | T1–T4 and T7–T9, exact McNemar then Holm. Every p is 1. T5, T6, and T10 omitted. |
 | G2, exploratory | Marathi 4/20 (Wilson 95% 0.081 to 0.416), Hindi 3/20 (0.052 to 0.360). English versus Marathi: p=0.125, 4 discordant, n=20. Not in the Holm family. |
 | Defenses | G1 only. Undefended 1/80, each defense 0/80, McNemar p=1. Over-block 4/17 (Wilson 95% 0.096 to 0.473). Not run on G2. |
-| Open models | None passed the same gate. On six drawings, Qwen2.5-VL 3B Q8 English paint changed 6/6: 4 hazard-ignoring flips and 2 GO corrections. Telea restored 6/6. |
+| Open models | None passed the same gate. Qwen2.5-VL 3B Q8: GO 0/20, balanced accuracy 0.500. The six-drawing English changes are illustrative examples from that gate-failed model, not headline evidence. |
 | Photographs, Flash | STOP 28/31 (Wilson 95% 0.751 to 0.967). Paint changes 0/19. GO recall is undefined. Holm p=1 on all five tests. The frames are not in this copy. |
 
 ## What failed and why
@@ -61,7 +61,23 @@ pytest
 cd web && npm ci && npm run dev
 ```
 
-`npm run build` writes `web/out`. Weights are not in git. `eval/download_models.sh` fetches the SmolVLM, Qwen2.5-VL-3B, Gemma-3-4B, and InternVL2.5-1B GGUF files used in the scored runs. `simple-lama-inpainting` is optional and is not installed by the test extra. The recorded photograph fill was LaMa. The six illustrated explanation scenes used OpenCV Telea.
+`npm run build` writes `web/out`. Weights are not in git. `eval/download_models.sh` fetches the SmolVLM, Qwen2.5-VL 3B, Gemma 3 4B, and InternVL2.5 1B GGUF files used in the scored runs. `simple-lama-inpainting` is optional and is not installed by the test extra. The recorded photograph fill was LaMa. The six illustrated explanation scenes used OpenCV Telea.
+
+## Model ids
+
+The scored run did not store a Hugging Face revision hash. The pin is the repository id plus the GGUF filename in `src/hornok/round2.py` and `src/hornok/round3.py`. Local runtime for every open model: llama.cpp `b11716`, image tokens 512, temperature 0, top_k 1, seed 1, context 4096, no GPU offload.
+
+| Id | What was run |
+|---|---|
+| `qwen25vl-3b-q8` | `ggml-org/Qwen2.5-VL-3B-Instruct-GGUF` file `Qwen2.5-VL-3B-Instruct-Q8_0.gguf`, projector `mmproj-Qwen2.5-VL-3B-Instruct-f16.gguf`. Round 2, round 3, the dev diagnostic, and the six explanation drawings. |
+| `qwen25vl-3b-q4` | Same repo, `Qwen2.5-VL-3B-Instruct-Q4_K_M.gguf`, same projector. Round 2 and round 3. |
+| `gemma3-4b-q8` | `ggml-org/gemma-3-4b-it-GGUF` file `gemma-3-4b-it-Q8_0.gguf`, projector `mmproj-model-f16.gguf`. This is Gemma 3 4B IT, not a separate Gemma 4B. Round 2, round 3, and the dev diagnostic. |
+| `gemma3-4b-q4` | Same repo, `gemma-3-4b-it-Q4_K_M.gguf`, same projector. Round 3 only. |
+| `internvl25-1b-q8` | `ggml-org/InternVL2_5-1B-GGUF` file `InternVL2_5-1B-Q8_0.gguf`, projector `mmproj-InternVL2_5-1B-f16.gguf`. Round 2 only. |
+| `smolvlm-256m-hf` / `smolvlm-500m-hf` | `HuggingFaceTB/SmolVLM-256M-Instruct` and `HuggingFaceTB/SmolVLM-500M-Instruct`, transformers float32. Round 1 pilot. |
+| `smolvlm-256m-f16` / `smolvlm-256m-q4` | `ggml-org/SmolVLM-256M-Instruct-GGUF` f16, and a Q4_0 file quantized locally from that f16 with llama.cpp `b11716`. Round 1 pilot. |
+| `gemini-3.8-flash` | Resolved API id. Temperature was not sent. The stored `thinking` field is `off`. |
+| `gemini-3.5-flash-lite` | Resolved API id. All 40 gate requests returned HTTP 400. Not evaluated. |
 
 ## Contribution
 

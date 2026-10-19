@@ -122,7 +122,10 @@ export function SeePanel({ summary }: { summary: XaiSummary | null }) {
       </p>
       <p className="mt-4 max-w-3xl text-base leading-relaxed">{summary.question}</p>
       <p className="mt-3 max-w-3xl text-sm leading-relaxed">
-        English paint changed the stored decision on {summary.scenes.length} illustrated scenes.{" "}
+        Illustrative examples from a gate-failed model, not headline evidence. Qwen2.5-VL 3B Q8
+        (`Qwen2.5-VL-3B-Instruct-Q8_0.gguf`) said GO on 0/20 and its balanced accuracy was 0.500, so the
+        preregistration does not treat these flips as a scored attack. English paint changed the stored decision
+        on {summary.scenes.length} illustrated scenes.{" "}
         {summary.scenes.filter((row) => row.label === "STOP" && row.decisions.g1_en?.clean === "STOP" && row.decisions.g1_en?.painted === "GO").length}{" "}
         of those scenes are labeled STOP, so a STOP to GO change there ignores the drawn hazard.{" "}
         {summary.scenes.filter((row) => row.label === "GO" && row.decisions.g1_en?.clean === "STOP" && row.decisions.g1_en?.painted === "GO").length}{" "}
@@ -238,10 +241,11 @@ export function SeePanel({ summary }: { summary: XaiSummary | null }) {
 
       {gaze ? (
         <div className="mt-12">
-          <h3 className="font-display text-2xl">Where it looked when it said GO through a hazard</h3>
+          <h3 className="font-display text-2xl">Maps from a gate-failed model, not a competence result</h3>
           <p className="mt-2 max-w-3xl text-sm text-muted">
-            These maps use the stored dev decision. The prompt is the one that produced that GO. The locked test set
-            was not rescored.
+            These maps use a stored dev decision on a prompt that is not the locked round-3 gate. A GO here is an
+            illustrative example. The locked test set was not rescored, and a model that failed the gate does not
+            supply headline evidence.
           </p>
           <div className="mt-4 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <figure className="overflow-hidden rounded-lg border border-line bg-white">

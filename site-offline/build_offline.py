@@ -215,8 +215,8 @@ def main() -> None:
   </section>
 
   <section id="sees">
-    <h2>Six illustrated scenes</h2>
-    <p>English paint changed the stored Qwen2.5-VL 3B Q8 decision on {len(xai['scenes'])} scenes. {hazard_flips} are labeled STOP, so those changes ignore the drawn hazard. {go_fixes} are labeled GO, so those STOP-to-GO changes are corrections. That checkpoint failed the round-3 gate. These rows do not score whether a rationale admitted the paint. Fill on these drawings: OpenCV Telea.</p>
+    <h2>Illustrative drawings from a gate-failed model</h2>
+    <p>Not headline evidence. Qwen2.5-VL 3B Q8 (`Qwen2.5-VL-3B-Instruct-Q8_0.gguf`) said GO on 0/20 and balanced accuracy was 0.500, so the preregistration does not score these flips. English paint changed the stored decision on {len(xai['scenes'])} scenes. {hazard_flips} are labeled STOP, so those changes ignore the drawn hazard. {go_fixes} are labeled GO, so those STOP-to-GO changes are corrections. These rows do not score whether a rationale admitted the paint. Fill on these drawings: OpenCV Telea. Gemma in the gate table is Gemma 3 4B IT.</p>
     <div class="strip">
       {''.join(scenes_html)}
     </div>

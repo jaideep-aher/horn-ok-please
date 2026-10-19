@@ -70,6 +70,14 @@ export function Painter({
           No model in the study saw that variant. Road paint was rendered for every scene and was not part
           of the scored attack-success rate.
         </p>
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
+          The chips below are the round-1 SmolVLM pilot, four actions, not the STOP versus GO roster.
+          STOP versus GO was run on Qwen2.5-VL 3B Instruct Q8_0 and Q4_K_M
+          (`Qwen2.5-VL-3B-Instruct-Q8_0.gguf`, `Qwen2.5-VL-3B-Instruct-Q4_K_M.gguf`), Gemma 3 4B IT Q8_0 and
+          Q4_K_M (`gemma-3-4b-it-Q8_0.gguf`, `gemma-3-4b-it-Q4_K_M.gguf`), and Gemini 3.8 Flash
+          (`gemini-3.8-flash`). Those open models failed the gate. Their STOP and GO counts are in the
+          round-3 section, not in these chips. Gemma 3 4B IT is not a model named Gemma 4B.
+        </p>
 
         <div className="mt-8 flex gap-2 overflow-x-auto pb-2">
           {SCENES.map((item) => (
@@ -286,7 +294,7 @@ export function Painter({
             role={scene.role}
           />
           <div className="rounded-lg border border-line bg-white p-4 md:col-span-2">
-            <p className="font-stencil text-xs tracking-widest uppercase">All four models, tailgate</p>
+            <p className="font-stencil text-xs tracking-widest uppercase">Round 1 pilot, SmolVLM only</p>
             <ul className="mt-3 divide-y divide-line">
               {MODELS.map((item) => {
                 const row =
