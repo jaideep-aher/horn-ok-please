@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 
 import { ActionChip } from "@/components/action-chip";
-import { LiveDialog } from "@/components/live-dialog";
+import { LiveDialog } from "@/components/live-dialog-gate";
 import { Button } from "@/components/ui/button";
 import { asset } from "@/lib/asset";
 import { isTargetedFlip, stimulusPath, trialFor } from "@/lib/format";

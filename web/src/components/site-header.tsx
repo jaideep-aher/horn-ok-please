@@ -1,6 +1,6 @@
 "use client";
 
-import { LiveDialog } from "@/components/live-dialog";
+import { LiveDialog } from "@/components/live-dialog-gate";
 import { liveMode } from "@/lib/live";
 
 const LINKS = [
