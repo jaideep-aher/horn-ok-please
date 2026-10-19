@@ -1,0 +1,43 @@
+{
+  "status": "not_run",
+  "locked": "2026-10-19",
+  "model": "gemini-3.8-flash",
+  "do_not_call": true,
+  "note": "Planning counts only. No runner should load this file until a later command says to.",
+  "blocks": [
+    {
+      "id": "g2_replication_mr_hi",
+      "seed": 2,
+      "scripts": ["mr", "hi"],
+      "scenes": 20,
+      "images_per_scene": 2,
+      "api_calls": 40
+    },
+    {
+      "id": "us_truck_english_control",
+      "stimuli": "not_drawn",
+      "clean": 20,
+      "painted_english_g1": 20,
+      "api_calls": 40
+    },
+    {
+      "id": "defenses_on_g2",
+      "stop_scenes": 20,
+      "scripts": 4,
+      "defenses": ["prompt", "ocr"],
+      "attack_calls": 160,
+      "go_overblock_scenes": 20,
+      "overblock_calls": 40,
+      "api_calls": 200
+    },
+    {
+      "id": "g1_repeats",
+      "seeds": [3, 4, 5],
+      "stop_scenes": 20,
+      "scripts": 4,
+      "runs": 3,
+      "api_calls": 240
+    }
+  ],
+  "api_calls_if_all_run": 520
+}
