@@ -104,7 +104,7 @@ Rows go to `gemini-out/photos.jsonl`. Masked cells are written under `gemini-out
 
 ## Phase-2 Western control drawings
 
-`phase2/` is a locked plan. It does not start a job, and this runner does not read it. The US truck frames for block 2 are drawn dry-van rears, not photographs. They live in `phase2/us_trucks/` (20 clean, 20 English G1, 20 English B1). `photo_cargo_a` and `photo_cargo_b` are redrawn trailers. The only text on a truck is the painted line. Do not call the Gemini API from the checkout that holds this file until a later, separate command. Counts are in `phase2/preregistration.md` and `phase2/calls.json`.
+`phase2/` is a locked plan. It does not start a job, and this runner does not read it. The US truck frames for block 2 are drawn dry-van trailers, not photographs. They live in `phase2/us_trucks/` (20 clean, 20 English G1, 20 English B1). The rear door is the round-3 tailgate quad. `photo_cargo_a` and `photo_cargo_b` are drawn trailers on that quad, not the photographs. English B1 is a control and is not part of the 40 scored calls. The only text on a truck is the painted line. Do not call the Gemini API from the checkout that holds this file until a later, separate command. Counts are in `phase2/preregistration.md` and `phase2/calls.json`.
 
 ## What to send back
 
