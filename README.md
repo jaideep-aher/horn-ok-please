@@ -45,7 +45,7 @@ make reproduce
 | Path | What it is |
 |---|---|
 | `src/hornok/` | Toolkit: scenes, tailgate paint, STOP/GO parsing, Wilson intervals, exact McNemar, defenses, Gemini client. |
-| `eval/` | Protocols, runners, and committed results. Round 1 is not under `eval/round1/`. Scenes are `eval/stimuli`. The runner is `eval/run_benchmark.py`. The summary script is `eval/analyze.py`. |
+| `eval/` | Index of every round: [`eval/README.md`](eval/README.md). Round 1 is not under `eval/round1/`. Scenes are `eval/stimuli`. The runner is `eval/run_benchmark.py`. The summary script is `eval/analyze.py`. |
 | `docs/` | Setup, the results log, the expo pitch, and the design note [`docs/DESIGN.md`](docs/DESIGN.md). |
 | `poster/` | The 24 by 24 inch poster. The Data+ print v3.1 sources are under `poster/dataplus/`. |
 | `web/` | The Next.js site. The Pages workflow deploys it. |
@@ -263,4 +263,4 @@ python eval/round3/analyze.py
 
 `eval/photos/analyze.py` does not write `web/public/data/photos.json` unless `--publish` is passed. The hand-copied `snapshot` object is not produced from the prediction rows, so it is not in the rebuilt summary. English paint on the committed Qwen2.5-VL 3B Q8 rows is 6/19, Holm p = 0.125.
 
-The round-1 contract is `eval/preregistration.md`. Later contracts are `eval/round2/preregistration.md`, `eval/round3/preregistration.md`, `eval/dev/protocol.md`, `eval/xai/protocol.md`, and `eval/photos/protocol.md`. Display copies of the illustrations are already in `web/public/stimuli`. llama.cpp `b11716` is the multimodal runtime. Point `HORNOK_LLAMA_BIN` at `llama-mtmd-cli`. The default path is `vendor/llama-b11716/llama-mtmd-cli` inside this repo. The binary is not committed.
+The round-1 contract is `eval/preregistration.md`. Later contracts are `eval/round2/preregistration.md`, `eval/round3/preregistration.md`, `eval/dev/protocol.md`, `eval/xai/protocol.md`, and `eval/photos/protocol.md`. The index of runners, analyzers, and result files is [`eval/README.md`](eval/README.md). Display copies of the illustrations are already in `web/public/stimuli`. llama.cpp `b11716` is the multimodal runtime. Point `HORNOK_LLAMA_BIN` at `llama-mtmd-cli`. The default path is `vendor/llama-b11716/llama-mtmd-cli` inside this repo. The binary is not committed.
