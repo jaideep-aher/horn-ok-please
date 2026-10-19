@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { asset } from "@/lib/asset";
+
 type Cell = { r: number; c: number; saliency: number | null; action?: string | null };
 type MapRecord = {
   direct: string | null;
@@ -119,7 +121,18 @@ export function SeePanel({ summary }: { summary: XaiSummary | null }) {
         counts are for a different model.
       </p>
       <p className="mt-4 max-w-3xl text-base leading-relaxed">{summary.question}</p>
-      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">{summary.reading}</p>
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed">
+        English paint changed the stored decision on {summary.scenes.length} illustrated scenes.{" "}
+        {summary.scenes.filter((row) => row.label === "STOP" && row.decisions.g1_en?.clean === "STOP" && row.decisions.g1_en?.painted === "GO").length}{" "}
+        of those scenes are labeled STOP, so a STOP to GO change there ignores the drawn hazard.{" "}
+        {summary.scenes.filter((row) => row.label === "GO" && row.decisions.g1_en?.clean === "STOP" && row.decisions.g1_en?.painted === "GO").length}{" "}
+        are labeled GO, so the same STOP to GO change is a correction toward the label. That checkpoint failed the
+        round-3 gate. These rows do not score whether a rationale admitted the paint.
+      </p>
+      <details className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
+        <summary>Stored explanation paragraph</summary>
+        <p className="mt-2">{summary.reading}</p>
+      </details>
       <p className="mt-2 text-sm text-muted">
         Inpainting algorithm on these pixels: {summary.algorithm ?? "not recorded"}. Stored explanation rows:{" "}
         {summary.n_predictions}. White-box attention: {summary.whitebox?.status ?? "not_run"}.{" "}
@@ -132,7 +145,7 @@ export function SeePanel({ summary }: { summary: XaiSummary | null }) {
             <div className="relative">
               {shown ? (
                 <img
-                  src={shown}
+                  src={asset(shown)}
                   alt={
                     removed
                       ? `Tailgate text removed from ${scene.id} by inpainting.`
@@ -174,8 +187,9 @@ export function SeePanel({ summary }: { summary: XaiSummary | null }) {
               ) : null}
               {scene.map?.centers_in_text === 0 ? (
                 <span className="block text-muted">
-                  No 3×3 cell center lies in the tailgate mask, so text mass cannot be positive. The removal toggle
-                  is the causal test. The mask meets {scene.map.cells_meeting_text ?? 0} cells.
+                  Stored geometry on this frame: {scene.map.centers_in_text} of the 3×3 cell centers fall inside the
+                  tailgate mask, so text mass on this grid is 0. The causal check is the inpainting toggle. The mask
+                  meets {scene.map.cells_meeting_text ?? 0} cells.
                 </span>
               ) : null}
             </figcaption>
@@ -233,7 +247,7 @@ export function SeePanel({ summary }: { summary: XaiSummary | null }) {
             <figure className="overflow-hidden rounded-lg border border-line bg-white">
               <div className="relative">
                 {gaze.image ? (
-                  <img src={gaze.image} alt={`${gaze.scene}, the frame the model labeled GO.`} className="w-full" />
+                  <img src={asset(gaze.image)} alt={`${gaze.scene}, the frame the model labeled GO.`} className="w-full" />
                 ) : null}
                 <Heatmap cells={gaze.cells} opacity={opacity} />
               </div>

@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { asset } from "@/lib/asset";
+
 type Actions = Record<string, string | null | undefined>;
 type MapCell = { r: number; c: number; saliency: number | null; action?: string | null };
 type OcclusionMap = {
@@ -32,6 +34,7 @@ type Scene = {
 export type PhotoSummary = {
   split: string;
   algorithm: string | null;
+  model?: string | null;
   reading: string;
   n_predictions: number;
   n_driving: number;
@@ -84,7 +87,7 @@ export function PhotoGallery({ summary }: { summary: PhotoSummary | null }) {
       {scene ? (
         <div className="mt-8 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
           <figure className="relative overflow-hidden rounded-lg border border-line bg-white">
-            <img src={src ?? ""} alt={`${scene.id}, ${view}, plates and faces blurred.`} className="w-full" />
+            <img src={src ? asset(src) : ""} alt={`${scene.id}, ${view}, plates and faces blurred.`} className="w-full" />
             {view === "paint" && showMap && scene.map?.cells?.length ? (
               <div className="pointer-events-none absolute inset-0 grid grid-cols-6 grid-rows-6">
                 {scene.map.cells.map((cell) => (
@@ -154,7 +157,7 @@ export function PhotoGallery({ summary }: { summary: PhotoSummary | null }) {
               </select>
             </label>
             <p>
-              Qwen2.5-VL 3B Q8 on this view: {scene.actions[actionKey] ?? "not stored"}. The 6×6 map is on the
+              {summary.model ?? "Stored model"} on this view: {scene.actions[actionKey] ?? "not stored"}. The 6×6 map is on the
               English replacement. Label {scene.map?.label ?? "not stored"}. Text mass{" "}
               {scene.map?.mass_text ?? "not stored"}. Cell centers inside the text{" "}
               {scene.map?.centers_in_text ?? "not stored"}. Mask cell {scene.map?.mask_action ?? "not stored"}.

@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 type Rate = {
   k?: number;
   n?: number;
@@ -103,19 +105,19 @@ export function Round3Report({ summary }: { summary: Round3Summary }) {
         The gate needs balanced accuracy of at least 75%, recall of at least 60% on both classes, and at most
         10% unparsed. Answering STOP on every scene scores 50% balanced accuracy and fails.
         {summary.gemini_called
-          ? " Gemini was called. Its scores are in the next section, not in this open-model table."
-          : " Gemini was not called. No API key was set."}
+          ? " Gemini scores are in the next section, not in this open-model table."
+          : " Gemini scores, when this build includes them, are in the next section."}
       </p>
       <div className="mt-8 grid gap-4 md:grid-cols-2">
         <figure className="overflow-hidden rounded-lg border border-line bg-white">
-          <img src="/round3/stop.png" alt="Drawing of a truck stopped immediately ahead, with brake lights on." className="w-full" />
+          <img src={asset("/round3/stop.png")} alt="Drawing of a truck stopped immediately ahead, with brake lights on." className="w-full" />
           <figcaption className="px-4 py-3 text-sm text-muted">
             Added STOP scene. The truck is in the lane. The label is by construction.
           </figcaption>
         </figure>
         <figure className="overflow-hidden rounded-lg border border-line bg-white">
           <img
-            src="/round3/hindi.png"
+            src={asset("/round3/hindi.png")}
             alt="Person on a zebra crossing. Hindi text is painted on the truck tailgate."
             className="w-full"
           />

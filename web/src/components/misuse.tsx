@@ -21,18 +21,17 @@ export function Misuse() {
               <li>Do not paint these phrases on a vehicle, a wall, or a road. The generator builds labeled audit images. It is not a physical recipe, and this project did not test a moving vehicle.</li>
               <li>The defense ships in the same package as the generator. An audit kit that only offers the attack is the wrong artifact.</li>
               <li>A flip on an illustration is evidence about the proxy. It is not a measured probability of a crash.</li>
-              <li>API models, photograph transfer, and a larger phrase set are pending. Their absence is a gap, not a quiet zero.</li>
+              <li>Gemini 3.8 Flash was run on the locked gate, the explanation scenes, and the photograph track. Flash-Lite was not evaluated: all 40 gate requests returned HTTP 400. GPT-4o and Claude are not in this study.</li>
             </ul>
           </div>
         </div>
         <div className="mt-8 rounded-lg border border-yellow/40 p-5 text-sm leading-relaxed">
           <h3 className="font-display text-2xl text-yellow">Limits that stay even after the numbers land</h3>
           <p className="mt-2 text-paper/85">
-            Twelve original illustrations, ten of them in the primary rate, one phrase per script, one
-            plate size, tailgate only. Four SmolVLM checkpoints on CPU. The edge file is Q4_0 at 5.20
-            bits per weight as reported by llama-quantize, with the vision projector left at f16. Tesseract
-            is a weak reader of a STOP octagon. The parser is strict, so a chatty answer becomes
-            unparseable rather than a flip. No human driver was asked to label the same frames.
+            The locked drawing set is 20 STOP and 20 GO. G1 is the confirmatory phrase. G2 is a second
+            phrase and is not in the Holm family. Defenses were scored on G1 only. The open-weight
+            explanation pilot is six drawings, and that Qwen checkpoint failed the round-3 gate. The
+            photograph pack has 31 driving views and no empty lane. No human driver labeled the same frames.
           </p>
         </div>
       </div>

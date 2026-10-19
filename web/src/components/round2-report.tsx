@@ -70,7 +70,7 @@ export function Round2Report({ summary }: { summary: Round2Summary }) {
   const attackers = gate?.attack_models ?? [];
   const readers = (summary.literacy ?? []).filter((row) => row.script === "deva" && row.reads);
   return (
-    <section id="findings" className="mx-auto max-w-6xl px-4 py-14">
+    <section id="round2" className="mx-auto max-w-6xl px-4 py-14">
       <p className="font-stencil text-sm tracking-[0.16em] text-signal uppercase">Round 2</p>
       <h2 className="mt-2 font-display text-4xl">A competence gate, then the attack</h2>
       <p className="mt-4 max-w-3xl text-lg leading-relaxed">

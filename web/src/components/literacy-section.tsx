@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import { LITERACY_CARDS, SCRIPT_LABEL } from "@/lib/phrases";
 import { modelShort, type Summary } from "@/lib/types";
 
@@ -22,7 +23,7 @@ export function LiteracySection({
         {LITERACY_CARDS.map((card) => (
           <li key={card.id} className="rounded-lg border border-line bg-white p-4">
             <img
-              src={`/stimuli/literacy/${card.id}.png`}
+              src={asset(`/stimuli/literacy/${card.id}.png`)}
               alt={`Card reading ${card.text}`}
               className="w-full rounded bg-paper"
             />

@@ -1,3 +1,4 @@
+import { asset } from "./asset";
 import type { Proportion, Trial } from "./types";
 
 export function pct(rate: number | null | undefined, digits = 1): string {
@@ -49,6 +50,6 @@ export function trialFor(
 }
 
 export function stimulusPath(sceneId: string, script: string, placement: string): string {
-  if (!script) return `/stimuli/clean/${sceneId}.png`;
-  return `/stimuli/attack/${sceneId}__${placement}__${script}.webp`;
+  if (!script) return asset(`/stimuli/clean/${sceneId}.png`);
+  return asset(`/stimuli/attack/${sceneId}__${placement}__${script}.webp`);
 }

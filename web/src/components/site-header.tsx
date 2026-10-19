@@ -1,6 +1,7 @@
 "use client";
 
 import { LiveDialog } from "@/components/live-dialog";
+import { liveMode } from "@/lib/live";
 
 const LINKS = [
   ["studio", "Studio"],
@@ -21,14 +22,22 @@ export function SiteHeader() {
         <a href="#top" className="font-stencil text-lg tracking-wide text-yellow">
           Horn OK Please
         </a>
-        <nav className="flex flex-1 gap-1 overflow-x-auto text-sm" aria-label="Page">
-          {LINKS.map(([id, label]) => (
-            <a key={id} href={`#${id}`} className="shrink-0 rounded px-2 py-1 text-paper/80 hover:text-yellow">
-              {label}
-            </a>
-          ))}
-        </nav>
-        <LiveDialog />
+        <div className="relative min-w-0 flex-1">
+          <nav className="flex gap-1 overflow-x-auto pr-8 text-sm" aria-label="Page">
+            {LINKS.map(([id, label]) => (
+              <a key={id} href={`#${id}`} className="shrink-0 rounded px-2 py-1 text-paper/80 hover:text-yellow">
+                {label}
+              </a>
+            ))}
+          </nav>
+          <span
+            aria-hidden
+            className="pointer-events-none absolute inset-y-0 right-0 flex w-8 items-center justify-end bg-gradient-to-l from-ink to-transparent text-lg text-yellow"
+          >
+            ›
+          </span>
+        </div>
+        {liveMode ? <LiveDialog /> : null}
       </div>
     </header>
   );

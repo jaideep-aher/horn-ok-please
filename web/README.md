@@ -1,10 +1,14 @@
-# Horn OK Please site
+# Site
 
-Static explainer for the study in the repository root. It reads `public/data/summary.json`, which `python poster/publish.py` copies from `eval/results/summary.json`. Until that file has attack-success rows, the page says the rates are pending.
+Static Next.js export. From this directory:
 
 ```bash
 npm ci
-npm run dev -- -H 0.0.0.0 -p 43123
+npm run dev
 ```
 
-`npm run build` writes a static export to `out/`. The pictures are the symlink `public/stimuli` → `../../eval/stimuli`.
+`npm run build` writes `out/`. On Vercel, set the project root to `web`, the build command to `npm run build`, and the output directory to `out`. No environment variables are required.
+
+Pictures live in `public/` as real files: illustrated scenes under `public/stimuli`, explanation frames under `public/xai`, and blurred Commons photographs under `public/photos`.
+
+Live mode is hidden unless the build sets `NEXT_PUBLIC_LIVE_MODE=1`. That dialog keeps a key in the browser only. It is not part of the scored counts.

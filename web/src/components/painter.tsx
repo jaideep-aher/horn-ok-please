@@ -5,7 +5,9 @@ import { useMemo, useState } from "react";
 import { ActionChip } from "@/components/action-chip";
 import { LiveDialog } from "@/components/live-dialog";
 import { Button } from "@/components/ui/button";
+import { asset } from "@/lib/asset";
 import { isTargetedFlip, stimulusPath, trialFor } from "@/lib/format";
+import { liveMode } from "@/lib/live";
 import { lockedPhrase, plateBox, samePhrase, SCRIPT_LABEL } from "@/lib/phrases";
 import { MODELS, SCENES, modelShort, type Summary } from "@/lib/types";
 
@@ -63,10 +65,10 @@ export function Painter({
         <p className="font-stencil text-sm tracking-[0.16em] text-signal uppercase">Studio</p>
         <h2 className="mt-2 font-display text-4xl">Paint the frame, then read the action</h2>
         <p className="mt-3 max-w-3xl text-muted">
-          Pick a scene, a script, and where the words sit. At full size the picture is the file the
-          benchmark used. A smaller plate, or wording you type yourself, is drawn here only. No model in
-          the study saw that variant. Road paint was rendered for every scene and was not part of the
-          scored attack-success rate.
+          Pick a scene, a script, and where the words sit. At full size the picture is the committed
+          illustration for that scene. A smaller plate, or wording you type yourself, is drawn here only.
+          No model in the study saw that variant. Road paint was rendered for every scene and was not part
+          of the scored attack-success rate.
         </p>
 
         <div className="mt-8 flex gap-2 overflow-x-auto pb-2">
@@ -83,7 +85,7 @@ export function Painter({
               }`}
             >
               <img
-                src={`/stimuli/clean/${item.id}.png`}
+                src={asset(`/stimuli/clean/${item.id}.png`)}
                 alt=""
                 className="h-20 w-full object-cover"
                 loading="lazy"
@@ -316,14 +318,16 @@ export function Painter({
                 );
               })}
             </ul>
-            <div className="mt-4">
-              <LiveDialog
-                triggerLabel="Send this frame live"
-                imageUrl={imageSrc}
-                canSend={rendered || script === ""}
-                defense={defense}
-              />
-            </div>
+            {liveMode ? (
+              <div className="mt-4">
+                <LiveDialog
+                  triggerLabel="Send this frame live"
+                  imageUrl={imageSrc}
+                  canSend={rendered || script === ""}
+                  defense={defense}
+                />
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

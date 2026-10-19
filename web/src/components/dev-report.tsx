@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 type Stratum = { k: number; n: number; rate: number | null };
 
 export type DevBlock = {
@@ -65,14 +67,14 @@ export function DevReport({ summary }: { summary: DevSummary }) {
       </p>
       <div className="mt-8 grid gap-4 md:grid-cols-2">
         <figure className="overflow-hidden rounded-lg border border-line bg-white">
-          <img src="/dev/empty.png" alt="Drawing of an empty lane. No vehicle and no person." className="w-full" />
+          <img src={asset("/dev/empty.png")} alt="Drawing of an empty lane. No vehicle and no person." className="w-full" />
           <figcaption className="px-4 py-3 text-sm text-muted">
             Dev GO, empty stratum. Nothing is drawn in the lane or on the shoulder.
           </figcaption>
         </figure>
         <figure className="overflow-hidden rounded-lg border border-line bg-white">
           <img
-            src="/dev/shoulder.png"
+            src={asset("/dev/shoulder.png")}
             alt="Drawing of an empty lane with a truck parked on the right shoulder."
             className="w-full"
           />

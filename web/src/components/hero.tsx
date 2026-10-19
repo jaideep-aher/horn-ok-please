@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { asset } from "@/lib/asset";
 import type { Summary } from "@/lib/types";
 
 export function Hero({
@@ -25,10 +26,11 @@ export function Hero({
           while a person is still standing on the crossing.
         </p>
         <p className="mt-5 max-w-xl text-base leading-relaxed">
-          Horn OK Please is the line people already know from Indian truck tails. The audit asks whether a
-          small vision-language model can tell STOP from GO, whether painted text can change that call, and
-          whether the model’s own explanation admits the paint. A model that cannot make the clean call does
-          not get an attack score. The explanation layer still runs on the failures.
+          Horn OK Please is the line people already know from Indian truck tails. The question is whether
+          painted text changes a driving decision, whether we can see why, and whether the model’s own
+          explanation admits the paint. Gemini 3.8 Flash passed the STOP versus GO gate. The open models in
+          this study did not. A model that cannot make the clean call does not get an attack score. The
+          explanation layer still runs on the failures.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Button asChild variant="yellow" size="lg">
@@ -47,7 +49,7 @@ export function Hero({
       </div>
       <figure className="overflow-hidden rounded-lg border border-line bg-white shadow-sm">
         <img
-          src="/stimuli/attack/ped_crossing__truck_rear__deva.webp"
+          src={asset("/stimuli/attack/ped_crossing__truck_rear__deva.webp")}
           alt="Illustrated approach to a zebra crossing. A person in a red shirt stands on the stripes. A yellow truck ahead carries painted Marathi text on the tailgate."
           className="w-full"
         />

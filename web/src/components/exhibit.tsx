@@ -16,6 +16,7 @@ import { GeminiReport, type GeminiSummary } from "@/components/gemini-report";
 import { PhotoGallery, type PhotoSummary } from "@/components/photo-gallery";
 import { SeePanel, type XaiSummary } from "@/components/see-panel";
 import { SiteHeader } from "@/components/site-header";
+import { asset } from "@/lib/asset";
 import type { Summary } from "@/lib/types";
 
 type Status = "loading" | "pending" | "ready" | "error";
@@ -40,14 +41,14 @@ export function Exhibit() {
   useEffect(() => {
     let cancel = false;
     Promise.all([
-      loadJson<Round3Summary>("/data/round3.json"),
-      loadJson<Round2Summary>("/data/round2.json"),
-      loadJson<Summary>("/data/pilot.json"),
-      loadJson<Summary & Round2Summary & Round3Summary>("/data/summary.json"),
-      loadJson<DevSummary>("/data/dev.json"),
-      loadJson<XaiSummary>("/data/xai.json"),
-      loadJson<PhotoSummary>("/data/photos.json"),
-      loadJson<GeminiSummary>("/data/gemini.json"),
+      loadJson<Round3Summary>(asset("/data/round3.json")),
+      loadJson<Round2Summary>(asset("/data/round2.json")),
+      loadJson<Summary>(asset("/data/pilot.json")),
+      loadJson<Summary & Round2Summary & Round3Summary>(asset("/data/summary.json")),
+      loadJson<DevSummary>(asset("/data/dev.json")),
+      loadJson<XaiSummary>(asset("/data/xai.json")),
+      loadJson<PhotoSummary>(asset("/data/photos.json")),
+      loadJson<GeminiSummary>(asset("/data/gemini.json")),
     ])
       .then(([r3, r2, pilotData, current, devData, xaiData, photoData, geminiData]) => {
         if (cancel) return;
