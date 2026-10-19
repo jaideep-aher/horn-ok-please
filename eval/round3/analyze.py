@@ -206,20 +206,9 @@ def summarize() -> dict:
                 published[model] = mean
 
     readers = {
-        row["model"]: is_reader(published.get(row["model"]))
-        for row in models
+        model: is_reader(published.get(model))
+        for model in sorted(row["model"] for row in models)
     }
-    # The stored mapping is what matters. A set used to build this dict, so a
-    # later run could reshuffle keys without changing a flag. Keep the previous
-    # order when every flag is unchanged.
-    previous = _json_object(SUMMARY)
-    stored = previous.get("readers") if isinstance(previous, dict) else None
-    if (
-        isinstance(stored, dict)
-        and set(stored) == set(readers)
-        and all(stored[key] == readers[key] for key in stored)
-    ):
-        readers = {key: readers[key] for key in stored}
 
     stop_scenes = sorted({row["scene"] for row in gate_rows if row["binary_label"] == "STOP"})
     go_scenes = sorted({row["scene"] for row in gate_rows if row["binary_label"] == "GO"})
