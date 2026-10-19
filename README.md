@@ -150,12 +150,34 @@ AI coding assistants helped build the tooling: the harness, the stimulus scripts
 ## Reproduce
 
 ```bash
-hornok make-scenes --out eval/round1/stimuli
-python eval/round1/run_benchmark.py
-python eval/round1/analyze.py
+make setup
+make test
+make reproduce
+```
+
+`make setup` installs this package with the dev extra. `make test` runs `ruff check src tests eval poster` and `pytest`. `make reproduce` rebuilds summaries from the prediction files already in git, with no model and no network, then `git diff --exit-code` checks those files byte for byte. It sets `PYTHONHASHSEED=6` because `eval/round3/analyze.py` fills `readers` from a set; that seed keeps the committed key order. The rates do not depend on the seed.
+
+Round 1 is not under `eval/round1/`. Scenes are `eval/stimuli` (`hornok make-scenes` writes there by default). The runner is `eval/run_benchmark.py`. The summary script is `eval/analyze.py`, which reads `eval/results/predictions.jsonl`. Five of the 40 round-3 gate frames (`photo_cargo_a`, `photo_cargo_b`, `photo_delhi`, `photo_dharwad`, `photo_wind`) are withheld Wikimedia Commons photographs and are not in git, so that gate cannot be fully re-run from a clone. `make reproduce` still rebuilds the summaries from the committed predictions. A full rescore needs the weights and is not what `make reproduce` runs:
+
+```bash
+hornok make-scenes --out eval/stimuli
+python eval/run_benchmark.py
+python eval/analyze.py
 python eval/round3/build_stimuli.py
 python eval/round3/run_benchmark.py
 python eval/round3/analyze.py
 ```
+
+`make reproduce` reruns only the analyzers that match the committed summaries:
+
+- `eval/analyze.py` writes `eval/results/summary.json`
+- `eval/round2/analyze.py` writes `eval/round2/results/summary.json`
+- `eval/round3/analyze.py` writes `eval/round3/results/summary.json`
+- `eval/dev/analyze.py` writes `eval/dev/results/summary.json`
+- `poster/derived_stats.py` writes `poster/build/derived_stats.json`
+
+`eval/xai/analyze.py` is excluded. Committed `eval/xai/results/summary.json` still quotes `MemAvailable was 14044844032 bytes; the protocol floor for a second Qwen2.5-VL-3B load is 8589934592 bytes` in `whitebox.reason` and in `reading`. Committed `eval/xai/results/whitebox.json` has a later sentence, `above the protocol floor of 8589934592 bytes for a second Qwen2.5-VL-3B load`. The analyzer copies that file into the summary, so a rerun would change those two strings. It also copies paint and inpaint PNGs into `web/public/xai/`. Those PNGs are gitignored (only the WebP previews are stored), so the site JSON would lose its image paths. The summary is left as committed.
+
+`eval/photos/analyze.py` is excluded. `eval/photos/results/summary.json` has a `snapshot` object the analyzer does not write: model `qwen25vl-3b-q8`, excluded `literacy rows, and every model other than qwen25vl-3b-q8`, copied while literacy and the other checkpoints were still running. A rerun drops that object. Every other field in that file does rebuild. The same script overwrites `web/public/data/photos.json`, the Gemini photograph report, with the open-weight summary. Neither file is rewritten.
 
 The round-1 contract is `eval/preregistration.md`. Later contracts are `eval/round2/preregistration.md`, `eval/round3/preregistration.md`, `eval/dev/protocol.md`, `eval/xai/protocol.md`, and `eval/photos/protocol.md`. Display copies of the illustrations are already in `web/public/stimuli`. llama.cpp `b11716` is the multimodal runtime. Point `HORNOK_LLAMA_BIN` at `llama-mtmd-cli`. The default path is `vendor/llama-b11716/llama-mtmd-cli` inside this repo. The binary is not committed.

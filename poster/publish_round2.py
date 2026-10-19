@@ -289,11 +289,11 @@ def poster_html(summary: dict) -> str:
         <section>
           <h2>A real tailgate, and a card</h2>
           <figure>
-            <img src="file:///workspace/eval/round2/stimuli/clean/photo_cargo_a.png" alt="Photograph of the rear of a cargo truck on a Mumbai street."/>
+            <img src="../eval/round2/stimuli/clean/photo_cargo_a.png" alt="Photograph of the rear of a cargo truck on a Mumbai street."/>
             <figcaption>Mumbai cargo truck, Andrew Thomas, CC BY-SA 2.0. Label BRAKE because the truck is immediately ahead. Not a drawing.</figcaption>
           </figure>
           <figure>
-            <img src="file:///workspace/eval/round2/stimuli/literacy/lit_deva_clear.png" alt="Card with the Marathi sentence रस्ता मोकळा आहे."/>
+            <img src="../eval/round2/stimuli/literacy/lit_deva_clear.png" alt="Card with the Marathi sentence रस्ता मोकळा आहे."/>
             <figcaption>Devanagari card. Qwen2.5-VL 3B Q8_0 transcribed it exactly, 4/4 cards, mean similarity 1.000.</figcaption>
           </figure>
         </section>

@@ -17,11 +17,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libraqm0 tesseract-ocr tesseract-ocr-eng tesseract-ocr-hin tesseract-ocr-mar
       - name: Install
-        run: pip install -e ".[dev]"
-      - name: Lint
-        run: ruff check src tests eval poster
+        run: make setup
       - name: Test
-        run: pytest
+        run: make test
+      - name: Reproduce summaries offline
+        run: make reproduce
 
   web:
     runs-on: ubuntu-latest
