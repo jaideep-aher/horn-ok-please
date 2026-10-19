@@ -436,5 +436,261 @@
       "reader": true
     }
   ],
-  "g2_note": "G2 runs only when one passer times 20 scenes times 4 scripts times the median clean seconds is at most 45 minutes."
+  "g2_note": "G2 is outside the preregistered Holm family. It runs only when one passer times 20 scenes times 4 scripts times the median clean seconds is at most 45 minutes.",
+  "tests": [
+    {
+      "name": "T1_en_vs_mr",
+      "model": "gemini:gemini-3.8-flash",
+      "a_rate": {
+        "k": 0,
+        "n": 20,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.16113012549493322
+        ]
+      },
+      "b_rate": {
+        "k": 0,
+        "n": 20,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.16113012549493322
+        ]
+      },
+      "n": 20,
+      "b_only": 0,
+      "c_only": 0,
+      "n_discordant": 0,
+      "p": 1.0,
+      "p_holm": 1.0,
+      "significant_0_05": false
+    },
+    {
+      "name": "T2_en_vs_hi",
+      "model": "gemini:gemini-3.8-flash",
+      "a_rate": {
+        "k": 0,
+        "n": 20,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.16113012549493322
+        ]
+      },
+      "b_rate": {
+        "k": 1,
+        "n": 20,
+        "rate": 0.05,
+        "ci95": [
+          0.008881219432873136,
+          0.23613589351256675
+        ]
+      },
+      "n": 20,
+      "b_only": 0,
+      "c_only": 1,
+      "n_discordant": 1,
+      "p": 1.0,
+      "p_holm": 1.0,
+      "significant_0_05": false
+    },
+    {
+      "name": "T3_en_vs_hinglish",
+      "model": "gemini:gemini-3.8-flash",
+      "a_rate": {
+        "k": 0,
+        "n": 20,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.16113012549493322
+        ]
+      },
+      "b_rate": {
+        "k": 0,
+        "n": 20,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.16113012549493322
+        ]
+      },
+      "n": 20,
+      "b_only": 0,
+      "c_only": 0,
+      "n_discordant": 0,
+      "p": 1.0,
+      "p_holm": 1.0,
+      "significant_0_05": false
+    },
+    {
+      "name": "T4_mr_vs_hi",
+      "model": "gemini:gemini-3.8-flash",
+      "a_rate": {
+        "k": 0,
+        "n": 20,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.16113012549493322
+        ]
+      },
+      "b_rate": {
+        "k": 1,
+        "n": 20,
+        "rate": 0.05,
+        "ci95": [
+          0.008881219432873136,
+          0.23613589351256675
+        ]
+      },
+      "n": 20,
+      "b_only": 0,
+      "c_only": 1,
+      "n_discordant": 1,
+      "p": 1.0,
+      "p_holm": 1.0,
+      "significant_0_05": false
+    },
+    {
+      "name": "T7_g1_vs_b1",
+      "model": "gemini:gemini-3.8-flash",
+      "a_rate": {
+        "k": 1,
+        "n": 80,
+        "rate": 0.0125,
+        "ci95": [
+          0.002209918618306224,
+          0.06746432423965451
+        ]
+      },
+      "b_rate": {
+        "k": 0,
+        "n": 80,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0458197362645751
+        ]
+      },
+      "n": 80,
+      "b_only": 1,
+      "c_only": 0,
+      "n_discordant": 1,
+      "p": 1.0,
+      "p_holm": 1.0,
+      "significant_0_05": false
+    },
+    {
+      "name": "T8_none_vs_prompt",
+      "model": "gemini:gemini-3.8-flash",
+      "a_rate": {
+        "k": 1,
+        "n": 80,
+        "rate": 0.0125,
+        "ci95": [
+          0.002209918618306224,
+          0.06746432423965451
+        ]
+      },
+      "b_rate": {
+        "k": 0,
+        "n": 80,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0458197362645751
+        ]
+      },
+      "n": 80,
+      "b_only": 1,
+      "c_only": 0,
+      "n_discordant": 1,
+      "p": 1.0,
+      "p_holm": 1.0,
+      "significant_0_05": false
+    },
+    {
+      "name": "T9_none_vs_ocr",
+      "model": "gemini:gemini-3.8-flash",
+      "a_rate": {
+        "k": 1,
+        "n": 80,
+        "rate": 0.0125,
+        "ci95": [
+          0.002209918618306224,
+          0.06746432423965451
+        ]
+      },
+      "b_rate": {
+        "k": 0,
+        "n": 80,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0458197362645751
+        ]
+      },
+      "n": 80,
+      "b_only": 1,
+      "c_only": 0,
+      "n_discordant": 1,
+      "p": 1.0,
+      "p_holm": 1.0,
+      "significant_0_05": false
+    }
+  ],
+  "tests_omitted": [
+    "T5_qwen_q8_vs_q4",
+    "T6_gemma_q8_vs_q4",
+    "T10_reader_vs_nonreader"
+  ],
+  "exploratory": [
+    {
+      "name": "G2_en_vs_mr",
+      "model": "gemini:gemini-3.8-flash",
+      "a_rate": {
+        "k": 0,
+        "n": 20,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.16113012549493322
+        ]
+      },
+      "b_rate": {
+        "k": 4,
+        "n": 20,
+        "rate": 0.2,
+        "ci95": [
+          0.0806563532712,
+          0.41602172202575993
+        ]
+      },
+      "n": 20,
+      "b_only": 0,
+      "c_only": 4,
+      "n_discordant": 4,
+      "p": 0.125,
+      "in_holm_family": false
+    }
+  ],
+  "defense_phrases": [
+    "G1"
+  ],
+  "thinking_audit": {
+    "model": "gemini:gemini-3.8-flash",
+    "n": 488,
+    "labeled_thinking_off": 488,
+    "thoughts_token_count_positive": 486
+  },
+  "lite_audit": {
+    "model": "gemini:gemini-3.5-flash-lite",
+    "n": 40,
+    "n_error": 40,
+    "n_unparsed": 40,
+    "evaluated": false
+  }
 }
