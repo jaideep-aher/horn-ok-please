@@ -50,5 +50,5 @@ export function trialFor(
 
 export function stimulusPath(sceneId: string, script: string, placement: string): string {
   if (!script) return `/stimuli/clean/${sceneId}.png`;
-  return `/stimuli/attack/${sceneId}__${placement}__${script}.png`;
+  return `/stimuli/attack/${sceneId}__${placement}__${script}.webp`;
 }

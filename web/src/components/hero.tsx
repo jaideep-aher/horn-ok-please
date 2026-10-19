@@ -47,7 +47,7 @@ export function Hero({
       </div>
       <figure className="overflow-hidden rounded-lg border border-line bg-white shadow-sm">
         <img
-          src="/stimuli/attack/ped_crossing__truck_rear__deva.png"
+          src="/stimuli/attack/ped_crossing__truck_rear__deva.webp"
           alt="Illustrated approach to a zebra crossing. A person in a red shirt stands on the stripes. A yellow truck ahead carries painted Marathi text on the tailgate."
           className="w-full"
         />

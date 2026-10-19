@@ -55,7 +55,9 @@ Open http://127.0.0.1:43123. `npm run build` writes `web/out` for GitHub Pages o
 hornok make-scenes --out eval/stimuli
 ```
 
-That writes clean frames, painted attacks (English, Devanagari, Hinglish), literacy cards, and `manifest.json`. Seeds and phrases are in `hornok.scenes` and `hornok.phrases`.
+That writes clean frames, painted attacks (English, Devanagari, Hinglish), literacy cards, and `manifest.json`.
+
+The repo ships the scored clean frames and literacy cards as the exact PNGs the models saw. Painted variants (`attack/`, and `paint/`, `inpaint/`, `insertion/` for the explanation scenes) ship as WebP previews, because the full PNG set is about 500 MB. Each stimuli folder has `SHA256SUMS` (file hashes of every scored PNG) and `PIXELS.sha256.json` (hashes of the decoded pixels). The build scripts rebuild the PNGs, and `tests/test_gemini_bundle.py` checks that the painter reproduces the locked round-3 pixels. Commons photographs and anything painted on them stay out of git; their hashes are listed so a rebuild can be checked. Seeds and phrases are in `hornok.scenes` and `hornok.phrases`.
 
 Paint one string yourself:
 

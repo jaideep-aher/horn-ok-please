@@ -14,8 +14,13 @@ web/out/
 eval/results/ocr_cache/
 eval/round2/results/ocr_cache/
 eval/round2/photo_src/
+# Derived stimuli ship as WebP previews. Regenerated PNGs stay local; check them
+# against SHA256SUMS next to each manifest.
+eval/**/stimuli/attack/*.png
+eval/xai/stimuli/paint/*.png
+eval/xai/stimuli/inpaint/*.png
+eval/xai/stimuli/insertion/*.png
 eval/round2/stimuli/attack/
-eval/round3/stimuli/attack/
 eval/round3/results/ocr/
 .DS_Store
 *.log

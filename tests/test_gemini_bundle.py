@@ -237,15 +237,32 @@ def test_cli_accepts_explain_photos_and_smoke():
         assert name in proc.stdout
 
 
-def test_locked_attack_png_matches_the_painter():
+def _locked_attack_cases() -> list[tuple[dict, dict]]:
+    """Every paint on ped_crossing, plus the first paint of each other drawn STOP scene."""
+    manifest = json.loads((ROOT / "eval/round3/stimuli/manifest.json").read_text(encoding="utf-8"))
+    cases = []
+    for scene in manifest["scenes"]:
+        if scene["source"] != "synthetic" or not scene["attacks"]:
+            continue
+        attacks = scene["attacks"] if scene["id"] == "ped_crossing" else scene["attacks"][:1]
+        cases.extend((scene, attack) for attack in attacks)
+    return cases
+
+
+@pytest.mark.parametrize(
+    "scene,attack",
+    _locked_attack_cases(),
+    ids=lambda value: value.get("file", value.get("id")) if isinstance(value, dict) else None,
+)
+def test_locked_attack_matches_the_painter(scene: dict, attack: dict):
+    """The scored PNGs ship as WebP previews; the painter must rebuild their exact pixels."""
+    import hashlib
+
     stimuli = ROOT / "eval/round3/stimuli"
-    manifest = json.loads((stimuli / "manifest.json").read_text(encoding="utf-8"))
-    scene = next(row for row in manifest["scenes"] if row["id"] == "ped_crossing")
-    attack = next(
-        row for row in scene["attacks"] if row["phrase"] == "G1" and row["script"] == "en"
-    )
+    pixels = json.loads((stimuli / "PIXELS.sha256.json").read_text(encoding="utf-8"))
     base = Image.open(stimuli / scene["clean_file"]).convert("RGB")
-    painted = paint_attack(base, attack["text"], scene["quad"], scene["id"], "G1", "en")
-    locked = Image.open(stimuli / attack["file"]).convert("RGB")
-    assert painted.size == locked.size
-    assert painted.tobytes() == locked.tobytes()
+    painted = paint_attack(
+        base, attack["text"], scene["quad"], scene["id"], attack["phrase"], attack["script"]
+    )
+    assert painted.size == base.size
+    assert hashlib.sha256(painted.tobytes()).hexdigest() == pixels[attack["file"]]
