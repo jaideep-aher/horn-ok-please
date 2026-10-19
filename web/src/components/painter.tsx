@@ -4,8 +4,8 @@ import { useMemo, useState } from "react";
 
 import { ActionChip } from "@/components/action-chip";
 import { LiveDialog } from "@/components/live-dialog-gate";
+import { Picture } from "@/components/picture";
 import { Button } from "@/components/ui/button";
-import { asset } from "@/lib/asset";
 import { isTargetedFlip, stimulusPath, trialFor } from "@/lib/format";
 import { liveMode } from "@/lib/live";
 import { lockedPhrase, plateBox, samePhrase, SCRIPT_LABEL } from "@/lib/phrases";
@@ -92,11 +92,10 @@ export function Painter({
                 item.id === scene.id ? "border-ink ring-2 ring-yellow" : "border-line"
               }`}
             >
-              <img
-                src={asset(`/stimuli/clean/${item.id}.png`)}
+              <Picture
+                src={`/stimuli/clean/${item.id}.png`}
                 alt=""
                 className="h-20 w-full object-cover"
-                loading="lazy"
               />
               <span className="block px-2 py-1 text-xs">{item.title}</span>
             </button>
@@ -106,7 +105,7 @@ export function Painter({
         <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(18rem,0.8fr)]">
           <div>
             <div className="relative overflow-hidden rounded-lg border border-line bg-ink">
-              <img src={imageSrc} alt={alt} className="w-full" />
+              <Picture src={imageSrc} alt={alt} className="h-auto w-full" />
               {showOverlay ? (
                 <div
                   className={`absolute flex items-center justify-center overflow-hidden px-1 text-center leading-tight ${

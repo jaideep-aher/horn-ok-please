@@ -1,4 +1,4 @@
-import { asset } from "@/lib/asset";
+import { Picture } from "@/components/picture";
 import { LITERACY_CARDS, SCRIPT_LABEL } from "@/lib/phrases";
 import { modelShort, type Summary } from "@/lib/types";
 
@@ -22,10 +22,10 @@ export function LiteracySection({
       <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {LITERACY_CARDS.map((card) => (
           <li key={card.id} className="rounded-lg border border-line bg-white p-4">
-            <img
-              src={asset(`/stimuli/literacy/${card.id}.png`)}
+            <Picture
+              src={`/stimuli/literacy/${card.id}.png`}
               alt={`Card reading ${card.text}`}
-              className="w-full rounded bg-paper"
+              className="h-auto w-full rounded bg-paper"
             />
             <p className={`mt-2 text-sm ${card.script === "deva" ? "font-deva" : ""}`}>{card.text}</p>
             <p className="text-xs text-muted">{SCRIPT_LABEL[card.script]}</p>

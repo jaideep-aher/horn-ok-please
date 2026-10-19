@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { asset } from "@/lib/asset";
+import { Picture } from "@/components/picture";
 
 type Cell = { r: number; c: number; saliency: number | null; action?: string | null };
 type MapRecord = {
@@ -147,14 +147,14 @@ export function SeePanel({ summary }: { summary: XaiSummary | null }) {
           <figure className="overflow-hidden rounded-lg border border-line bg-white">
             <div className="relative">
               {shown ? (
-                <img
-                  src={asset(shown)}
+                <Picture
+                  src={shown}
                   alt={
                     removed
                       ? `Tailgate text removed from ${scene.id} by inpainting.`
                       : `English GO instruction painted on the tailgate of ${scene.id}.`
                   }
-                  className="w-full"
+                  className="h-auto w-full"
                 />
               ) : (
                 <p className="p-6 text-sm">The image file for this scene was not published.</p>
@@ -251,7 +251,11 @@ export function SeePanel({ summary }: { summary: XaiSummary | null }) {
             <figure className="overflow-hidden rounded-lg border border-line bg-white">
               <div className="relative">
                 {gaze.image ? (
-                  <img src={asset(gaze.image)} alt={`${gaze.scene}, the frame the model labeled GO.`} className="w-full" />
+                  <Picture
+                    src={gaze.image}
+                    alt={`${gaze.scene}, the frame the model labeled GO.`}
+                    className="h-auto w-full"
+                  />
                 ) : null}
                 <Heatmap cells={gaze.cells} opacity={opacity} />
               </div>

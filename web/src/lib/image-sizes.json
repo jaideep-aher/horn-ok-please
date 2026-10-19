@@ -1,0 +1,486 @@
+{
+  "/dev/empty.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/dev/shoulder.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/round3/go.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/round3/hindi.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/round3/stop.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/child_curb__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/child_curb__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/child_curb__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/child_curb__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/child_curb__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/child_curb__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_day__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_day__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_day__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_day__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_day__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_day__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_dusk__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_dusk__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_dusk__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_dusk__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_dusk__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/clear_dusk__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/close_truck__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/close_truck__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/close_truck__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/close_truck__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/close_truck__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/close_truck__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/cow__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/cow__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/cow__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/cow__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/cow__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/cow__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/debris__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/debris__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/debris__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/debris__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/debris__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/debris__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/lane_blocked__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/lane_blocked__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/lane_blocked__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/lane_blocked__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/lane_blocked__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/lane_blocked__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_crossing__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_crossing__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_crossing__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_crossing__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_crossing__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_crossing__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_side__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_side__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_side__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_side__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_side__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ped_side__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/red_light__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/red_light__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/red_light__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/red_light__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/red_light__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/red_light__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ruko_sign__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ruko_sign__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ruko_sign__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ruko_sign__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ruko_sign__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/ruko_sign__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/stop_sign__road_surface__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/stop_sign__road_surface__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/stop_sign__road_surface__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/stop_sign__truck_rear__deva.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/stop_sign__truck_rear__en.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/attack/stop_sign__truck_rear__hinglish.webp": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/child_curb.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/clear_day.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/clear_dusk.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/close_truck.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/cow.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/debris.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/lane_blocked.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/ped_crossing.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/ped_side.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/red_light.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/ruko_sign.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/clean/stop_sign.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/stimuli/literacy/lit_deva_brake.png": {
+    "width": 960,
+    "height": 280
+  },
+  "/stimuli/literacy/lit_deva_clear.png": {
+    "width": 960,
+    "height": 280
+  },
+  "/stimuli/literacy/lit_deva_go.png": {
+    "width": 960,
+    "height": 280
+  },
+  "/stimuli/literacy/lit_deva_ruko.png": {
+    "width": 960,
+    "height": 280
+  },
+  "/stimuli/literacy/lit_en_brake.png": {
+    "width": 960,
+    "height": 280
+  },
+  "/stimuli/literacy/lit_en_clear.png": {
+    "width": 960,
+    "height": 280
+  },
+  "/stimuli/literacy/lit_en_horn.png": {
+    "width": 960,
+    "height": 280
+  },
+  "/stimuli/literacy/lit_en_stop.png": {
+    "width": 960,
+    "height": 280
+  },
+  "/xai/dev_block.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/dev_child.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/dev_cow.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/dev_debris.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/dev_person.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/dev_person_dusk.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_block__clean.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_block__g1_en.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_block__g1_en_inpaint.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_child__clean.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_child__g1_en.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_child__g1_en_inpaint.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_cow__clean.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_cow__g1_en.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_cow__g1_en_inpaint.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_dusk__clean.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_dusk__g1_en.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_dusk__g1_en_inpaint.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_empty__clean.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_empty__g1_en.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_empty__g1_en_inpaint.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_person__clean.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_person__g1_en.png": {
+    "width": 1280,
+    "height": 720
+  },
+  "/xai/xai_person__g1_en_inpaint.png": {
+    "width": 1280,
+    "height": 720
+  }
+}

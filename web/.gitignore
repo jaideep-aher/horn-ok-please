@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AVIF/WebP siblings from scripts/optimize-images.mjs. Source webp stays.
+public/**/*.avif
+public/stimuli/clean/*.webp
+public/stimuli/literacy/*.webp
+public/xai/*.webp
+public/round3/*.webp
+public/dev/*.webp

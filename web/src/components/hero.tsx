@@ -1,5 +1,5 @@
+import { Picture } from "@/components/picture";
 import { Button } from "@/components/ui/button";
-import { asset } from "@/lib/asset";
 import type { Summary } from "@/lib/types";
 
 export function Hero({
@@ -48,10 +48,11 @@ export function Hero({
         </p>
       </div>
       <figure className="overflow-hidden rounded-lg border border-line bg-white shadow-sm">
-        <img
-          src={asset("/stimuli/attack/ped_crossing__truck_rear__deva.webp")}
+        <Picture
+          src="/stimuli/attack/ped_crossing__truck_rear__deva.webp"
           alt="Illustrated approach to a zebra crossing. A person in a red shirt stands on the stripes. A yellow truck ahead carries painted Marathi text on the tailgate."
-          className="w-full"
+          className="h-auto w-full"
+          priority
         />
         <figcaption className="space-y-1 px-4 py-3 text-sm text-muted">
           <span className="block text-ink">Person on the crossing, Marathi on the tailgate.</span>
