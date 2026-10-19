@@ -152,6 +152,14 @@ export function Exhibit() {
             decided what to run and what to report, and checked every reported number against the committed result
             files in this repository. Any errors are mine.
           </p>
+          <p>
+            <a
+              className="underline decoration-yellow decoration-2 underline-offset-2"
+              href="https://github.com/jaideep-aher/horn-ok-please"
+            >
+              Code and data
+            </a>
+          </p>
         </div>
       </footer>
     </>

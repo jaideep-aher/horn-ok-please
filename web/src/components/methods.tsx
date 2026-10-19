@@ -48,6 +48,14 @@ export function Methods({ summary }: { summary: Summary | null }) {
     <section id="methods" className="mx-auto max-w-6xl px-4 py-14">
       <p className="font-stencil text-sm tracking-[0.16em] text-signal uppercase">Methods</p>
       <h2 className="mt-2 font-display text-4xl">Locked before the first scored reply</h2>
+      <p className="mt-3 text-sm">
+        <a
+          className="underline decoration-yellow decoration-2 underline-offset-2"
+          href="https://github.com/jaideep-aher/horn-ok-please"
+        >
+          Code and data
+        </a>
+      </p>
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <article className="space-y-3 text-sm leading-relaxed">
           <p>
