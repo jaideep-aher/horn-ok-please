@@ -1,6 +1,5 @@
 # Offline checks. `make reproduce` rebuilds summaries from committed predictions
-# and exits non-zero if those bytes change. eval/xai/analyze.py is excluded;
-# the Reproduce section of README.md says why.
+# and exits non-zero if those bytes change.
 
 PYTHON ?= python3
 # eval/round3/analyze.py fills `readers` from a set. This seed keeps the
@@ -22,6 +21,7 @@ REPRO_SUMMARIES := \
 	eval/round3/results/summary.json \
 	eval/dev/results/summary.json \
 	eval/photos/results/summary.json \
+	eval/xai/results/summary.json \
 	poster/build/derived_stats.json
 
 reproduce:
@@ -30,5 +30,6 @@ reproduce:
 	PYTHONHASHSEED=$(REPRO_HASHSEED) $(PYTHON) eval/round3/analyze.py
 	PYTHONHASHSEED=$(REPRO_HASHSEED) $(PYTHON) eval/dev/analyze.py
 	PYTHONHASHSEED=$(REPRO_HASHSEED) $(PYTHON) eval/photos/analyze.py
+	PYTHONHASHSEED=$(REPRO_HASHSEED) $(PYTHON) eval/xai/analyze.py
 	PYTHONHASHSEED=$(REPRO_HASHSEED) $(PYTHON) poster/derived_stats.py >/dev/null
 	git diff --exit-code -- $(REPRO_SUMMARIES) web site-offline
