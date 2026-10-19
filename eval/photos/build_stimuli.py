@@ -265,8 +265,6 @@ def _publish_blur(scene_id: str, original: Image.Image, record: dict, boxes: lis
     PUBLIC.mkdir(parents=True, exist_ok=True)
     for name, source in pairs.items():
         dest = PUBLIC / f"{scene_id}__{name}.jpg"
-        if dest.is_file():
-            continue
         image = source if isinstance(source, Image.Image) else Image.open(source).convert("RGB")
         blur_regions(image, regions).save(dest, quality=85)
 

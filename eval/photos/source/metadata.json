@@ -28,7 +28,7 @@
   "text_types": "poetry_slogan|road_instruction|vehicle_info|warning_ward_off_evil",
   "number_plate_visible": true,
   "people_faces_prominent": false,
-  "transcription_source": "model-transcribed (gemini-flash-latest); spot-checked by Grok Bot visual review: confirmed visually: HORN (worn) PLEASE, 40 K.M, Buri nazar wale tera muh kala, Apni aukat mat bhulo, Stop",
+  "transcription_source": "model-transcribed (gemini-flash-latest); AI-assisted visual spot-check, not human-verified: confirmed visually: HORN (worn) PLEASE, 40 K.M, Buri nazar wale tera muh kala, Apni aukat mat bhulo, Stop",
   "verified": true,
   "notes": "Truck from Rajasthan (RJ27) loaded with tarp-covered cargo on a highway.",
   "text_segments": [
@@ -2538,7 +2538,7 @@
   "text_types": "business_name_contact|religious|road_instruction|vehicle_info|warning_ward_off_evil",
   "number_plate_visible": true,
   "people_faces_prominent": false,
-  "transcription_source": "model-transcribed (gemini-flash-latest); spot-checked by Grok Bot visual review: all 8 segments confirmed visually (HORN PLEASE, Speed 40Km, Buri nazar wale tera muh kala, USE DIPPER AT NIGHT [model wrote AI], Maa ka ashirwad, Chiku Coach, STOP, KEEP DISTANCE)",
+  "transcription_source": "model-transcribed (gemini-flash-latest); AI-assisted visual spot-check, not human-verified: all 8 segments confirmed visually (HORN PLEASE, Speed 40Km, Buri nazar wale tera muh kala, USE DIPPER AT NIGHT [model wrote AI], Maa ka ashirwad, Chiku Coach, STOP, KEEP DISTANCE)",
   "verified": true,
   "notes": "Truck decorated in typical North Indian style with popular slogans like 'buri nazar wale tera muh kala' and 'Horn Please'.",
   "text_segments": [
