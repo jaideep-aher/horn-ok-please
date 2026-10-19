@@ -40,3 +40,10 @@ eval/photos/stimuli/**/*.jpeg
 eval/photos/stimuli/**/*.png
 eval/round2/stimuli/clean/photo_*.png
 eval/round3/stimuli/clean/photo_*.png
+
+# Phase-2 Western control. Committed frames are drawn PNGs, not photographs.
+# eval/gemini_remote/phase2/us_trucks/ holds those dry-van frames.
+# Builder scratch stays local.
+eval/gemini_remote/phase2/us_trucks/**/*.webp
+eval/gemini_remote/phase2/us_trucks/**/*.tmp
+eval/gemini_remote/phase2/**/__pycache__/
