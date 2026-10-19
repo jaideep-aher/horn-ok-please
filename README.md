@@ -37,10 +37,17 @@ When painted truck text changes a driving model's decision, can we see why, and 
 | G2, exploratory | Marathi 4/20 (Wilson 95% 0.081 to 0.416), Hindi 3/20 (0.052 to 0.360). English versus Marathi: p=0.125, 4 discordant, n=20. Not in the Holm family. |
 | Defenses | G1 only. Undefended 1/80, each defense 0/80, McNemar p=1. Over-block 4/17 (Wilson 95% 0.096 to 0.473). Not run on G2. |
 | Open models | None passed the same gate. On six drawings, Qwen2.5-VL 3B Q8 English paint changed 6/6: 4 hazard-ignoring flips and 2 GO corrections. Telea restored 6/6. |
-| Photographs, Flash | STOP 28/31 (Wilson 95% 0.751 to 0.967). Paint changes 0/19. GO recall is undefined. Holm p=1 on all five tests. |
-| Photographs, Qwen2.5-VL 3B Q8 | STOP 31/31 (Wilson 95% 0.890 to 1.000). English paint differed on 6/19 (0.154 to 0.540). Unadjusted McNemar p=0.03125, n=19, 6 discordant. Holm p=0.125 in the family of five. Not significant. Multiplying that unadjusted p by 5 is 0.15625, which is not the Holm step this repo uses. |
+| Photographs, Flash | STOP 28/31 (Wilson 95% 0.751 to 0.967). Paint changes 0/19. GO recall is undefined. Holm p=1 on all five tests. The frames are not in this copy. |
 
-Flash-Lite returned HTTP 400 on all 40 gate images, so it was never evaluated. The full log, including the prompt diagnostic, is `docs/RESULTS_LOG.md`. The Qwen photograph rows are `eval/photos/results/summary.json`.
+## What failed and why
+
+- **Flash-Lite was never evaluated.** All 40 gate requests returned HTTP 400 INVALID_ARGUMENT. The client tries another thinking setting only when the error names `thinking_budget` or `thinking_level`. This message does not, so the run stopped. That is not a competence score.
+- **Open models failed the gate.** In `web/public/data/round3.json`, Qwen2.5-VL 3B Q4 is STOP 20/20 and GO 1/20 (`photo_wind` only), balanced accuracy 0.525, unparsed 0/40. Qwen2.5-VL 3B Q8, Gemma 3 4B Q8, and Gemma 3 4B Q4 each said STOP on 40/40, balanced accuracy 0.500, unparsed 0/40. None passed, so their attacks were not scored.
+- **The gate was re-run.** An earlier Flash file, 40/40 unparsed, was a client failure: thinking tokens consumed a 64-token cap, and the schema was not sent as `response_schema`. That file is not a score. The numbers above are the later run.
+- **`thinking: off` is mislabeled.** Stored `thinking` is `off` on 488/488 Flash rows, and `thoughts_token_count` is positive on 486/488. The two rows without thoughts are literacy cards.
+- **Defenses were not tested on G2.** Prompt and OCR defenses were scored on G1 only. Undefended G1 is 1/80 and each defense is 0/80, so the paired test is p=1: no measurable benefit. Each defense also over-blocked 4/17 true GO scenes.
+
+The full log, including the prompt diagnostic, is `docs/RESULTS_LOG.md`. An open-weight photograph snapshot sits in `eval/photos/results/summary.json`. It is not a published claim in this copy.
 
 ## Quickstart
 
@@ -60,7 +67,7 @@ cd web && npm ci && npm run dev
 
 The toolkit in `src/hornok` draws scenes, parses STOP and GO, scores attack success with Wilson intervals and exact McNemar tests, and runs the explanation checks. Protocols were locked before the completions they govern. The site reads those summaries. It does not invent a rate.
 
-Illustrated frames are original drawings, CC-BY-4.0, Jaideep (Jay) Aher. The 99-photograph track uses Wikimedia Commons frames. Credits and licenses are in `eval/photos/CREDITS.md`. Unblurred plates and faces are not in this git history. Blurred copies are in `web/public/photos/`. Rebuild the model-facing files with `python eval/photos/fetch_sources.py` and `python eval/photos/build_stimuli.py`.
+Illustrated frames are original drawings, CC-BY-4.0, Jaideep (Jay) Aher. The 99-photograph track uses Wikimedia Commons frames. Credits and licenses are in `eval/photos/CREDITS.md`. The Commons frames are not in this copy: painted registration numbers and phone numbers stayed readable after the bumper-plate boxes, so `web/public/photos/` is empty. Model-facing files stay out of git. Rebuild them locally with `python eval/photos/fetch_sources.py` and `python eval/photos/build_stimuli.py`.
 
 ## Design decisions
 

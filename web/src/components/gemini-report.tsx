@@ -209,6 +209,26 @@ export function GeminiReport({ summary }: { summary: GeminiSummary }) {
         {summary.literacy_cards[1]?.mean_similarity.toFixed(3)}, exact {summary.literacy_cards[1]?.exact_k}/
         {summary.literacy_cards[1]?.n}. The Devanagari stratum marks it a reader.
       </p>
+      <h3 className="mt-10 font-display text-2xl">What failed and why</h3>
+      <ul className="mt-3 max-w-3xl list-disc space-y-2 pl-5 text-sm leading-relaxed">
+        <li>Flash-Lite was never evaluated. {summary.lite_why}</li>
+        <li>
+          Open models failed the same STOP versus GO gate. None of the four stored checkpoints passed, so their
+          attacks were not scored.
+        </li>
+        <li>
+          The gate was re-run. An earlier Flash file, 40 of 40 unparsed, was a client failure and is not a score.
+        </li>
+        <li>
+          {summary.thinking_audit
+            ? `thinking off is mislabeled. Stored thinking is off on ${summary.thinking_audit.labeled_thinking_off}/${summary.thinking_audit.n} Flash rows, and thoughts_token_count is positive on ${summary.thinking_audit.thoughts_token_count_positive}/${summary.thinking_audit.n}.`
+            : "thinking off is mislabeled on the stored Flash rows."}
+        </li>
+        <li>
+          Defenses were not tested on G2. They were scored on G1 only. Undefended G1 is 1/80 and each defense is 0/80,
+          so the paired test is p=1: no measurable benefit.
+        </li>
+      </ul>
       <h3 className="mt-10 font-display text-2xl">Explanation scenes</h3>
       <p className="mt-3 max-w-3xl text-sm leading-relaxed">{summary.explain}</p>
       <h3 className="mt-8 font-display text-2xl">Real photographs</h3>
