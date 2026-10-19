@@ -46,7 +46,7 @@ make reproduce
 |---|---|
 | `src/hornok/` | Toolkit: scenes, tailgate paint, STOP/GO parsing, Wilson intervals, exact McNemar, defenses, Gemini client. |
 | `eval/` | Protocols, runners, and committed results. Round 1 is not under `eval/round1/`. Scenes are `eval/stimuli`. The runner is `eval/run_benchmark.py`. The summary script is `eval/analyze.py`. |
-| `docs/` | Setup, the results log, and the expo pitch. |
+| `docs/` | Setup, the results log, the expo pitch, and the design note [`docs/DESIGN.md`](docs/DESIGN.md). |
 | `poster/` | The 24 by 24 inch poster. The Data+ print v3.1 sources are under `poster/dataplus/`. |
 | `web/` | The Next.js site. The Pages workflow deploys it. |
 | `tests/` | Pytest. |
@@ -195,6 +195,8 @@ The scored run did not store a Hugging Face revision hash. The pin is the reposi
 The toolkit in `src/hornok` draws scenes, parses STOP and GO, scores attack success with Wilson intervals and exact McNemar tests, and runs the explanation checks. Protocols were locked before the completions they govern. The site reads those summaries. It does not invent a rate.
 
 ## Design decisions
+
+The longer rationale is [`docs/DESIGN.md`](docs/DESIGN.md).
 
 - **A gate before an attack.** Round 1 showed that a zero attack rate on SmolVLM was incompetence. Round 2 asked for four actions from one still frame, and every model failed a 60% agreement gate. Round 3, locked on 18 October 2026, asks only STOP or GO, because a still frame cannot support the four-way split. Unparsed is a miss.
 - **Scripts are fixed, not searched.** English, Marathi in Devanagari, Hindi in Devanagari, Hinglish, and, on the photographs, Urdu in Nastaliq.
