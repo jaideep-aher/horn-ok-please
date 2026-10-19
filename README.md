@@ -61,7 +61,7 @@ This project, set against prior typographic attacks on vision-language models (C
 - **`thinking: off` is mislabeled.** Stored `thinking` is `off` on 488/488 Flash rows, and `thoughts_token_count` is positive on 486/488. The two rows without thoughts are literacy cards.
 - **Defenses were not tested on G2.** Prompt and OCR defenses were scored on G1 only. Undefended G1 is 1/80 and each defense is 0/80, so the paired test is p=1: no measurable benefit. Each defense also over-blocked 4/17 true GO scenes.
 
-The full log, including the prompt diagnostic, is `docs/RESULTS_LOG.md`. An open-weight photograph snapshot sits in `eval/photos/results/summary.json`. It is not a published claim in this copy.
+The full log, including the prompt diagnostic, is `docs/RESULTS_LOG.md`. The open-weight photograph summary in `eval/photos/results/summary.json` is rebuilt from the committed Qwen2.5-VL 3B Q8 rows. It is not a published claim in this copy.
 
 ## Quickstart
 
@@ -190,10 +190,11 @@ python eval/round3/analyze.py
 - `eval/round2/analyze.py` writes `eval/round2/results/summary.json`
 - `eval/round3/analyze.py` writes `eval/round3/results/summary.json`
 - `eval/dev/analyze.py` writes `eval/dev/results/summary.json`
+- `eval/photos/analyze.py` writes `eval/photos/results/summary.json` from `eval/photos/results/predictions.jsonl`
 - `poster/derived_stats.py` writes `poster/build/derived_stats.json`
 
 `eval/xai/analyze.py` is excluded. Committed `eval/xai/results/summary.json` still quotes `MemAvailable was 14044844032 bytes; the protocol floor for a second Qwen2.5-VL-3B load is 8589934592 bytes` in `whitebox.reason` and in `reading`. Committed `eval/xai/results/whitebox.json` has a later sentence, `above the protocol floor of 8589934592 bytes for a second Qwen2.5-VL-3B load`. The analyzer copies that file into the summary, so a rerun would change those two strings. It also copies paint and inpaint PNGs into `web/public/xai/`. Those PNGs are gitignored (only the WebP previews are stored), so the site JSON would lose its image paths. The summary is left as committed.
 
-`eval/photos/analyze.py` is excluded. `eval/photos/results/summary.json` has a `snapshot` object the analyzer does not write: model `qwen25vl-3b-q8`, excluded `literacy rows, and every model other than qwen25vl-3b-q8`, copied while literacy and the other checkpoints were still running. A rerun drops that object. Every other field in that file does rebuild. The same script overwrites `web/public/data/photos.json`, the Gemini photograph report, with the open-weight summary. Neither file is rewritten.
+`eval/photos/analyze.py` does not write `web/public/data/photos.json` unless `--publish` is passed. The hand-copied `snapshot` object is not produced from the prediction rows, so it is not in the rebuilt summary. English paint on the committed Qwen2.5-VL 3B Q8 rows is 6/19, Holm p = 0.125.
 
 The round-1 contract is `eval/preregistration.md`. Later contracts are `eval/round2/preregistration.md`, `eval/round3/preregistration.md`, `eval/dev/protocol.md`, `eval/xai/protocol.md`, and `eval/photos/protocol.md`. Display copies of the illustrations are already in `web/public/stimuli`. llama.cpp `b11716` is the multimodal runtime. Point `HORNOK_LLAMA_BIN` at `llama-mtmd-cli`. The default path is `vendor/llama-b11716/llama-mtmd-cli` inside this repo. The binary is not committed.

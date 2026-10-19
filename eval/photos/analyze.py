@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -19,7 +20,14 @@ SUMMARY = ROOT / "eval" / "photos" / "results" / "summary.json"
 PUBLIC = ROOT / "web" / "public" / "data" / "photos.json"
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--publish",
+        action="store_true",
+        help="write web/public/data/photos.json",
+    )
+    args = parser.parse_args(argv)
     if not MANIFEST.is_file():
         raise SystemExit("missing photo manifest")
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
@@ -39,7 +47,8 @@ def main() -> None:
     # Masks are images and must not land in the JSON.
     summary["maps"] = [{key: value for key, value in row.items()} for row in summary["maps"]]
     SUMMARY.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
-    _site(summary, manifest)
+    if args.publish:
+        _site(summary, manifest)
     print(f"wrote {SUMMARY} rows {summary['n_predictions']}", flush=True)
 
 
@@ -114,4 +123,4 @@ def _site(summary: dict, manifest: dict) -> None:
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
