@@ -68,10 +68,7 @@ def gemini_prose() -> str:
     """Poster sentence. Counts and ids come from the committed Gemini summary."""
     data = load_committed_gemini()
     if data is None:
-        return (
-            "Gemini was not called. The client lists models at runtime and does not hard-code an id. "
-            "GEMINI_MODEL overrides that list. No key was set, so the list was not requested."
-        )
+        return f"The committed Gemini summary is not at {GEMINI_RESULTS_REL}."
     resolved = data["resolved_models"]
     parts = [
         f"Gemini was called. The stored run is {GEMINI_RESULTS_REL}.",
@@ -678,7 +675,7 @@ I will not call a flip on a drawing a crash. I will not talk about GPT-4o or Cla
 
 **Why change the task?** Because round 2 showed that SLOW versus BRAKE and CHANGE_LANE versus CONTINUE are not decidable from one frame, and every model collapsed onto one action. STOP versus GO is the safety question the frame can support. The change is written down as an amendment. Round 2 is not relabeled.
 
-**Was Gemini run?** {gemini_prose() if load_committed_gemini() else "No. GEMINI_API_KEY was unset, and the harness refuses to call the API without it. The client no longer hard-codes a model id. It lists models when a key exists."}
+**Was Gemini run?** {gemini_prose()}
 
 **Did a prompt variant clear the dev gate?** {("Yes. " + str(dev.get("promoted_prompt")) + " was promoted, and round 4 is the locked test set under that wording.") if dev and dev.get("promoted_prompt") else ("No. Round 4 was not opened. The counts are in the script above." if dev and dev.get("blocks") else "The diagnostic file is not in this pitch.")}
 

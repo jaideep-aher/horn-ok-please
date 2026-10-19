@@ -42,7 +42,7 @@ Style references: Latent Gaze and Alba. The page leads with the story, in short 
 
 ## 4. Findings
 - Purpose: three takeaways, each a card with one number and a plain sentence.
-- (a) Gemini gated result: pending data. No Gemini results JSON is committed on main yet. Current copy ("Gemini was not called") is false and must change once the results are published.
+- (a) Gemini gated result: committed in `eval/gemini_remote/results/summary.json` (site copy `web/public/data/gemini.json`). Flash resolved to gemini-3.8-flash and passed the round-3 gate. Flash-Lite resolved to gemini-3.5-flash-lite and did not. Stored rows: 528.
 - (b) Open-model over-caution (`round3.json`, round-3 gate, 20 STOP / 20 GO scenes, 168 predictions): all four open models got STOP right on 20/20. GO recall was 1/20 for qwen25vl-3b-q4 and 0/20 for qwen25vl-3b-q8, gemma3-4b-q8 and gemma3-4b-q4. Balanced accuracy was 0.525 / 0.5 / 0.5 / 0.5 against a 0.75 threshold, so no model passed. Plain reading: they say STOP to almost everything, so attack-success rates on them are not meaningful.
 - (c) 6/6 flip-and-restore: the xai.json numbers from section 3, labeled as illustrative examples from a model that failed the competence gate, not the headline. Scope: 6 rendered scenes, Qwen2.5-VL 3B Q8, GO 0/20, balanced accuracy 0.500.
 - Feeds from: `round3-report.tsx` (references `/round3/*.png`, which is missing), `findings.tsx`, `dev-report.tsx` (`dev.json`; `/dev/*.png` is missing). Round-2 is in `round2-report.tsx` (collapsed).
