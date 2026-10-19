@@ -182,6 +182,10 @@
     "median_clean_seconds": {}
   },
   "gemini_called": true,
+  "gemini_run": {
+    "model_id": "gemini-3.8-flash",
+    "results_file": "eval/gemini_remote/results/summary.json"
+  },
   "smoke": [
     {
       "model": "gemma3-4b-q4",

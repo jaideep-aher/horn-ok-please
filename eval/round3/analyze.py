@@ -25,6 +25,79 @@ from hornok.round3 import (  # noqa: E402
 PREDICTIONS = ROOT / "eval" / "round3" / "results" / "predictions.jsonl"
 GATE_PATH = ROOT / "eval" / "round3" / "results" / "gate.json"
 SUMMARY = ROOT / "eval" / "round3" / "results" / "summary.json"
+GEMINI_SUMMARY = ROOT / "eval" / "gemini_remote" / "results" / "summary.json"
+GEMINI_RESULTS_REL = "eval/gemini_remote/results/summary.json"
+ROUND3_PROTOCOL = "eval/round3/preregistration.md"
+
+
+def _json_object(path: Path) -> dict | None:
+    if not path.is_file():
+        return None
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return data if isinstance(data, dict) else None
+
+
+def _stored_run_date(*sources: dict | None) -> str | None:
+    """A run date only when a committed results file already stores one."""
+    for source in sources:
+        if not source:
+            continue
+        for key in ("run_date", "dated", "date"):
+            value = source.get(key)
+            if isinstance(value, str) and value.strip():
+                return value
+    return None
+
+
+def committed_gemini_run() -> dict | None:
+    """Provenance for the committed Gemini bundle when it ran round 3.
+
+    Local predictions are the open-weight run. Gemini rows stay in
+    eval/gemini_remote/results and are not copied into this gate table.
+    """
+    if not GEMINI_SUMMARY.is_file():
+        return None
+    predictions = GEMINI_SUMMARY.parent / "predictions.jsonl"
+    if not predictions.is_file():
+        return None
+    data = _json_object(GEMINI_SUMMARY)
+    if data is None:
+        return None
+    if data.get("round") != 3 or data.get("protocol") != ROUND3_PROTOCOL:
+        return None
+    if data.get("backend") != "gemini":
+        return None
+    called = False
+    for line in predictions.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        model = str(row.get("model") or "")
+        if row.get("backend") == "gemini" and model.startswith("gemini:"):
+            called = True
+            break
+    if not called:
+        return None
+    resolved = data.get("resolved_models")
+    model_id = resolved.get("flash") if isinstance(resolved, dict) else None
+    if not isinstance(model_id, str) or not model_id:
+        for block in data.get("gate") or []:
+            if isinstance(block, dict) and isinstance(block.get("resolved_model_id"), str):
+                model_id = block["resolved_model_id"]
+                break
+    if not isinstance(model_id, str) or not model_id:
+        return None
+    record = {"model_id": model_id}
+    run_date = _stored_run_date(
+        data,
+        _json_object(GEMINI_SUMMARY.parent / "models.json"),
+        _json_object(GEMINI_SUMMARY.parent / "status_all.json"),
+        _json_object(GEMINI_SUMMARY.parent / "status.json"),
+    )
+    if run_date:
+        record["run_date"] = run_date
+    record["results_file"] = GEMINI_RESULTS_REL
+    return record
 
 
 def _rows() -> list[dict]:
@@ -132,7 +205,21 @@ def summarize() -> dict:
             if script == "deva" and mean is not None:
                 published[model] = mean
 
-    readers = {model: is_reader(published.get(model)) for model in {row["model"] for row in models}}
+    readers = {
+        row["model"]: is_reader(published.get(row["model"]))
+        for row in models
+    }
+    # The stored mapping is what matters. A set used to build this dict, so a
+    # later run could reshuffle keys without changing a flag. Keep the previous
+    # order when every flag is unchanged.
+    previous = _json_object(SUMMARY)
+    stored = previous.get("readers") if isinstance(previous, dict) else None
+    if (
+        isinstance(stored, dict)
+        and set(stored) == set(readers)
+        and all(stored[key] == readers[key] for key in stored)
+    ):
+        readers = {key: readers[key] for key in stored}
 
     stop_scenes = sorted({row["scene"] for row in gate_rows if row["binary_label"] == "STOP"})
     go_scenes = sorted({row["scene"] for row in gate_rows if row["binary_label"] == "GO"})
@@ -338,10 +425,13 @@ def summarize() -> dict:
             "run_g2": checkpoint.get("run_g2"),
             "median_clean_seconds": checkpoint.get("median_clean_seconds"),
         },
-        "gemini_called": any(str(row["model"]).startswith("gemini:") for row in rows),
-        "smoke": smoke,
-        "dropped": checkpoint.get("dropped") or [],
     }
+    gemini = committed_gemini_run()
+    summary["gemini_called"] = gemini is not None
+    if gemini is not None:
+        summary["gemini_run"] = gemini
+    summary["smoke"] = smoke
+    summary["dropped"] = checkpoint.get("dropped") or []
     SUMMARY.parent.mkdir(parents=True, exist_ok=True)
     SUMMARY.write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(
