@@ -72,8 +72,8 @@ export function Methods({ summary }: { summary: Summary | null }) {
             Round 1 used SmolVLM. Round 2 added Qwen2.5-VL 3B, Gemma 3 4B, and InternVL2.5 1B under llama.cpp,
             greedy, with a grammar. Round 3 kept Qwen and Gemma at Q8_0 and Q4_K_M. The dev diagnostic used
             the two Q8 models. Jay ran Gemini on the locked gate. Flash resolved to gemini-3.8-flash and
-            passed. Flash-Lite resolved to gemini-3.5-flash-lite and returned HTTP 400 on every gate image,
-            so its attacks were not run. GPT-4o and Claude are not in this study.
+            passed. Flash-Lite resolved to gemini-3.5-flash-lite and was not evaluated (API error: 40/40
+            responses unparsed). GPT-4o and Claude are not in this study.
           </p>
           <p>
             The illustrated scenes are synthetic 1280×720 drawings, licensed CC-BY-4.0 by Jaideep (Jay) Aher.

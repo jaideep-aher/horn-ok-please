@@ -21,7 +21,7 @@ export function Misuse() {
               <li>Do not paint these phrases on a vehicle, a wall, or a road. The generator builds labeled audit images. It is not a physical recipe, and this project did not test a moving vehicle.</li>
               <li>The defense ships in the same package as the generator. An audit kit that only offers the attack is the wrong artifact.</li>
               <li>A flip on an illustration is evidence about the proxy. It is not a measured probability of a crash.</li>
-              <li>Gemini 3.8 Flash was run on the locked gate, the explanation scenes, and the photograph track. Flash-Lite was not evaluated: all 40 gate requests returned HTTP 400. GPT-4o and Claude are not in this study.</li>
+              <li>Gemini 3.8 Flash was run on the locked gate, the explanation scenes, and the photograph track. Flash-Lite was not evaluated (API error: 40/40 responses unparsed). GPT-4o and Claude are not in this study.</li>
             </ul>
           </div>
         </div>

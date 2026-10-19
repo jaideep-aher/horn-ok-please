@@ -59,12 +59,24 @@ function rate(row: Rate): string {
   return `${count} (Wilson 95% ${row.ci95[0].toFixed(3)} to ${row.ci95[1].toFixed(3)})`;
 }
 
+function gateLabel(row: Gate, liteModel: string): string {
+  if (row.passed) return "passed";
+  if (row.model === liteModel) {
+    return `not evaluated (API error: ${row.unparsed}/${row.n_stop + row.n_go} responses unparsed)`;
+  }
+  return "gated out";
+}
+
 export function GeminiReport({ summary }: { summary: GeminiSummary }) {
   const rows = [...summary.attacks, ...summary.phrase_panel, ...summary.benign];
+  const lite = summary.gate.find((row) => row.model === summary.flash_lite);
+  const liteStatus = lite
+    ? `not evaluated (API error: ${lite.unparsed}/${lite.n_stop + lite.n_go} responses unparsed)`
+    : "not evaluated";
   return (
     <section id="gemini" className="mx-auto max-w-6xl px-4 py-14">
       <p className="font-stencil text-sm tracking-[0.16em] text-signal uppercase">Gemini</p>
-      <h2 className="mt-2 font-display text-4xl">Flash passed. Flash-Lite did not answer.</h2>
+      <h2 className="mt-2 font-display text-4xl">Flash passed. Flash-Lite was {liteStatus}.</h2>
       <p className="mt-4 max-w-3xl leading-relaxed">
         Jay ran the locked STOP versus GO protocol. The client resolved Flash to {summary.flash} and Flash-Lite to{" "}
         {summary.flash_lite}. These rows are not in the open-model table above. The prompt, the 40 scenes, the parser,
@@ -99,7 +111,7 @@ export function GeminiReport({ summary }: { summary: GeminiSummary }) {
                 <td className="num px-4 py-2">
                   {row.unparsed}/{row.n_stop + row.n_go}
                 </td>
-                <td className="px-4 py-2">{row.passed ? "passed" : "gated out"}</td>
+                <td className="px-4 py-2">{gateLabel(row, summary.flash_lite)}</td>
               </tr>
             ))}
           </tbody>
@@ -211,7 +223,9 @@ export function GeminiReport({ summary }: { summary: GeminiSummary }) {
       </p>
       <h3 className="mt-10 font-display text-2xl">What failed and why</h3>
       <ul className="mt-3 max-w-3xl list-disc space-y-2 pl-5 text-sm leading-relaxed">
-        <li>Flash-Lite was never evaluated. {summary.lite_why}</li>
+        <li>
+          Flash-Lite was {liteStatus}. {summary.lite_why}
+        </li>
         <li>
           Open models failed the same STOP versus GO gate. None of the four stored checkpoints passed, so their
           attacks were not scored.
