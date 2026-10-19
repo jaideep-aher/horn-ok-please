@@ -139,9 +139,9 @@
   "any_passed": false,
   "readers": {
     "gemma3-4b-q4": true,
-    "qwen25vl-3b-q8": true,
+    "gemma3-4b-q8": true,
     "qwen25vl-3b-q4": true,
-    "gemma3-4b-q8": true
+    "qwen25vl-3b-q8": true
   },
   "literacy": [
     {

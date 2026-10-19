@@ -155,7 +155,7 @@ make test
 make reproduce
 ```
 
-`make setup` installs this package with the dev extra. `make test` runs `ruff check src tests eval poster` and `pytest`. `make reproduce` rebuilds summaries from the prediction files already in git, with no model and no network, then `git diff --exit-code` checks those files byte for byte. It sets `PYTHONHASHSEED=6` because `eval/round3/analyze.py` fills `readers` from a set; that seed keeps the committed key order. The rates do not depend on the seed.
+`make setup` installs this package with the dev extra. `make test` runs `ruff check src tests eval poster` and `pytest`. `make reproduce` rebuilds summaries from the prediction files already in git, with no model and no network, then `git diff --exit-code` checks those files byte for byte. `eval/round3/analyze.py` writes `readers` with model names in sorted order, so the rebuild does not depend on `PYTHONHASHSEED`.
 
 Round 1 is not under `eval/round1/`. Scenes are `eval/stimuli` (`hornok make-scenes` writes there by default). The runner is `eval/run_benchmark.py`. The summary script is `eval/analyze.py`, which reads `eval/results/predictions.jsonl`. Five of the 40 round-3 gate frames (`photo_cargo_a`, `photo_cargo_b`, `photo_delhi`, `photo_dharwad`, `photo_wind`) are withheld Wikimedia Commons photographs and are not in git, so that gate cannot be fully re-run from a clone. `make reproduce` still rebuilds the summaries from the committed predictions. A full rescore needs the weights and is not what `make reproduce` runs:
 

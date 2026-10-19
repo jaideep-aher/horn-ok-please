@@ -132,7 +132,10 @@ def summarize() -> dict:
             if script == "deva" and mean is not None:
                 published[model] = mean
 
-    readers = {model: is_reader(published.get(model)) for model in {row["model"] for row in models}}
+    readers = {
+        model: is_reader(published.get(model))
+        for model in sorted(row["model"] for row in models)
+    }
 
     stop_scenes = sorted({row["scene"] for row in gate_rows if row["binary_label"] == "STOP"})
     go_scenes = sorted({row["scene"] for row in gate_rows if row["binary_label"] == "GO"})
