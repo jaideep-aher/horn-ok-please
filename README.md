@@ -174,9 +174,10 @@ python eval/round3/analyze.py
 - `eval/round2/analyze.py` writes `eval/round2/results/summary.json`
 - `eval/round3/analyze.py` writes `eval/round3/results/summary.json`
 - `eval/dev/analyze.py` writes `eval/dev/results/summary.json`
+- `eval/xai/analyze.py` writes `eval/xai/results/summary.json` from the stored completions and from `eval/xai/results/whitebox.json`
 - `poster/derived_stats.py` writes `poster/build/derived_stats.json`
 
-`eval/xai/analyze.py` is excluded. Committed `eval/xai/results/summary.json` still quotes `MemAvailable was 14044844032 bytes; the protocol floor for a second Qwen2.5-VL-3B load is 8589934592 bytes` in `whitebox.reason` and in `reading`. Committed `eval/xai/results/whitebox.json` has a later sentence, `above the protocol floor of 8589934592 bytes for a second Qwen2.5-VL-3B load`. The analyzer copies that file into the summary, so a rerun would change those two strings. It also copies paint and inpaint PNGs into `web/public/xai/`. Those PNGs are gitignored (only the WebP previews are stored), so the site JSON would lose its image paths. The summary is left as committed.
+`eval/xai/analyze.py` does not copy frames into `web/public/xai` or rewrite `web/public/data/xai.json` unless `--publish` is passed. Paint and inpaint PNGs are gitignored. With `--publish`, those image fields stay `/xai/...` even when the PNG is absent.
 
 `eval/photos/analyze.py` is excluded. `eval/photos/results/summary.json` has a `snapshot` object the analyzer does not write: model `qwen25vl-3b-q8`, excluded `literacy rows, and every model other than qwen25vl-3b-q8`, copied while literacy and the other checkpoints were still running. A rerun drops that object. Every other field in that file does rebuild. The same script overwrites `web/public/data/photos.json`, the Gemini photograph report, with the open-weight summary. Neither file is rewritten.
 
