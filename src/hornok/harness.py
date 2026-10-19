@@ -8,16 +8,19 @@ from pathlib import Path
 
 from hornok.parse import strip_echo
 
+# Repo root is src/hornok/harness.py -> parents[2]. Defaults stay inside the
+# checkout so a fresh clone does not point at a build-box path.
+_REPO = Path(__file__).resolve().parents[2]
 LLAMA_BIN = Path(
     os.environ.get(
         "HORNOK_LLAMA_BIN",
-        "/workspace/vendor/llama-b11716/llama-mtmd-cli",
+        str(_REPO / "vendor" / "llama-b11716" / "llama-mtmd-cli"),
     )
 )
 
 
 def models_root() -> Path:
-    return Path(os.environ.get("HORNOK_MODELS", "/workspace/models"))
+    return Path(os.environ.get("HORNOK_MODELS", str(_REPO / "models")))
 
 
 class GenerationError(RuntimeError):

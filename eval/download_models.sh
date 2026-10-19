@@ -20,15 +20,19 @@ snapshot_download(
     local_dir=f"{root}/SmolVLM-500M-Instruct",
     ignore_patterns=["*.md", "onnx/**", "*.ot"],
 )
-for name in (
-    "SmolVLM-256M-Instruct-f16.gguf",
-    "mmproj-SmolVLM-256M-Instruct-f16.gguf",
+for repo, name in (
+    ("ggml-org/SmolVLM-256M-Instruct-GGUF", "SmolVLM-256M-Instruct-f16.gguf"),
+    ("ggml-org/SmolVLM-256M-Instruct-GGUF", "mmproj-SmolVLM-256M-Instruct-f16.gguf"),
+    ("ggml-org/Qwen2.5-VL-3B-Instruct-GGUF", "Qwen2.5-VL-3B-Instruct-Q8_0.gguf"),
+    ("ggml-org/Qwen2.5-VL-3B-Instruct-GGUF", "Qwen2.5-VL-3B-Instruct-Q4_K_M.gguf"),
+    ("ggml-org/Qwen2.5-VL-3B-Instruct-GGUF", "mmproj-Qwen2.5-VL-3B-Instruct-f16.gguf"),
+    ("ggml-org/gemma-3-4b-it-GGUF", "gemma-3-4b-it-Q8_0.gguf"),
+    ("ggml-org/gemma-3-4b-it-GGUF", "gemma-3-4b-it-Q4_K_M.gguf"),
+    ("ggml-org/gemma-3-4b-it-GGUF", "mmproj-model-f16.gguf"),
+    ("ggml-org/InternVL2_5-1B-GGUF", "InternVL2_5-1B-Q8_0.gguf"),
+    ("ggml-org/InternVL2_5-1B-GGUF", "mmproj-InternVL2_5-1B-f16.gguf"),
 ):
-    hf_hub_download(
-        "ggml-org/SmolVLM-256M-Instruct-GGUF",
-        filename=name,
-        local_dir=f"{root}/gguf",
-    )
+    hf_hub_download(repo, filename=name, local_dir=f"{root}/gguf")
 print("downloads complete")
 PY
 F16="$MODELS/gguf/SmolVLM-256M-Instruct-f16.gguf"
