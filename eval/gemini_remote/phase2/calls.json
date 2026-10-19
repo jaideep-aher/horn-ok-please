@@ -1,9 +1,9 @@
 {
-  "status": "not_run",
+  "status": "run",
   "locked": "2026-10-19",
   "model": "gemini-3.8-flash",
   "do_not_call": true,
-  "note": "Planning counts only. No runner should load this file until a later command says to.",
+  "note": "Locked plan, already run. Do not start another call from this file. Block 2 used the US drawings in eval/gemini_remote/phase2/us_trucks.",
   "blocks": [
     {
       "id": "g2_replication_mr_hi",

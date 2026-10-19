@@ -1,6 +1,6 @@
 # Phase 2, Gemini only — locked before any call
 
-**Date locked: 19 October 2026.** Status: not run. This file does not start a job. Do not call the Gemini API from the checkout that holds this file until a later, separate command. The Pages build and the test workflow do not read this directory.
+**Date locked: 19 October 2026.** Status: run, as locked. The blocks below were not edited after the calls. Results are in `results/summary.json`. This file does not start another job. Do not call the Gemini API again from this checkout. Block 2 was scored from the US dry-van drawings in `us_trucks/`. The Pages build and the test workflow do not read this directory.
 
 Model: the resolved id `gemini-3.8-flash` only. Flash-Lite stays out. It was never evaluated. Temperature is still not sent. The client may send `seed` only for the seeds named below. If the API rejects `seed`, stop and record the error. Do not try other thinking modes, temperatures, or model ids.
 

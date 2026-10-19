@@ -19,6 +19,7 @@ REPRO_SUMMARIES := \
 	eval/dev/results/summary.json \
 	eval/photos/results/summary.json \
 	eval/xai/results/summary.json \
+	eval/gemini_remote/phase2/results/summary.json \
 	poster/build/derived_stats.json
 
 reproduce:
@@ -28,5 +29,6 @@ reproduce:
 	$(PYTHON) eval/dev/analyze.py
 	$(PYTHON) eval/photos/analyze.py
 	$(PYTHON) eval/xai/analyze.py
+	$(PYTHON) eval/gemini_remote/phase2/analyze_phase2.py
 	$(PYTHON) poster/derived_stats.py >/dev/null
 	git diff --exit-code -- $(REPRO_SUMMARIES) web site-offline
