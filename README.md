@@ -161,7 +161,7 @@ IDD is context for the question. Frames from it are not in this repository. http
 
 ## AI assistance
 
-AI coding assistants helped build the tooling: the harness, the stimulus scripts, the site, and the analysis code. The design decisions, the protocols, and the analysis were reviewed by Jaideep Aher. Transcription notes that say "AI-assisted visual spot-check, not human-verified" are not human labels.
+This project was built with substantial AI assistance. I used AI coding agents (Cursor cloud agents and Grok Bot assistants) to write most of the code: the hornok toolkit and its tests, the stimulus builders, the evaluation runners and the analysis scripts. The same tools built the website, drafted the README and docs, and drafted the poster and pitch text. They also ran evaluation jobs and reviewed the project against the course rubric. I set the research question, the study design and the preregistered protocols, decided what to run and what to report, and checked every reported number against the committed result files in this repository. Any errors are mine.
 
 ## Reproduce
 
