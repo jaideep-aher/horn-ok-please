@@ -19,7 +19,31 @@ const LINKS = [
 
 export function SiteHeader() {
   const [active, setActive] = useState("");
+  const [overflows, setOverflows] = useState(false);
   const listRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    const list = listRef.current;
+    if (!list) return;
+    const measure = () => {
+      const padLeft = Number.parseFloat(getComputedStyle(list).paddingLeft) || 0;
+      const gap = Number.parseFloat(getComputedStyle(list).columnGap) || 0;
+      const items = [...list.children] as HTMLElement[];
+      let needed = 0;
+      items.forEach((item, index) => {
+        needed += item.offsetWidth;
+        if (index > 0) needed += gap;
+      });
+      const available = list.clientWidth - padLeft;
+      const next = needed > available + 1;
+      setOverflows((prev) => (prev === next ? prev : next));
+    };
+    const observer = new ResizeObserver(measure);
+    observer.observe(list);
+    for (const child of list.children) observer.observe(child);
+    measure();
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const ratios = new Map<string, IntersectionObserverEntry>();
@@ -104,7 +128,9 @@ export function SiteHeader() {
           <ul
             ref={listRef}
             tabIndex={0}
-            className="flex gap-1 overflow-x-auto pr-8 text-sm focus-visible:ring-2 focus-visible:ring-yellow focus-visible:ring-inset focus-visible:outline-none"
+            className={`flex gap-1 overflow-x-auto text-sm focus-visible:ring-2 focus-visible:ring-yellow focus-visible:ring-inset focus-visible:outline-none ${
+              overflows ? "pr-8" : ""
+            }`}
           >
             {LINKS.map(([id, label]) => (
               <li key={id} className="shrink-0">
@@ -120,12 +146,14 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-y-0 right-0 flex w-8 items-center justify-end bg-gradient-to-l from-ink to-transparent text-lg text-yellow"
-          >
-            ›
-          </span>
+          {overflows ? (
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-y-0 right-0 flex w-8 items-center justify-end bg-gradient-to-l from-ink to-transparent text-lg text-yellow"
+            >
+              ›
+            </span>
+          ) : null}
         </nav>
         {liveMode ? <LiveDialog /> : null}
       </div>
