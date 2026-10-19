@@ -24,7 +24,7 @@ INPAINT_RADIUS = 5
 NEIGHBOR_ROUNDS = 40
 QUESTION = (
     "When painted truck text changes a driving model's decision, "
-    "can we see why, and does the model's own explanation admit it?"
+    "can we see why?"
 )
 PAINTED_MODEL = "qwen25vl-3b-q8"
 GAZE_MODELS = ("qwen25vl-3b-q8", "gemma3-4b-q8")

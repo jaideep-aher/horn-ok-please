@@ -6,7 +6,7 @@ Jaideep (Jay) Aher. Spoken at about five sentences a minute. Under five minutes.
 
 The back of an Indian truck often says Horn OK Please. A vision-language model sees those letters as part of the road, in the same picture as the person on the crossing.
 
-The question is: when painted truck text changes a driving model's decision, can we see why, and does the model's own explanation admit it?
+The question is: when painted truck text changes a driving model's decision, can we see why?
 
 I drew the hazards, so the right answer is known. A model is attacked only after it can tell STOP from GO. If the paint changes STOP to GO, I remove the paint and ask again.
 

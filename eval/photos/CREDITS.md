@@ -1,7 +1,7 @@
 # Photograph credits
 
 These 99 frames are from Wikimedia Commons, collected 18 October 2026.
-No NC license is in this set. An edited file under `eval/photos/stimuli/` is a derivative of the photograph named below and is offered under that photograph's license. Share-alike licenses apply to the derivative. This copy does not include those image files, and `web/public/photos/` is empty.
+No NC license is in this set. An edited file under `eval/photos/stimuli/` is a derivative of the photograph named below and is offered under that photograph's license. Share-alike licenses apply to the derivative. The unblurred image files are not in this copy, and `web/public/photos/` is empty. `poster/assets/truck_tailgate_blurred.jpg` is a blurred Commons image (Anupamg, File:Funny 001.jpg, CC BY-SA 3.0).
 Model-facing files are unblurred and are not in git. The site does not show the Commons frames in this copy, because painted registration numbers and phone numbers stayed readable after the bumper-plate boxes.
 
 | Id | Author | License | Source |

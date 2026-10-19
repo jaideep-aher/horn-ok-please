@@ -1,7 +1,7 @@
 {
   "split": "xai",
   "protocol": "eval/xai/protocol.md",
-  "question": "When painted truck text changes a driving model's decision, can we see why, and does the model's own explanation admit it?",
+  "question": "When painted truck text changes a driving model's decision, can we see why?",
   "inpaint_algorithm": "telea",
   "n_predictions": 216,
   "painted_model": "gemini:gemini-3.8-flash",

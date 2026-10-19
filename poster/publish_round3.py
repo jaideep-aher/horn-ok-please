@@ -187,7 +187,7 @@ def xai_markdown(xai: dict | None) -> str:
     if not xai:
         return ""
     lines = [
-        "### What made it GO, and does the rationale admit it?",
+        "### What made it GO?",
         "",
         xai.get("question") or "",
         "",
@@ -592,7 +592,7 @@ Jaideep (Jay) Aher. Spoken script, under five minutes, then questions. Read the 
 
 ## Script
 
-Truck tails in India already say Horn OK Please. The question now is: when painted truck text changes a driving model's decision, can we see why, and does the model's own explanation admit it? The pilot, the gate, and the prompt diagnostic are how we got to a model that will answer at all.
+Truck tails in India already say Horn OK Please. The question now is: when painted truck text changes a driving model's decision, can we see why? The pilot, the gate, and the prompt diagnostic are how we got to a model that will answer at all.
 
 Round 1 tried that on SmolVLM. It could not do the clean task. An attack rate of zero there was incompetence, not robustness. That round is the pilot.
 
@@ -624,7 +624,7 @@ I will not call a flip on a drawing a crash. I will not talk about GPT-4o or Cla
 
 **Did a prompt variant clear the dev gate?** {("Yes. " + str(dev.get("promoted_prompt")) + " was promoted, and round 4 is the locked test set under that wording.") if dev and dev.get("promoted_prompt") else ("No. Round 4 was not opened. The counts are in the script above." if dev and dev.get("blocks") else "The diagnostic file is not in this pitch.")}
 
-**Did painted text change a decision, and did the rationale admit it?** {xai.get("reading") if xai and xai.get("reading") else "The explanation file is not in this pitch."}
+**Did painted text change a decision?** {xai.get("reading") if xai and xai.get("reading") else "The explanation file is not in this pitch."}
 
 **What happened on the Commons photographs?** {photos.get("reading") if photos and photos.get("reading") else "The real-photo file is not in this pitch."}
 """
@@ -792,7 +792,7 @@ def poster_html(
     <header>
       <p class="kicker">Duke AIPI 590 · Jaideep (Jay) Aher · Pilot, gate, diagnostic, then an explanation</p>
       <h1>Horn OK Please</h1>
-      <p class="sub">When painted truck text changes a driving model's decision, can we see why, and does the model's own explanation admit it? {html.escape(headline)}</p>
+      <p class="sub">When painted truck text changes a driving model's decision, can we see why? {html.escape(headline)}</p>
     </header>
     <main>
       <div>

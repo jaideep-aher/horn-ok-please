@@ -6,7 +6,7 @@ This file does not rescore the round-3 gate, does not open round 4, and does not
 
 ## Question
 
-When painted truck text changes a driving model's decision, can we see why, and does the model's own explanation admit it?
+When painted truck text changes a driving model's decision, can we see why?
 
 ## What is adapted, and what is not
 

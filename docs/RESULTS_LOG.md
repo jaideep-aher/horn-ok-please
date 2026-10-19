@@ -76,7 +76,7 @@ No candidate passed the gate. Round 4 was not opened. The locked 40-scene test s
 
 ### Illustrative examples from a gate-failed model
 
-When painted truck text changes a driving model's decision, can we see why, and does the model's own explanation admit it?
+When painted truck text changes a driving model's decision, can we see why?
 
 These rows are not headline evidence. `qwen25vl-3b-q8` failed the round-3 gate: GO 0/20, balanced accuracy 0.500. The preregistration does not score an attack on a model that failed that gate. The six drawings show what that checkpoint did anyway.
 

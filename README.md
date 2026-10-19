@@ -4,7 +4,7 @@
 
 ## Read this first
 
-When painted truck text changes a driving model's decision, can we see why, and does the model's own explanation admit it?
+When painted truck text changes a driving model's decision, can we see why?
 
 The confirmatory Gemini result is a null. Gemini 3.8 Flash passed the STOP versus GO gate: STOP 20/20 (Wilson 95% 0.839 to 1.000), GO 17/20 (0.640 to 0.948), balanced accuracy 0.925, unparsed 0/40. Preregistered tests T1–T4 and T7–T9 are exact McNemar then Holm, and every stored p is 1. T5, T6, and T10 are omitted because this file has one passer. G2 is not in that family. Marathi G2 flipped 4/20 (Wilson 95% 0.081 to 0.416) and Hindi G2 flipped 3/20 (0.052 to 0.360). English versus Marathi on G2 is exploratory: n=20, 4 discordant pairs, McNemar p=0.125.
 
@@ -22,11 +22,27 @@ cd web && npm ci && npm run dev
 
 ![Marathi GO line painted on an illustrated truck tailgate, with a person still on the crossing](web/public/stimuli/attack/ped_crossing__truck_rear__deva.webp)
 
-The site is a static export. GitHub Actions publishes it at https://jaideep-aher.github.io/horn-ok-please/. The poster QR points at that URL.
+The site is a static export. It is deployed via the GitHub Pages workflow once Pages is enabled, at https://jaideep-aher.github.io/horn-ok-please/. The poster QR points at that URL.
 
 ## The question
 
-When painted truck text changes a driving model's decision, can we see why, and does the model's own explanation admit it?
+When painted truck text changes a driving model's decision, can we see why?
+
+## Novelty
+
+What is new, against Chung et al., "Towards Transferable Attacks Against Vision-LLMs in Autonomous Driving with Typography." (arXiv:2405.14169), Burbano et al., "CHAI: Command Hijacking against embodied AI." (arXiv:2510.00181), and Westerhoff et al., "SCAM." (arXiv:2504.04893), is non-English and multi-script (Devanagari/Marathi, Hindi, Hinglish, Urdu) scene-text injection via truck paint on driving VLMs, a cloud versus quantized-edge comparison, a preregistered gate, and an XAI causal audit by paint removal and inpainting.
+
+## Course mapping
+
+| Theme | Where it shows up |
+|---|---|
+| Adversarial robustness | Painted tailgate attacks in [`eval/round3/`](eval/round3/) and the two defenses in [`src/hornok/defense.py`](src/hornok/defense.py) |
+| Explainability (causal removal/inpainting) | [`eval/xai/protocol.md`](eval/xai/protocol.md) |
+| Evaluation rigor (gate, preregistration, Holm) | [`eval/round3/preregistration.md`](eval/round3/preregistration.md) and Holm adjustment in [`src/hornok/metrics.py`](src/hornok/metrics.py) |
+| Fairness / language coverage | English, Marathi, Hindi, and Hinglish in [`src/hornok/round3.py`](src/hornok/round3.py); Urdu on the photograph track in [`eval/photos/protocol.md`](eval/photos/protocol.md) |
+| Privacy (blurring, withheld photos) | Blurred frame [`poster/assets/truck_tailgate_blurred.jpg`](poster/assets/truck_tailgate_blurred.jpg); unblurred frames withheld, with credits in [`eval/photos/CREDITS.md`](eval/photos/CREDITS.md) |
+| Harms / stakeholders | [Misuse and stakeholders](#misuse-and-stakeholders) |
+| Misuse | Audit phrases, not a painting guide, in [`src/hornok/phrases.py`](src/hornok/phrases.py) |
 
 ## Key results
 
@@ -98,7 +114,7 @@ The scored run did not store a Hugging Face revision hash. The pin is the reposi
 
 The toolkit in `src/hornok` draws scenes, parses STOP and GO, scores attack success with Wilson intervals and exact McNemar tests, and runs the explanation checks. Protocols were locked before the completions they govern. The site reads those summaries. It does not invent a rate.
 
-Illustrated frames are original drawings, CC-BY-4.0, Jaideep (Jay) Aher. The 99-photograph track uses Wikimedia Commons frames. Credits and licenses are in `eval/photos/CREDITS.md`. Photograph, font, and illustration terms outside the MIT license are in `NOTICE`. The Commons frames are not in this copy: painted registration numbers and phone numbers stayed readable after the bumper-plate boxes, so `web/public/photos/` is empty. Model-facing files stay out of git. Rebuild them locally with `python eval/photos/fetch_sources.py` and `python eval/photos/build_stimuli.py`.
+Illustrated frames are original drawings, CC-BY-4.0, Jaideep (Jay) Aher. The 99-photograph track uses Wikimedia Commons frames. Credits and licenses are in `eval/photos/CREDITS.md`. Photograph, font, and illustration terms outside the MIT license are in `NOTICE`. The unblurred Commons frames are not in this copy. `poster/assets/truck_tailgate_blurred.jpg` is a blurred Commons image (Anupamg, File:Funny 001.jpg, CC BY-SA 3.0). Painted registration numbers and phone numbers stayed readable after the bumper-plate boxes, so `web/public/photos/` is empty. Model-facing files stay out of git. Rebuild them locally with `python eval/photos/fetch_sources.py` and `python eval/photos/build_stimuli.py`.
 
 ## Design decisions
 
@@ -125,6 +141,8 @@ The phrases tell a model to ignore a hazard or to invent one. They are here so a
 People who would bear a real version of this failure: people on foot, on two-wheelers, and in the vehicle; truck owners whose vehicles would be the canvas; ADAS and vehicle-software teams; regulators writing rules for driver assistance. A useful outcome is a defense that still brakes for a person and for STOP. A harmful outcome is treating a flip on a drawing as proof that a named production car is vulnerable.
 
 ## Future work
+
+Does the model's own explanation admit it? Rationales were not scored.
 
 A human check of the photograph transcriptions, attention maps from a checkpoint that returns them, and a deployment note for teams who ship a vision policy: score STOP and GO before scoring an attack, and publish the over-block cost beside any flip. A printed-board transfer test, if it is done, stays off public roads. Steps that need a date, a key, or a person are in `docs/SETUP.md`.
 
