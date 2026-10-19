@@ -13,7 +13,7 @@ The Gemini client is in the repo and was used for the locked STOP/GO gate, the e
 To run Gemini again:
 
 1. Create a key in the provider's console. Do not commit it.
-2. `GEMINI_API_KEY=... python eval/gemini_remote/run_gemini.py`. Without the key, the client stores nothing and does not send a request.
+2. `GEMINI_API_KEY=... python eval/gemini_remote/run_gemini.py`. Without the key, no request is sent. The runner writes `status.json` with state `not_called` in the output folder (default `gemini-out/`) and does not append prediction rows.
 3. Append rows to a new jsonl. Do not delete the stored rows.
 4. Do not add Gemini to the round-1 confirmatory family after looking at attack success. Report a new run as its own file.
 
@@ -23,9 +23,9 @@ Budget in the idea report was about $20–60 for a small API slice. That figure 
 
 The site is a static Next.js export once `web/` is built.
 
-- GitHub Pages: push the `out/` directory, or use an action that runs `npm ci && npm run build` with `output: 'export'`.
-- Vercel: import the repo, set the root directory to `web`, the build command to `npm run build`, and the output directory to `out`. No environment variables are required for the offline demo.
-- The poster QR is `poster/qr-site.png` and points at https://jaideep-aher.github.io/horn-ok-please/.
+- GitHub Pages: `.github/workflows/pages.yml` runs `npm ci && npm run build` in `web/` and deploys `web/out`. `web/next.config.ts` already sets `output: "export"`. `web/out/` is gitignored, so it is not pushed.
+- Vercel: import the repo, set the root directory to `web`, the build command to `npm run build`, and the output directory to `out`. No environment variables are required for the offline demo. `web/next.config.ts` hardcodes `basePath` to `/horn-ok-please`.
+- The poster QR is `poster/assets/qr.png` and points at https://jaideep-aher.github.io/horn-ok-please/.
 
 No token is required for the offline demo. Live mode stays hidden unless the build sets `NEXT_PUBLIC_LIVE_MODE=1`. That dialog expects an OpenAI-compatible endpoint and a key typed into the browser and kept in `localStorage`. The key is not written to the repo.
 

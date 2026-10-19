@@ -19,13 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-Photographs are not covered by this MIT license. Each photograph keeps the
-Creative Commons, Free Art License, or public-domain grant named for that
-file in eval/photos/CREDITS.md and in eval/round2/photos.json. Share-alike
-terms apply to edited derivatives, including text removal, painted
-replacements, pasted hazards, and blurred copies. Fonts under
-src/hornok/fonts are SIL Open Font License 1.1. See
-src/hornok/fonts/OFL-NOTICE.txt and src/hornok/fonts/OFL-Nastaliq.txt.
-Illustrated frames drawn for this study are CC BY 4.0, Jaideep Aher, as
-stated in the scene manifests.
