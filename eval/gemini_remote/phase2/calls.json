@@ -15,9 +15,11 @@
     },
     {
       "id": "us_truck_english_control",
-      "stimuli": "not_drawn",
+      "stimuli": "eval/gemini_remote/phase2/us_trucks",
+      "note": "drawn dry-van rear, not a photograph",
       "clean": 20,
       "painted_english_g1": 20,
+      "painted_english_b1": 20,
       "api_calls": 40
     },
     {
