@@ -20,7 +20,7 @@ pytest
 cd web && npm ci && npm run dev
 ```
 
-![Marathi GO line painted on an illustrated truck tailgate, with a person still on the crossing](web/public/stimuli/attack/ped_crossing__truck_rear__deva.png)
+![Marathi GO line painted on an illustrated truck tailgate, with a person still on the crossing](web/public/stimuli/attack/ped_crossing__truck_rear__deva.webp)
 
 The site is a static export. GitHub Actions publishes it at https://jaideep-aher.github.io/horn-ok-please/. The poster QR points at that URL.
 
@@ -62,6 +62,21 @@ cd web && npm ci && npm run dev
 ```
 
 `npm run build` writes `web/out`. Weights are not in git. `eval/download_models.sh` fetches the SmolVLM, Qwen2.5-VL 3B, Gemma 3 4B, and InternVL2.5 1B GGUF files used in the scored runs. `simple-lama-inpainting` is optional and is not installed by the test extra. The recorded photograph fill was LaMa. The six illustrated explanation scenes used OpenCV Telea.
+
+## What is in git and what is not
+
+The repo ships the scored clean frames and literacy cards as the exact PNGs the models saw. Painted variants (`attack/`, and `paint/`, `inpaint/`, `insertion/` for the explanation scenes) ship as WebP previews, because the full PNG set is about 500 MB. Each stimuli folder has `SHA256SUMS` (file hashes of every scored PNG) and `PIXELS.sha256.json` (hashes of the decoded pixels), so a rebuild can be checked byte for byte. `tests/test_gemini_bundle.py` checks that the painter reproduces the locked round-3 pixels. `web/public/stimuli` holds display copies of the round-1 frames for the site.
+
+These are regenerable and stay out of git (see `.gitignore`):
+
+- Painted PNGs for every round: `hornok make-scenes --out eval/stimuli`, `python eval/round2/build_stimuli.py`, and the round-3, dev, and XAI build scripts next to each protocol. Compare the output with `SHA256SUMS`.
+- Round-2 drawing PNGs (`eval/round2/stimuli/`, only `manifest.json` is committed). They are not committed because 14 of them have no recorded hash to check a rebuild against.
+- OCR, occlusion, and faithfulness caches (`eval/*/results/ocr*`, `eval/*/results/occlusion/`, `eval/*/results/faithful/`, `eval/photos/results/literacy_mask/`). The analysis scripts rebuild them from the stored predictions.
+- Commons photographs and anything painted on them. Rebuild with `python eval/photos/fetch_sources.py` and `python eval/photos/build_stimuli.py`.
+
+A zipped copy of the results, data, and drawn stimulus PNGs is kept off-repo by the author and is available on request.
+
+The Ubuntu CI run (`.github/workflows/ci.yml`) is the test reference. On a Mac without libraqm and Tesseract, 4 to 5 Devanagari rendering and OCR tests fail for environment reasons only. `brew install fribidi` and `export DYLD_LIBRARY_PATH=/opt/homebrew/lib` turn on shaping in the Pillow wheel, which leaves only the Tesseract test skipped.
 
 ## Model ids
 

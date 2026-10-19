@@ -60,7 +60,7 @@ def main() -> None:
             raise SystemExit(f"drawing path looks like a photograph: {rel}")
         return jpeg_uri(path, draw_w, draw_q)
 
-    hero = draw_src("stimuli/attack/ped_crossing__truck_rear__deva.png")
+    hero = draw_src("stimuli/attack/ped_crossing__truck_rear__deva.webp")
     scenes_html = []
     for scene in xai["scenes"]:
         label = scene["label"]
