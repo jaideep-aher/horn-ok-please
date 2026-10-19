@@ -1,0 +1,8 @@
+# Python packages for rebuilding and checking the expo poster (poster/README.md)
+pymupdf>=1.28
+pdfplumber>=0.11
+pillow>=11
+numpy>=2
+opencv-python-headless>=4.10
+qrcode>=8
+scipy>=1.13

@@ -1,0 +1,32 @@
+| Element | Min pt | Max pt | Chars | Sizes (pt: chars) |
+|---|---|---|---|---|
+| Kicker (author line) | 19.99 | 19.99 | 51 | 19.99: 51 |
+| Title | 104 | 104 | 24 | 104: 24 |
+| Subtitle | 28.99 | 28.99 | 54 | 28.99: 54 |
+| QR side text | 19.99 | 24 | 47 | 19.99: 27, 24: 20 |
+| QR URL | 21 | 21 | 37 | 21: 37 |
+| Claim line | 42 | 42 | 59 | 42: 59 |
+| Hero header | 28 | 40 | 73 | 28: 16, 40: 57 |
+| Hero tile captions / row labels / badges | 19 | 37.99 | 231 | 19: 32, 19.99: 69, 24: 84, 37.99: 46 |
+| Hero foot line | 22 | 22 | 129 | 22: 129 |
+| Panel heads | 34 | 42 | 49 | 34: 4, 42: 45 |
+| Photo caption | 18 | 18 | 21 | 18: 21 |
+| Why body | 25 | 25 | 194 | 25: 194 |
+| Who is affected line | 19.99 | 24 | 74 | 19.99: 13, 24: 61 |
+| Contribution box | 25 | 25 | 120 | 25: 120 |
+| Kit line | 24 | 24 | 74 | 24: 74 |
+| Heatmap caption | 19 | 19 | 59 | 19: 59 |
+| Big numbers | 68 | 68 | 11 | 68: 11 |
+| Tag labels | 19.99 | 19.99 | 21 | 19.99: 21 |
+| 1/80 text | 24 | 24 | 78 | 24: 78 |
+| Exploratory box | 19.99 | 24 | 101 | 19.99: 11, 24: 90 |
+| Gate table title | 24 | 24 | 29 | 24: 29 |
+| Gate table (all cells) | 24 | 24 | 178 | 24: 178 |
+| Edge 4/4 text | 24 | 24 | 111 | 24: 111 |
+| Defenses text | 24 | 24 | 102 | 24: 102 |
+| Limitation box | 19.99 | 24 | 111 | 19.99: 10, 24: 101 |
+| Future work box | 19.99 | 24 | 98 | 19.99: 10, 24: 88 |
+| References | 18.49 | 18.49 | 161 | 18.49: 161 |
+| Photo credit / license footer | 18 | 18.49 | 401 | 18: 269, 18.49: 132 |
+
+pdfplumber per-character sizes (pt: chars): 18: 290, 18.49: 293, 19: 91, 19.99: 211, 21: 37, 22: 129, 24: 1013, 25: 313, 28: 16, 28.99: 54, 34: 4, 37.99: 46, 40: 57, 42: 103, 68: 11, 103.99: 24

@@ -1,0 +1,77 @@
+== verify.py (v2.1) ==
+pages 1 rect Rect(0.0, 0.0, 1728.0, 1728.0) inches 24.0 24.0
+font sizes (pt: chars): [(18.0, 319), (18.5, 342), (19.0, 102), (20.0, 239), (21.0, 37), (22.0, 156), (24.0, 1163), (25.0, 362), (28.0, 19), (29.0, 65), (34.0, 4), (38.0, 46), (40.0, 72), (42.0, 126), (68.0, 11), (104.0, 28)]
+min size 18.0 max size 104.0
+spans under 18pt: none
+Horn OK Please [104.0]
+Why it matters [42.0]
+What I built [42.0]
+What I found [42.0]
+Limits and next [42.0]
+chars at 24-28pt: 1544/3091 = 50%; chars 18-<24pt: 1195
+objects intruding into 0.5in margin: none 0
+inked pixels in margin band at 72dpi: 0
+QR placed size in: 2.0 decoded: 'https://jaideep-aher.github.io/horn-ok-please'
+== pdfinfo -box ==
+Pages:           1
+Page size:       1728 x 1728 pts
+MediaBox:            0.00     0.00  1728.00  1728.00
+CropBox:             0.00     0.00  1728.00  1728.00
+BleedBox:            0.00     0.00  1728.00  1728.00
+TrimBox:             0.00     0.00  1728.00  1728.00
+ArtBox:              0.00     0.00  1728.00  1728.00
+File size:       6599787 bytes
+== pdffonts ==
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+AAAAAA+Lato-Black                    CID TrueType      Identity-H       yes yes yes      7  0
+BAAAAA+Lato-Bold                     CID TrueType      Identity-H       yes yes yes      8  0
+CAAAAA+Lato-Regular                  CID TrueType      Identity-H       yes yes yes     12  0
+DAAAAA+NotoSansDevanagari-Regular    CID TrueType      Identity-H       yes yes yes     14  0
+EAAAAA+Lato-Italic                   CID TrueType      Identity-H       yes yes yes     23  0
+FAAAAA+AlfaSlabOne-Regular           CID TrueType      Identity-H       yes yes yes     25  0
+== pdfimages -list ==
+page   num  type   width height color comp bpc  enc interp  object ID x-ppi y-ppi size ratio
+--------------------------------------------------------------------------------------------
+   1     0 image     888   888  icc     3   8  image  no        10  0   444   444 24.0K 1.0%
+   1     1 image    1280   510  icc     3   8  image  no        16  0   431   433  854K  45%
+   1     2 image    1280   510  icc     3   8  image  no        17  0   431   433  873K  46%
+   1     3 image    1280   510  icc     3   8  image  no        18  0   431   433  871K  46%
+   1     4 image    1280   510  icc     3   8  image  no        19  0   431   433  869K  45%
+   1     5 image    1280   510  icc     3   8  image  no        20  0   431   433  873K  46%
+   1     6 image    1280   510  icc     3   8  image  no        21  0   431   433  856K  45%
+   1     7 image    1280   960  icc     3   8  jpeg   no        22  0   530   530  123K 3.4%
+   1     8 image    1280   720  icc     3   8  image  no        24  0   400   400  951K  35%
+== per-element font sizes (fontmap.py) ==
+| Element | Min pt | Max pt | Chars | Sizes (pt: chars) |
+|---|---|---|---|---|
+| Kicker (author line) | 19.99 | 19.99 | 51 | 19.99: 51 |
+| Title | 104 | 104 | 24 | 104: 24 |
+| Subtitle | 28.99 | 28.99 | 54 | 28.99: 54 |
+| QR side text | 19.99 | 24 | 47 | 19.99: 27, 24: 20 |
+| QR URL | 21 | 21 | 37 | 21: 37 |
+| Claim line | 42 | 42 | 59 | 42: 59 |
+| Hero header | 28 | 40 | 73 | 28: 16, 40: 57 |
+| Hero tile captions / row labels / badges | 19 | 37.99 | 231 | 19: 32, 19.99: 69, 24: 84, 37.99: 46 |
+| Hero foot line | 22 | 22 | 129 | 22: 129 |
+| Panel heads | 34 | 42 | 49 | 34: 4, 42: 45 |
+| Photo caption | 18 | 18 | 21 | 18: 21 |
+| Why body | 25 | 25 | 194 | 25: 194 |
+| Who is affected line | 19.99 | 24 | 74 | 19.99: 13, 24: 61 |
+| Contribution box | 25 | 25 | 120 | 25: 120 |
+| Kit line | 24 | 24 | 74 | 24: 74 |
+| Heatmap caption | 19 | 19 | 59 | 19: 59 |
+| Big numbers | 68 | 68 | 11 | 68: 11 |
+| Tag labels | 19.99 | 19.99 | 21 | 19.99: 21 |
+| 1/80 text | 24 | 24 | 78 | 24: 78 |
+| Exploratory box | 19.99 | 24 | 101 | 19.99: 11, 24: 90 |
+| Gate table title | 24 | 24 | 29 | 24: 29 |
+| Gate table (all cells) | 24 | 24 | 178 | 24: 178 |
+| Edge 4/4 text | 24 | 24 | 111 | 24: 111 |
+| Defenses text | 24 | 24 | 102 | 24: 102 |
+| Limitation box | 19.99 | 24 | 111 | 19.99: 10, 24: 101 |
+| Future work box | 19.99 | 24 | 98 | 19.99: 10, 24: 88 |
+| References | 18.49 | 18.49 | 161 | 18.49: 161 |
+| Photo credit / license footer | 18 | 18.49 | 401 | 18: 269, 18.49: 132 |
+
+pdfplumber per-character sizes (pt: chars): 18: 290, 18.49: 293, 19: 91, 19.99: 211, 21: 37, 22: 129, 24: 1013, 25: 313, 28: 16, 28.99: 54, 34: 4, 37.99: 46, 40: 57, 42: 103, 68: 11, 103.99: 24
