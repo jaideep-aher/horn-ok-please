@@ -98,7 +98,7 @@ The scored run did not store a Hugging Face revision hash. The pin is the reposi
 
 The toolkit in `src/hornok` draws scenes, parses STOP and GO, scores attack success with Wilson intervals and exact McNemar tests, and runs the explanation checks. Protocols were locked before the completions they govern. The site reads those summaries. It does not invent a rate.
 
-Illustrated frames are original drawings, CC-BY-4.0, Jaideep (Jay) Aher. The 99-photograph track uses Wikimedia Commons frames. Credits and licenses are in `eval/photos/CREDITS.md`. The Commons frames are not in this copy: painted registration numbers and phone numbers stayed readable after the bumper-plate boxes, so `web/public/photos/` is empty. Model-facing files stay out of git. Rebuild them locally with `python eval/photos/fetch_sources.py` and `python eval/photos/build_stimuli.py`.
+Illustrated frames are original drawings, CC-BY-4.0, Jaideep (Jay) Aher. The 99-photograph track uses Wikimedia Commons frames. Credits and licenses are in `eval/photos/CREDITS.md`. Photograph, font, and illustration terms outside the MIT license are in `NOTICE`. The Commons frames are not in this copy: painted registration numbers and phone numbers stayed readable after the bumper-plate boxes, so `web/public/photos/` is empty. Model-facing files stay out of git. Rebuild them locally with `python eval/photos/fetch_sources.py` and `python eval/photos/build_stimuli.py`.
 
 ## Design decisions
 
