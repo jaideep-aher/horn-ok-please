@@ -25,6 +25,9 @@ PITCH = ROOT / "docs" / "EXPO_PITCH.md"
 POSTER_HTML = ROOT / "poster" / "poster.html"
 POSTER_PDF = ROOT / "poster" / "horn-ok-please.pdf"
 WEB = ROOT / "web" / "public" / "data"
+GEMINI_RESULTS = ROOT / "eval" / "gemini_remote" / "results" / "summary.json"
+GEMINI_RESULTS_REL = "eval/gemini_remote/results/summary.json"
+ROUND3_PROTOCOL = "eval/round3/preregistration.md"
 
 NAMES = {
     "qwen25vl-3b-q8": "Qwen2.5-VL 3B Q8_0",
@@ -41,6 +44,67 @@ PROMPT_BLURB = {
     "D3": "GO is correct when the lane ahead is clear; a shoulder vehicle is not in the lane",
     "D4": "locked wording with the definitions swapped, GO then STOP",
 }
+
+
+def load_committed_gemini() -> dict | None:
+    """The committed Gemini summary when it is a round-3 protocol run."""
+    if not GEMINI_RESULTS.is_file():
+        return None
+    data = json.loads(GEMINI_RESULTS.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        return None
+    if data.get("round") != 3 or data.get("protocol") != ROUND3_PROTOCOL:
+        return None
+    if data.get("backend") != "gemini":
+        return None
+    resolved = data.get("resolved_models")
+    model_id = resolved.get("flash") if isinstance(resolved, dict) else None
+    if not isinstance(model_id, str) or not model_id:
+        return None
+    return data
+
+
+def gemini_prose() -> str:
+    """Poster sentence. Counts and ids come from the committed Gemini summary."""
+    data = load_committed_gemini()
+    if data is None:
+        return (
+            "Gemini was not called. The client lists models at runtime and does not hard-code an id. "
+            "GEMINI_MODEL overrides that list. No key was set, so the list was not requested."
+        )
+    resolved = data["resolved_models"]
+    parts = [
+        f"Gemini was called. The stored run is {GEMINI_RESULTS_REL}.",
+        f"Flash resolved to {resolved['flash']}.",
+    ]
+    lite = resolved.get("flash_lite")
+    if isinstance(lite, str) and lite:
+        parts.append(f"Flash-Lite resolved to {lite}.")
+    passed = []
+    failed = []
+    for block in data.get("gate") or []:
+        if not isinstance(block, dict):
+            continue
+        name = block.get("resolved_model_id") or block.get("model")
+        if not isinstance(name, str) or not name:
+            continue
+        if block.get("passed") is True:
+            passed.append(name)
+        elif block.get("passed") is False:
+            failed.append(name)
+    if passed:
+        parts.append("Passed the gate: " + ", ".join(passed) + ".")
+    if failed:
+        parts.append("Did not pass the gate: " + ", ".join(failed) + ".")
+    n_rows = data.get("n_predictions")
+    if isinstance(n_rows, int):
+        parts.append(f"Stored rows: {n_rows}.")
+    for key in ("run_date", "dated", "date"):
+        value = data.get(key)
+        if isinstance(value, str) and value.strip():
+            parts.append(f"Run date {value}.")
+            break
+    return " ".join(parts)
 
 
 def pct(rate: float | None) -> str:
@@ -478,13 +542,7 @@ def results_markdown(
     lines.extend(
         [
             "",
-            (
-                "Gemini was not called. The client lists models at runtime and does not hard-code an id. "
-                "GEMINI_MODEL overrides that list. No key was set, so the list was not requested."
-                if not summary.get("gemini_called")
-                else "Gemini was called. Its rows are in the same file. The model id was resolved at runtime "
-                "unless GEMINI_MODEL was set."
-            ),
+            gemini_prose(),
             "",
         ]
     )
@@ -610,7 +668,7 @@ Round 3 is the amendment, dated 18 October 2026, written before these completion
 
 {photos.get("reading") if photos and photos.get("reading") else "The real-photo file is not in this pitch. No Commons rate is filled in."}
 
-Gemini is wired up and was not called. There is no API key in this run. When a key is set, the client lists models and picks a Flash id instead of using a hard-coded name. GEMINI_MODEL overrides that list. The same gate applies.
+{gemini_prose()}
 
 I will not call a flip on a drawing a crash. I will not talk about GPT-4o or Claude. Those were not in this run.
 
@@ -620,7 +678,7 @@ I will not call a flip on a drawing a crash. I will not talk about GPT-4o or Cla
 
 **Why change the task?** Because round 2 showed that SLOW versus BRAKE and CHANGE_LANE versus CONTINUE are not decidable from one frame, and every model collapsed onto one action. STOP versus GO is the safety question the frame can support. The change is written down as an amendment. Round 2 is not relabeled.
 
-**Was Gemini run?** {"Yes." if summary.get("gemini_called") else "No. GEMINI_API_KEY was unset, and the harness refuses to call the API without it. The client no longer hard-codes a model id. It lists models when a key exists."}
+**Was Gemini run?** {gemini_prose() if load_committed_gemini() else "No. GEMINI_API_KEY was unset, and the harness refuses to call the API without it. The client no longer hard-codes a model id. It lists models when a key exists."}
 
 **Did a prompt variant clear the dev gate?** {("Yes. " + str(dev.get("promoted_prompt")) + " was promoted, and round 4 is the locked test set under that wording.") if dev and dev.get("promoted_prompt") else ("No. Round 4 was not opened. The counts are in the script above." if dev and dev.get("blocks") else "The diagnostic file is not in this pitch.")}
 
@@ -821,7 +879,7 @@ def poster_html(
             <thead><tr><th>Model</th><th>STOP</th><th>GO</th><th>Balanced</th><th>Unparsed</th><th>Gate</th></tr></thead>
             <tbody>{''.join(rows)}</tbody>
           </table>
-          <p>{summary['n_predictions']} stored round-3 rows. Grammar token STOP or GO. Gemini was {"called" if summary.get("gemini_called") else "not called"}.</p>
+          <p>{summary['n_predictions']} stored round-3 rows. Grammar token STOP or GO. {html.escape(gemini_prose())}</p>
         </section>
         <section>
           {attack_html}
