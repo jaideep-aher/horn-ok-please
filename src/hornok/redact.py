@@ -1,8 +1,10 @@
-"""Blur faces and plates on copies that the site and the poster show.
+"""Redact faces and plates on copies that the site and the poster show.
 
 The detector is OpenCV 4.10 Haar cascades (frontal face, profile face, Russian
-plate) plus a contour heuristic for plates the cascade misses. OpenCV 5 has
-no CascadeClassifier. A miss is possible. The model-facing stimuli are not blurred.
+plate) plus a bright-background text-line finder for plates the cascade misses.
+OpenCV 5 has no CascadeClassifier. A miss is possible. Detected regions are
+painted as a solid mean color, expanded past the box, so a character cannot
+remain inside the box. The model-facing stimuli are not redacted.
 """
 
 from __future__ import annotations
@@ -32,9 +34,10 @@ def _cascades():
     return loaded
 
 
-def _expand(box: list[int], width: int, height: int, pad: float) -> list[int]:
+def _expand(box: list[int], width: int, height: int, pad: float, minimum: int) -> list[int]:
     x, y, w, h = box
-    dx, dy = int(w * pad), int(h * pad)
+    dx = max(minimum, int(w * pad))
+    dy = max(minimum, int(h * pad))
     return [
         max(0, x - dx),
         max(0, y - dy),
@@ -44,75 +47,89 @@ def _expand(box: list[int], width: int, height: int, pad: float) -> list[int]:
 
 
 def detect_regions(image: Image.Image, avoid: list[list[float]] | None = None) -> list[list[int]]:
-    """Pixel boxes to blur. Plate boxes that mostly cover a text box are dropped."""
+    """Pixel boxes to paint over. ``avoid`` is kept for callers; plates are not dropped for it."""
+    del avoid
+    found = detect_labeled(image)
+    return [row["box"] for row in found]
+
+
+def detect_labeled(image: Image.Image) -> list[dict]:
+    """Boxes tagged ``face`` or ``plate``. Plate entries are what the review list counts."""
     import cv2
 
     rgb = np.asarray(image.convert("RGB"))
     gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
     height, width = gray.shape
     cascades = _cascades()
-    boxes: list[list[int]] = []
+    labeled: list[dict] = []
     for name in ("face", "profile"):
         cascade = cascades.get(name)
         if cascade is None:
             continue
-        found = cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(24, 24))
+        found = cascade.detectMultiScale(gray, scaleFactor=1.08, minNeighbors=4, minSize=(20, 20))
         for x, y, w, h in found:
-            boxes.append(_expand([int(x), int(y), int(w), int(h)], width, height, 0.35))
+            labeled.append(
+                {
+                    "kind": "face",
+                    "box": _expand([int(x), int(y), int(w), int(h)], width, height, 0.45, 12),
+                }
+            )
     plate = cascades.get("plate")
     if plate is not None:
-        found = plate.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4, minSize=(40, 16))
+        found = plate.detectMultiScale(gray, scaleFactor=1.05, minNeighbors=3, minSize=(36, 12))
         for x, y, w, h in found:
-            boxes.append(_expand([int(x), int(y), int(w), int(h)], width, height, 0.15))
-    boxes.extend(_contour_plates(gray, avoid or []))
-    return _dedupe(boxes)
+            if h > height * 0.12 or w > width * 0.55:
+                continue
+            if w / float(h) < 1.6 or w / float(h) > 7.5:
+                continue
+            labeled.append(
+                {
+                    "kind": "plate",
+                    "box": _expand([int(x), int(y), int(w), int(h)], width, height, 0.35, 14),
+                }
+            )
+    for box in _text_line_plates(gray):
+        labeled.append({"kind": "plate", "box": _expand(box, width, height, 0.28, 18)})
+    return _dedupe_labeled(labeled)
 
 
-def _contour_plates(gray: np.ndarray, avoid: list[list[float]]) -> list[list[int]]:
+def _text_line_plates(gray: np.ndarray) -> list[list[int]]:
+    """Horizontal dark glyphs sitting on a bright patch. Rear plates, not tailgate poetry."""
     import cv2
 
     height, width = gray.shape
-    y0 = int(height * 0.55)
-    crop = gray[y0:, :]
-    edges = cv2.Canny(cv2.bilateralFilter(crop, 7, 40, 40), 50, 150)
-    contours, _ = cv2.findContours(edges, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+    blackhat = cv2.morphologyEx(
+        gray, cv2.MORPH_BLACKHAT, cv2.getStructuringElement(cv2.MORPH_RECT, (17, 5))
+    )
+    bright = cv2.dilate((gray > 140).astype(np.uint8), np.ones((11, 25), np.uint8))
+    ink = ((blackhat > 28) & bright.astype(bool)).astype(np.uint8) * 255
+    ink[: int(height * 0.45)] = 0
+    closed = cv2.morphologyEx(ink, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_RECT, (35, 7)))
+    contours, _ = cv2.findContours(closed, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     frame = float(width * height)
-    found = []
+    found: list[list[int]] = []
     for contour in contours:
         x, y, w, h = cv2.boundingRect(contour)
-        if h < 10 or w < 24:
+        if h < 10 or w < 40:
             continue
         ratio = w / float(h)
-        if ratio < 2.0 or ratio > 6.5:
+        if ratio < 1.5 or ratio > 9.0:
             continue
         area = w * h
-        if area < frame * 0.0015 or area > frame * 0.03:
+        if area < frame * 0.0004 or area > frame * 0.04:
             continue
-        box = [int(x), int(y0 + y), int(x + w), int(y0 + y + h)]
-        if _overlaps_text(box, avoid):
+        if h > height * 0.09 or w > width * 0.5:
             continue
-        found.append(box)
+        found.append([int(x), int(y), int(w), int(h)])
     return found
 
 
-def _overlaps_text(box: list[int], avoid: list[list[float]]) -> bool:
-    area = max(1, (box[2] - box[0]) * (box[3] - box[1]))
-    for other in avoid:
-        x0 = max(box[0], other[0])
-        y0 = max(box[1], other[1])
-        x1 = min(box[2], other[2])
-        y1 = min(box[3], other[3])
-        if x1 > x0 and y1 > y0 and (x1 - x0) * (y1 - y0) / area > 0.5:
-            return True
-    return False
-
-
-def _dedupe(boxes: list[list[int]]) -> list[list[int]]:
-    kept: list[list[int]] = []
-    for box in boxes:
-        if any(_iou(box, prior) > 0.5 for prior in kept):
+def _dedupe_labeled(rows: list[dict]) -> list[dict]:
+    kept: list[dict] = []
+    for row in rows:
+        if any(_iou(row["box"], prior["box"]) > 0.45 for prior in kept):
             continue
-        kept.append(box)
+        kept.append(row)
     return kept
 
 
@@ -125,18 +142,18 @@ def _iou(a: list[int], b: list[int]) -> float:
 
 
 def blur_regions(image: Image.Image, boxes: list[list[int]]) -> Image.Image:
+    """Paint each box a single mean color. The old two-pixel downsample left glyphs outside a short box."""
     out = image.convert("RGB").copy()
     for box in boxes:
-        crop = out.crop(box)
-        short = max(1, min(crop.size))
-        # Two pixels on the short side. A plate character cannot survive that.
-        cells = max(1, short // 2)
-        small = crop.resize(
-            (max(1, crop.width // cells), max(1, crop.height // cells)),
-            Image.Resampling.BOX,
-        )
-        pixel = small.resize(crop.size, Image.Resampling.NEAREST)
-        out.paste(pixel, box)
+        x0, y0, x1, y1 = (int(v) for v in box)
+        if x1 <= x0 or y1 <= y0:
+            continue
+        crop = np.asarray(out.crop((x0, y0, x1, y1)))
+        if crop.size == 0:
+            continue
+        flat = crop.reshape(-1, 3)
+        mean = tuple(int(channel) for channel in flat.sum(axis=0) // flat.shape[0])
+        out.paste(mean, (x0, y0, x1, y1))
     return out
 
 
