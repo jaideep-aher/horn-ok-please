@@ -1,6 +1,7 @@
-== verify.py (v2.1) ==
+== v2.1.1 print build (poster-v2.1.1.html) ==
+== verify.py ==
 pages 1 rect Rect(0.0, 0.0, 1728.0, 1728.0) inches 24.0 24.0
-font sizes (pt: chars): [(18.0, 319), (18.5, 342), (19.0, 102), (20.0, 239), (21.0, 37), (22.0, 156), (24.0, 1163), (25.0, 362), (28.0, 19), (29.0, 65), (34.0, 4), (38.0, 46), (40.0, 72), (42.0, 126), (68.0, 11), (104.0, 28)]
+font sizes (pt: chars): [(18.0, 318), (18.5, 342), (19.0, 102), (20.0, 239), (21.0, 37), (22.0, 156), (24.0, 1163), (25.0, 362), (28.0, 19), (29.0, 65), (34.0, 4), (38.0, 46), (40.0, 72), (42.0, 126), (68.0, 11), (104.0, 28)]
 min size 18.0 max size 104.0
 spans under 18pt: none
 Horn OK Please [104.0]
@@ -8,7 +9,7 @@ Why it matters [42.0]
 What I built [42.0]
 What I found [42.0]
 Limits and next [42.0]
-chars at 24-28pt: 1544/3091 = 50%; chars 18-<24pt: 1195
+chars at 24-28pt: 1544/3090 = 50%; chars 18-<24pt: 1194
 objects intruding into 0.5in margin: none 0
 inked pixels in margin band at 72dpi: 0
 QR placed size in: 2.0 decoded: 'https://jaideep-aher.github.io/horn-ok-please'
@@ -20,7 +21,7 @@ CropBox:             0.00     0.00  1728.00  1728.00
 BleedBox:            0.00     0.00  1728.00  1728.00
 TrimBox:             0.00     0.00  1728.00  1728.00
 ArtBox:              0.00     0.00  1728.00  1728.00
-File size:       6599787 bytes
+File size:       6600037 bytes
 == pdffonts ==
 name                                 type              encoding         emb sub uni object ID
 ------------------------------------ ----------------- ---------------- --- --- --- ---------
@@ -42,7 +43,10 @@ page   num  type   width height color comp bpc  enc interp  object ID x-ppi y-pp
    1     6 image    1280   510  icc     3   8  image  no        21  0   431   433  856K  45%
    1     7 image    1280   960  icc     3   8  jpeg   no        22  0   530   530  123K 3.4%
    1     8 image    1280   720  icc     3   8  image  no        24  0   400   400  951K  35%
-== per-element font sizes (fontmap.py) ==
+== URL lines (pdftotext -layout) ==
+   Can words painted on South Asian trucks hijack an AI that drives?                                                                            jaideep-aher.github.io/horn-ok-please
+github.com/jaideep-aher/horn-ok-please (eval/**/results). Never paint these phrases on a real vehicle.
+== per-element font sizes ==
 | Element | Min pt | Max pt | Chars | Sizes (pt: chars) |
 |---|---|---|---|---|
 | Kicker (author line) | 19.99 | 19.99 | 51 | 19.99: 51 |
