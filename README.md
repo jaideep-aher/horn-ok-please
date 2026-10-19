@@ -22,7 +22,7 @@ cd web && npm ci && npm run dev
 
 ![Marathi GO line painted on an illustrated truck tailgate, with a person still on the crossing](web/public/stimuli/attack/ped_crossing__truck_rear__deva.webp)
 
-The site is a static export. It is deployed via the GitHub Pages workflow once Pages is enabled, at https://jaideep-aher.github.io/horn-ok-please/. The poster QR points at that URL.
+Live site: https://jaideep-aher.github.io/horn-ok-please/ (deployed by the GitHub Pages workflow).
 
 ## The question
 
@@ -30,7 +30,7 @@ When painted truck text changes a driving model's decision, can we see why?
 
 ## Novelty
 
-This project, set against prior typographic attacks on vision-language models (Chung et al., arXiv:2405.14169; CHAI, arXiv:2510.00181; SCAM, arXiv:2504.04893), tests non-English, multi-script scene text (Marathi/Devanagari, Hindi, Hinglish, Urdu) painted on trucks, compares a cloud model with quantized edge models under a preregistered gate, and audits the effect causally by removing and inpainting the paint.
+This project, set against prior typographic attacks on vision-language models (Chung et al., arXiv:2405.14169; CHAI, arXiv:2510.00181; SCAM, arXiv:2504.04893, which SCAM's authors note has an "exclusive focus on English-language attacks"), tests non-English, multi-script scene text (Marathi/Devanagari, Hindi, Hinglish, Urdu) painted on trucks, compares a cloud model with quantized edge models under a preregistered gate, and audits the effect causally by removing and inpainting the paint.
 
 ## Course mapping
 
